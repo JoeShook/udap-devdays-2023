@@ -204,6 +204,6 @@ Continue in the :arrow_right: Search area or take the **Access Token** and use i
 
 ## Comments
 
-The Udap.Server package is an implementation of DCR on UDAP.  At the time of writing this package, Identity Server did not have [DCR](https://docs.duendesoftware.com/identityserver/v6/configuration/dcr/) (Dynamic Client Registration).  It has been added in the recent past.   The plan is to revisit this area and see how much of Udap.Server package code can be removed in favor of the Identity Server core DCR API.
+The 📦Udap.Server package is an implementation of DCR on UDAP.  At the time of writing this package, Identity Server did not have [DCR](https://docs.duendesoftware.com/identityserver/v6/configuration/dcr/) (Dynamic Client Registration).  It has been added in the recent past.   The plan is to revisit this area and see how much of 📦Udap.Server package code can be removed in favor of the Identity Server core DCR API.
 
 ## Questions
