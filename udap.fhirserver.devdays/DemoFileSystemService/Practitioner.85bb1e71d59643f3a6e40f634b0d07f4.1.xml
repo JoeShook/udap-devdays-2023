@@ -1,0 +1,30 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="85bb1e71d59643f3a6e40f634b0d07f4" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.4231058-07:00" />
+  </meta>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi" />
+    <value value="53370" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Lubowitz58" />
+    <given value="Will178" />
+    <prefix value="Dr." />
+  </name>
+  <telecom>
+    <system value="email" />
+    <value value="Will178.Lubowitz58@example.com" />
+    <use value="work" />
+  </telecom>
+  <address>
+    <line value="80 N AVE" />
+    <city value="ABINGTON" />
+    <state value="MA" />
+    <postalCode value="02351-1707" />
+    <country value="US" />
+  </address>
+  <gender value="male" />
+</Practitioner>

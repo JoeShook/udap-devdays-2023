@@ -1,0 +1,45 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="d9a3842a66c24818b064f9b66d93c2e5" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:15.4890835-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="185345009" />
+      <display value="Encounter for symptom" />
+    </coding>
+    <text value="Encounter for symptom" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+    <display value="Mr. Jarod376 Wehner319" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-000000000190" />
+      <display value="Dr. Stephaine613 Hoeger474" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2018-06-13T03:47:35-04:00" />
+    <end value="2018-06-13T04:02:35-04:00" />
+  </period>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="10509002" />
+      <display value="Acute bronchitis (disorder)" />
+    </coding>
+  </reasonCode>
+  <serviceProvider>
+    <reference value="urn:uuid:ac8356a5-78f8-3a63-8a1e-59e832fd54e7" />
+    <display value="NASHOBA VALLEY MEDICAL CENTER" />
+  </serviceProvider>
+</Encounter>

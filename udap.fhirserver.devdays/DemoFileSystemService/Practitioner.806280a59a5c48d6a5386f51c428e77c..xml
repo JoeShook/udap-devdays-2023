@@ -1,0 +1,30 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="806280a59a5c48d6a5386f51c428e77c" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.2026718-07:00" />
+  </meta>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi" />
+    <value value="490" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Oberbrunner298" />
+    <given value="Carmina141" />
+    <prefix value="Dr." />
+  </name>
+  <telecom>
+    <system value="email" />
+    <value value="Carmina141.Oberbrunner298@example.com" />
+    <use value="work" />
+  </telecom>
+  <address>
+    <line value="800 WASHINGTON STREET" />
+    <city value="NORWOOD" />
+    <state value="MA" />
+    <postalCode value="02062" />
+    <country value="US" />
+  </address>
+  <gender value="female" />
+</Practitioner>

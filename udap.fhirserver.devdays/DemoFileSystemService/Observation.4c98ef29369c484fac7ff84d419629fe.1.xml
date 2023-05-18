@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="4c98ef29369c484fac7ff84d419629fe" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.9782373-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="2571-8" />
+      <display value="Triglycerides" />
+    </coding>
+    <text value="Triglycerides" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:26c9f7dc-1420-4f0f-809e-9e72989d3415" />
+  </encounter>
+  <effectiveDateTime value="2014-01-04T07:24:07-05:00" />
+  <issued value="2014-01-04T07:24:07.775-05:00" />
+  <valueQuantity>
+    <value value="102.87294185426269" />
+    <unit value="mg/dL" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="mg/dL" />
+  </valueQuantity>
+</Observation>

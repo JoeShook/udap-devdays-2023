@@ -1,0 +1,87 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="f5abf4860fc74a9e9e34ac9a2afcd245" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:16.0193349-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:eed483f7-c02a-4a74-bbed-1ca1029765f1" />
+    <display value="Matilde468 Jakubowski832" />
+  </patient>
+  <billablePeriod>
+    <start value="2019-08-22T18:56:16-04:00" />
+    <end value="2019-08-22T19:11:16-04:00" />
+  </billablePeriod>
+  <created value="2019-08-22T19:11:16-04:00" />
+  <provider>
+    <reference value="urn:uuid:dc4ea7a8-6193-304e-9f3a-d59060321577" />
+    <display value="PCP7947" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <supportingInfo>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:c138de49-21d6-4a74-8a7a-3fa0b590d11b" />
+    </valueReference>
+  </supportingInfo>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Medicaid" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="410620009" />
+        <display value="Well child visit (procedure)" />
+      </coding>
+      <text value="Well child visit (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:7a0c8c3b-6317-418f-90a2-a6004bb35473" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <informationSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="08" />
+        <display value="Hep B, adolescent or pediatric" />
+      </coding>
+      <text value="Hep B, adolescent or pediatric" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

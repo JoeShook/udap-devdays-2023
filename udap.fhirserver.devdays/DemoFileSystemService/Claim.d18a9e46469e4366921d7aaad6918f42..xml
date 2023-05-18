@@ -1,0 +1,221 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="d18a9e46469e4366921d7aaad6918f42" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:20.3939753-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:73d58836-0439-4251-87d1-40e5f2f8c113" />
+    <display value="Shelia548 Sipes176" />
+  </patient>
+  <billablePeriod>
+    <start value="2018-06-06T11:39:41-04:00" />
+    <end value="2018-06-06T12:09:41-04:00" />
+  </billablePeriod>
+  <created value="2018-06-06T12:09:41-04:00" />
+  <provider>
+    <reference value="urn:uuid:56a38ca0-3e76-3ec7-8781-c0fd559345bd" />
+    <display value="PCP184847" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <supportingInfo>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:134d8961-6e31-4d93-8e0c-33eddf9bc90f" />
+    </valueReference>
+  </supportingInfo>
+  <supportingInfo>
+    <sequence value="2" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:c3b77b6a-4ab5-49e6-9433-872a1baf04f3" />
+    </valueReference>
+  </supportingInfo>
+  <supportingInfo>
+    <sequence value="3" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:420cc935-964c-4a0c-a545-54c89196f588" />
+    </valueReference>
+  </supportingInfo>
+  <supportingInfo>
+    <sequence value="4" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:6aa7c9ca-d317-446a-9d48-b77890d971ab" />
+    </valueReference>
+  </supportingInfo>
+  <supportingInfo>
+    <sequence value="5" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:3b85ef9c-7162-452e-94e0-489b26c75c09" />
+    </valueReference>
+  </supportingInfo>
+  <procedure>
+    <sequence value="1" />
+    <procedureReference>
+      <reference value="urn:uuid:4f382c91-7d3b-48e3-8011-26914248f6a0" />
+    </procedureReference>
+  </procedure>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Blue Cross Blue Shield" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="410620009" />
+        <display value="Well child visit (procedure)" />
+      </coding>
+      <text value="Well child visit (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:c135fc72-e70e-4274-9b71-b52032459ed1" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <informationSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="49" />
+        <display value="Hib (PRP-OMP)" />
+      </coding>
+      <text value="Hib (PRP-OMP)" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="3" />
+    <informationSequence value="2" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="119" />
+        <display value="rotavirus, monovalent" />
+      </coding>
+      <text value="rotavirus, monovalent" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="4" />
+    <informationSequence value="3" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="10" />
+        <display value="IPV" />
+      </coding>
+      <text value="IPV" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="5" />
+    <informationSequence value="4" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="20" />
+        <display value="DTaP" />
+      </coding>
+      <text value="DTaP" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="6" />
+    <informationSequence value="5" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="133" />
+        <display value="Pneumococcal conjugate PCV 13" />
+      </coding>
+      <text value="Pneumococcal conjugate PCV 13" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="7" />
+    <procedureSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="430193006" />
+        <display value="Medication Reconciliation (procedure)" />
+      </coding>
+      <text value="Medication Reconciliation (procedure)" />
+    </productOrService>
+    <net>
+      <value value="350.17" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

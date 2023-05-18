@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="f069e5e93318442085592ac2e09497e1" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:20.1180707-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="410620009" />
+      <display value="Well child visit (procedure)" />
+    </coding>
+    <text value="Well child visit (procedure)" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:73d58836-0439-4251-87d1-40e5f2f8c113" />
+    <display value="Shelia548 Sipes176" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000e33a" />
+      <display value="Dr. Yoko498 Keeling57" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2018-04-04T11:39:41-04:00" />
+    <end value="2018-04-04T12:09:41-04:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:56a38ca0-3e76-3ec7-8781-c0fd559345bd" />
+    <display value="PCP184847" />
+  </serviceProvider>
+</Encounter>

@@ -1,0 +1,26 @@
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="258011bbcc764a0392fdd49dcc7206d9" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:11.2878851-07:00" />
+  </meta>
+  <status value="completed" />
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="162676008" />
+      <display value="Brief general examination (procedure)" />
+    </coding>
+    <text value="Brief general examination (procedure)" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:755eded1-966e-493f-a4e2-8cefe7c0ba06" />
+  </encounter>
+  <performedPeriod>
+    <start value="2019-04-13T06:12:24-04:00" />
+    <end value="2019-04-13T06:25:24-04:00" />
+  </performedPeriod>
+</Procedure>

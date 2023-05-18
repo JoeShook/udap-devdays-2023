@@ -1,0 +1,83 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="7cd747640b73406da9d671b81a400798" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.2733049-07:00" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">Care Plan for Diabetes self management plan.<br />Activities: <ul><li>Diabetes self management plan</li><li>Diabetes self management plan</li></ul><br />Care plan is meant to treat Prediabetes.</div>
+  </text>
+  <status value="active" />
+  <intent value="order" />
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="698360004" />
+      <display value="Diabetes self management plan" />
+    </coding>
+    <text value="Diabetes self management plan" />
+  </category>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:f6603f7f-3083-485e-9db8-7f9753e33e73" />
+  </encounter>
+  <period>
+    <start value="2016-04-09T06:12:24-04:00" />
+  </period>
+  <careTeam>
+    <reference value="urn:uuid:f12d5c85-fbc9-40af-bd3b-6fe571316a3e" />
+  </careTeam>
+  <addresses>
+    <reference value="urn:uuid:65886a64-8b96-4506-abef-820d0c0fd8b0" />
+  </addresses>
+  <goal>
+    <reference value="urn:uuid:d3f5241a-b6e1-4a7c-9c59-73bcf2182f19" />
+  </goal>
+  <goal>
+    <reference value="urn:uuid:709ae273-f3ab-4e98-8460-b9feefef141a" />
+  </goal>
+  <goal>
+    <reference value="urn:uuid:7316a517-0066-4063-8cb5-87224252ea29" />
+  </goal>
+  <goal>
+    <reference value="urn:uuid:3c6e511b-6ab6-4579-89c7-9cd74761c172" />
+  </goal>
+  <goal>
+    <reference value="urn:uuid:fdeb23c0-dc41-45e3-87e0-c119f21532c8" />
+  </goal>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="160670007" />
+          <display value="Diabetic diet" />
+        </coding>
+        <text value="Diabetic diet" />
+      </code>
+      <status value="in-progress" />
+      <location>
+        <display value="PCP161397" />
+      </location>
+    </detail>
+  </activity>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="229065009" />
+          <display value="Exercise therapy" />
+        </coding>
+        <text value="Exercise therapy" />
+      </code>
+      <status value="in-progress" />
+      <location>
+        <display value="PCP161397" />
+      </location>
+    </detail>
+  </activity>
+</CarePlan>

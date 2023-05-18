@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="c986ee175a334970aaae390454d263a3" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.8779416-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="2069-3" />
+      <display value="Chloride" />
+    </coding>
+    <text value="Chloride" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:a311cd3b-5a18-4f5f-9cd4-5b332da15884" />
+  </encounter>
+  <effectiveDateTime value="2019-04-13T06:12:24-04:00" />
+  <issued value="2019-04-13T06:12:24.661-04:00" />
+  <valueQuantity>
+    <value value="110.02032905513818" />
+    <unit value="mmol/L" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="mmol/L" />
+  </valueQuantity>
+</Observation>

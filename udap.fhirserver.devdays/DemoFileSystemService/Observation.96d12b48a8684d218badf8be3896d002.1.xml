@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="96d12b48a8684d218badf8be3896d002" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:19.2868467-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="6690-2" />
+      <display value="Leukocytes [#/volume] in Blood by Automated count" />
+    </coding>
+    <text value="Leukocytes [#/volume] in Blood by Automated count" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:535c49f9-51b3-4606-98ec-424d23c6d1ef" />
+  </encounter>
+  <effectiveDateTime value="2017-01-07T07:24:07-05:00" />
+  <issued value="2017-01-07T07:24:07.775-05:00" />
+  <valueQuantity>
+    <value value="6.303454152227267" />
+    <unit value="10*3/uL" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="10*3/uL" />
+  </valueQuantity>
+</Observation>

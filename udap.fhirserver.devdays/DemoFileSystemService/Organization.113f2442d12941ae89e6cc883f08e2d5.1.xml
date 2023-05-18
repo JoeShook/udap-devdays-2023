@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="113f2442d12941ae89e6cc883f08e2d5" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.4954252-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="b06770b5-b695-3c1a-9685-ae2223966ff7" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="GENERAL HEALTH CARE" />
+  <telecom>
+    <system value="phone" />
+    <value value="508-643-0100" />
+  </telecom>
+  <address>
+    <line value="66 SOUTH WASHINGTON STREET" />
+    <city value="NORTH ATTLEBORO" />
+    <state value="MA" />
+    <postalCode value="2760" />
+    <country value="US" />
+  </address>
+</Organization>

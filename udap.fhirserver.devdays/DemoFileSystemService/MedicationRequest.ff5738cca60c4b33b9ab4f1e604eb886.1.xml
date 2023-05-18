@@ -1,0 +1,51 @@
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="ff5738cca60c4b33b9ab4f1e604eb886" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.6810035-07:00" />
+  </meta>
+  <status value="stopped" />
+  <intent value="order" />
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+      <code value="861467" />
+      <display value="Meperidine Hydrochloride 50 MG Oral Tablet" />
+    </coding>
+    <text value="Meperidine Hydrochloride 50 MG Oral Tablet" />
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:a22d3ceb-6bcc-4ede-9f45-4dd9fb826ee5" />
+  </encounter>
+  <authoredOn value="2018-11-15T05:12:24-05:00" />
+  <requester>
+    <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001cc" />
+    <display value="Dr. Gillian484 Satterfield305" />
+  </requester>
+  <dosageInstruction>
+    <sequence value="1" />
+    <timing>
+      <repeat>
+        <frequency value="1" />
+        <period value="4.0" />
+        <periodUnit value="h" />
+      </repeat>
+    </timing>
+    <asNeededBoolean value="false" />
+    <doseAndRate>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type" />
+          <code value="ordered" />
+          <display value="Ordered" />
+        </coding>
+      </type>
+      <doseQuantity>
+        <value value="1.0" />
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationRequest>

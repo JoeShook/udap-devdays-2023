@@ -1,0 +1,99 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="3f1126caeb8b44ecb26ac5c18f540974" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.3739636-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+    <display value="Byron202 Vandervort697" />
+  </patient>
+  <billablePeriod>
+    <start value="2010-01-12T05:12:24-05:00" />
+    <end value="2010-01-12T06:28:24-05:00" />
+  </billablePeriod>
+  <created value="2010-01-12T06:28:24-05:00" />
+  <provider>
+    <reference value="urn:uuid:c44f361c-2efb-3050-8f97-0354a12e2920" />
+    <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <diagnosis>
+    <sequence value="1" />
+    <diagnosisReference>
+      <reference value="urn:uuid:dbeae2cd-302a-4cfa-8d2b-e50dd9a514eb" />
+    </diagnosisReference>
+  </diagnosis>
+  <procedure>
+    <sequence value="1" />
+    <procedureReference>
+      <reference value="urn:uuid:e6c77a5a-2b08-4e0a-b5a8-74eb1a4d8ba9" />
+    </procedureReference>
+  </procedure>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="50849002" />
+        <display value="Emergency room admission (procedure)" />
+      </coding>
+      <text value="Emergency room admission (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:d0643e5c-cf30-4d31-8754-38c1883ef958" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <diagnosisSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="284551006" />
+        <display value="Laceration of foot" />
+      </coding>
+      <text value="Laceration of foot" />
+    </productOrService>
+  </item>
+  <item>
+    <sequence value="3" />
+    <procedureSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="288086009" />
+        <display value="Suture open wound" />
+      </coding>
+      <text value="Suture open wound" />
+    </productOrService>
+    <net>
+      <value value="14043.82" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

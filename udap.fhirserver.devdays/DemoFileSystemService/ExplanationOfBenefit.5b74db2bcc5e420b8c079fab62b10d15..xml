@@ -1,0 +1,189 @@
+<ExplanationOfBenefit xmlns="http://hl7.org/fhir">
+  <id value="5b74db2bcc5e420b8c079fab62b10d15" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:21.4300786-07:00" />
+  </meta>
+  <contained>
+    <ServiceRequest>
+      <id value="referral" />
+      <status value="completed" />
+      <intent value="order" />
+      <subject>
+        <reference value="urn:uuid:d44bc588-587f-409f-b955-6541be165ac5" />
+      </subject>
+      <requester>
+        <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001b8" />
+      </requester>
+      <performer>
+        <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001b8" />
+      </performer>
+    </ServiceRequest>
+  </contained>
+  <contained>
+    <Coverage>
+      <id value="coverage" />
+      <status value="active" />
+      <type>
+        <text value="UnitedHealthcare" />
+      </type>
+      <beneficiary>
+        <reference value="urn:uuid:d44bc588-587f-409f-b955-6541be165ac5" />
+      </beneficiary>
+      <payor>
+        <display value="UnitedHealthcare" />
+      </payor>
+    </Coverage>
+  </contained>
+  <identifier>
+    <system value="https://bluebutton.cms.gov/resources/variables/clm_id" />
+    <value value="c5436a20-9cf1-48e1-9a92-9fcc4fd9e94f" />
+  </identifier>
+  <identifier>
+    <system value="https://bluebutton.cms.gov/resources/identifier/claim-group" />
+    <value value="99999999999" />
+  </identifier>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:d44bc588-587f-409f-b955-6541be165ac5" />
+  </patient>
+  <billablePeriod>
+    <start value="2013-04-21T21:25:37-04:00" />
+    <end value="2014-04-21T21:25:37-04:00" />
+  </billablePeriod>
+  <created value="2013-04-21T21:25:37-04:00" />
+  <insurer>
+    <display value="UnitedHealthcare" />
+  </insurer>
+  <provider>
+    <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001b8" />
+  </provider>
+  <referral>
+    <reference value="#referral" />
+  </referral>
+  <claim>
+    <reference value="urn:uuid:c5436a20-9cf1-48e1-9a92-9fcc4fd9e94f" />
+  </claim>
+  <outcome value="complete" />
+  <careTeam>
+    <sequence value="1" />
+    <provider>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001b8" />
+    </provider>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claimcareteamrole" />
+        <code value="primary" />
+        <display value="Primary Care Practitioner" />
+      </coding>
+    </role>
+  </careTeam>
+  <diagnosis>
+    <sequence value="1" />
+    <diagnosisReference>
+      <reference value="urn:uuid:184d2d55-5379-4502-bf46-34170f44b5ed" />
+    </diagnosisReference>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-diagnosistype" />
+        <code value="principal" />
+      </coding>
+    </type>
+  </diagnosis>
+  <insurance>
+    <focal value="true" />
+    <coverage>
+      <reference value="#coverage" />
+      <display value="UnitedHealthcare" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd" />
+        <code value="1" />
+        <display value="Medical care" />
+      </coding>
+    </category>
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="185345009" />
+        <display value="Encounter for symptom" />
+      </coding>
+      <text value="Encounter for symptom" />
+    </productOrService>
+    <servicedPeriod>
+      <start value="2013-04-21T21:10:37-04:00" />
+      <end value="2013-04-21T21:25:37-04:00" />
+    </servicedPeriod>
+    <locationCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-serviceplace" />
+        <code value="21" />
+        <display value="Inpatient Hospital" />
+      </coding>
+    </locationCodeableConcept>
+    <encounter>
+      <reference value="urn:uuid:731f1717-4cf8-4f8e-bdb3-7d30b7330e33" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <diagnosisSequence value="1" />
+    <category>
+      <coding>
+        <system value="https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd" />
+        <code value="1" />
+        <display value="Medical care" />
+      </coding>
+    </category>
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="444814009" />
+        <display value="Viral sinusitis (disorder)" />
+      </coding>
+      <text value="Viral sinusitis (disorder)" />
+    </productOrService>
+    <servicedPeriod>
+      <start value="2013-04-21T21:10:37-04:00" />
+      <end value="2013-04-21T21:25:37-04:00" />
+    </servicedPeriod>
+    <locationCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-serviceplace" />
+        <code value="21" />
+        <display value="Inpatient Hospital" />
+      </coding>
+    </locationCodeableConcept>
+  </item>
+  <total>
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/adjudication" />
+        <code value="submitted" />
+        <display value="Submitted Amount" />
+      </coding>
+      <text value="Submitted Amount" />
+    </category>
+    <amount>
+      <value value="129.16" />
+      <currency value="USD" />
+    </amount>
+  </total>
+  <payment>
+    <amount>
+      <value value="0.0" />
+      <currency value="USD" />
+    </amount>
+  </payment>
+</ExplanationOfBenefit>

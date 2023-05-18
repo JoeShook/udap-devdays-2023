@@ -1,0 +1,38 @@
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="e51af222b7994275be406940e59ff110" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:08.5742043-07:00" />
+  </meta>
+  <status value="completed" />
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="117015009" />
+      <display value="Throat culture (procedure)" />
+    </coding>
+    <text value="Throat culture (procedure)" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:d5d42d5e-721f-4da6-b33f-be0c03eb9c25" />
+  </encounter>
+  <performedPeriod>
+    <start value="2016-06-14T08:41:34-04:00" />
+    <end value="2016-06-14T08:56:34-04:00" />
+  </performedPeriod>
+  <reasonReference>
+    <reference value="urn:uuid:fdfdf209-04b1-4924-9e6e-fd380206ef79" />
+    <display value="Acute viral pharyngitis (disorder)" />
+  </reasonReference>
+  <reasonReference>
+    <reference value="urn:uuid:2b9cd20f-1bdb-4d06-b0be-64727cedbeed" />
+    <display value="Acute viral pharyngitis (disorder)" />
+  </reasonReference>
+  <reasonReference>
+    <reference value="urn:uuid:09eedc0b-8bb1-4245-bf24-b0fb434fb306" />
+    <display value="Acute viral pharyngitis (disorder)" />
+  </reasonReference>
+</Procedure>

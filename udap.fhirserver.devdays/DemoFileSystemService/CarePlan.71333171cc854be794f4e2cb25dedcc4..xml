@@ -1,0 +1,81 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="71333171cc854be794f4e2cb25dedcc4" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:12.7540297-07:00" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">Care Plan for Self care.<br />Activities: <ul><li>Self care</li><li>Self care</li><li>Self care</li></ul></div>
+  </text>
+  <status value="active" />
+  <intent value="order" />
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="326051000000105" />
+      <display value="Self care" />
+    </coding>
+    <text value="Self care" />
+  </category>
+  <subject>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:d2d6d96e-a9ea-47ba-81c7-b67cfb6704f3" />
+  </encounter>
+  <period>
+    <start value="1995-09-23T21:23:12-04:00" />
+  </period>
+  <careTeam>
+    <reference value="urn:uuid:0116e384-f29e-4a03-bf93-507e98b34d23" />
+  </careTeam>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="409002" />
+          <display value="Food allergy diet" />
+        </coding>
+        <text value="Food allergy diet" />
+      </code>
+      <status value="in-progress" />
+      <location>
+        <display value="MARLBOROUGH HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="58332002" />
+          <display value="Allergy education" />
+        </coding>
+        <text value="Allergy education" />
+      </code>
+      <status value="in-progress" />
+      <location>
+        <display value="MARLBOROUGH HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="58332002" />
+          <display value="Allergy education" />
+        </coding>
+        <text value="Allergy education" />
+      </code>
+      <status value="in-progress" />
+      <location>
+        <display value="MARLBOROUGH HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+</CarePlan>

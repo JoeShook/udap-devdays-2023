@@ -1,0 +1,189 @@
+<ExplanationOfBenefit xmlns="http://hl7.org/fhir">
+  <id value="73b493b54baa4f7c949cbe5bb4b4e4ee" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:13.3830874-07:00" />
+  </meta>
+  <contained>
+    <ServiceRequest>
+      <id value="referral" />
+      <status value="completed" />
+      <intent value="order" />
+      <subject>
+        <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+      </subject>
+      <requester>
+        <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000000be" />
+      </requester>
+      <performer>
+        <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000000be" />
+      </performer>
+    </ServiceRequest>
+  </contained>
+  <contained>
+    <Coverage>
+      <id value="coverage" />
+      <status value="active" />
+      <type>
+        <text value="NO_INSURANCE" />
+      </type>
+      <beneficiary>
+        <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+      </beneficiary>
+      <payor>
+        <display value="NO_INSURANCE" />
+      </payor>
+    </Coverage>
+  </contained>
+  <identifier>
+    <system value="https://bluebutton.cms.gov/resources/variables/clm_id" />
+    <value value="0dfcbe4c-2c7d-4782-bdaa-dc2b7144f26e" />
+  </identifier>
+  <identifier>
+    <system value="https://bluebutton.cms.gov/resources/identifier/claim-group" />
+    <value value="99999999999" />
+  </identifier>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+  </patient>
+  <billablePeriod>
+    <start value="2011-04-02T22:23:12-04:00" />
+    <end value="2012-04-02T22:23:12-04:00" />
+  </billablePeriod>
+  <created value="2011-04-02T22:23:12-04:00" />
+  <insurer>
+    <display value="NO_INSURANCE" />
+  </insurer>
+  <provider>
+    <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000000be" />
+  </provider>
+  <referral>
+    <reference value="#referral" />
+  </referral>
+  <claim>
+    <reference value="urn:uuid:0dfcbe4c-2c7d-4782-bdaa-dc2b7144f26e" />
+  </claim>
+  <outcome value="complete" />
+  <careTeam>
+    <sequence value="1" />
+    <provider>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000000be" />
+    </provider>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claimcareteamrole" />
+        <code value="primary" />
+        <display value="Primary Care Practitioner" />
+      </coding>
+    </role>
+  </careTeam>
+  <diagnosis>
+    <sequence value="1" />
+    <diagnosisReference>
+      <reference value="urn:uuid:841e7ee8-0daa-4714-b365-1029af874e5f" />
+    </diagnosisReference>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-diagnosistype" />
+        <code value="principal" />
+      </coding>
+    </type>
+  </diagnosis>
+  <insurance>
+    <focal value="true" />
+    <coverage>
+      <reference value="#coverage" />
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd" />
+        <code value="1" />
+        <display value="Medical care" />
+      </coding>
+    </category>
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="50849002" />
+        <display value="Emergency room admission (procedure)" />
+      </coding>
+      <text value="Emergency room admission (procedure)" />
+    </productOrService>
+    <servicedPeriod>
+      <start value="2011-04-02T21:23:12-04:00" />
+      <end value="2011-04-02T22:23:12-04:00" />
+    </servicedPeriod>
+    <locationCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-serviceplace" />
+        <code value="20" />
+        <display value="Urgent Care Facility" />
+      </coding>
+    </locationCodeableConcept>
+    <encounter>
+      <reference value="urn:uuid:4815e697-5ae1-4e06-9f00-e4995666b080" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <diagnosisSequence value="1" />
+    <category>
+      <coding>
+        <system value="https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd" />
+        <code value="1" />
+        <display value="Medical care" />
+      </coding>
+    </category>
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="44465007" />
+        <display value="Sprain of ankle" />
+      </coding>
+      <text value="Sprain of ankle" />
+    </productOrService>
+    <servicedPeriod>
+      <start value="2011-04-02T21:23:12-04:00" />
+      <end value="2011-04-02T22:23:12-04:00" />
+    </servicedPeriod>
+    <locationCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-serviceplace" />
+        <code value="20" />
+        <display value="Urgent Care Facility" />
+      </coding>
+    </locationCodeableConcept>
+  </item>
+  <total>
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/adjudication" />
+        <code value="submitted" />
+        <display value="Submitted Amount" />
+      </coding>
+      <text value="Submitted Amount" />
+    </category>
+    <amount>
+      <value value="129.16" />
+      <currency value="USD" />
+    </amount>
+  </total>
+  <payment>
+    <amount>
+      <value value="0.0" />
+      <currency value="USD" />
+    </amount>
+  </payment>
+</ExplanationOfBenefit>

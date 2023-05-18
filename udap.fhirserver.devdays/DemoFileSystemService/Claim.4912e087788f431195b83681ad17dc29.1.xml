@@ -1,0 +1,171 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="4912e087788f431195b83681ad17dc29" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:13.9898764-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+    <display value="Edgardo196 Berge125" />
+  </patient>
+  <billablePeriod>
+    <start value="2016-12-30T20:23:12-05:00" />
+    <end value="2016-12-30T20:38:12-05:00" />
+  </billablePeriod>
+  <created value="2016-12-30T20:38:12-05:00" />
+  <provider>
+    <reference value="urn:uuid:5a9ded14-4f2b-3d66-9301-02c8fb81c8fd" />
+    <display value="RELIANT MEDICAL GROUP, INC" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <supportingInfo>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:2f88eb83-f3ff-4ad3-9e43-f7c8261c578d" />
+    </valueReference>
+  </supportingInfo>
+  <supportingInfo>
+    <sequence value="2" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:1506eec3-5b66-4fbc-8c51-8514c33d035a" />
+    </valueReference>
+  </supportingInfo>
+  <supportingInfo>
+    <sequence value="3" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:6e41667d-8368-4afe-8df2-1099c3596748" />
+    </valueReference>
+  </supportingInfo>
+  <supportingInfo>
+    <sequence value="4" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:7f7476bd-94b7-4f80-b9a3-cd85f3a6be4b" />
+    </valueReference>
+  </supportingInfo>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Anthem" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="162673000" />
+        <display value="General examination of patient (procedure)" />
+      </coding>
+      <text value="General examination of patient (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:d1b67f7e-d427-49c7-9c97-214dd68bdace" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <informationSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="140" />
+        <display value="Influenza, seasonal, injectable, preservative free" />
+      </coding>
+      <text value="Influenza, seasonal, injectable, preservative free" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="3" />
+    <informationSequence value="2" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="113" />
+        <display value="Td (adult) preservative free" />
+      </coding>
+      <text value="Td (adult) preservative free" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="4" />
+    <informationSequence value="3" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="43" />
+        <display value="Hep B, adult" />
+      </coding>
+      <text value="Hep B, adult" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="5" />
+    <informationSequence value="4" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="114" />
+        <display value="meningococcal MCV4P" />
+      </coding>
+      <text value="meningococcal MCV4P" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

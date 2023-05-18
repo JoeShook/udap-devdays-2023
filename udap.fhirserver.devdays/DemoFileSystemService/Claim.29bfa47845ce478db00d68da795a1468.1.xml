@@ -1,0 +1,109 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="29bfa47845ce478db00d68da795a1468" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:20.9145742-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:73d58836-0439-4251-87d1-40e5f2f8c113" />
+    <display value="Shelia548 Sipes176" />
+  </patient>
+  <billablePeriod>
+    <start value="2019-06-05T11:39:41-04:00" />
+    <end value="2019-06-05T12:09:41-04:00" />
+  </billablePeriod>
+  <created value="2019-06-05T12:09:41-04:00" />
+  <provider>
+    <reference value="urn:uuid:56a38ca0-3e76-3ec7-8781-c0fd559345bd" />
+    <display value="PCP184847" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <supportingInfo>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:8a6904d4-07c3-4ca5-8662-790efb994247" />
+    </valueReference>
+  </supportingInfo>
+  <procedure>
+    <sequence value="1" />
+    <procedureReference>
+      <reference value="urn:uuid:99210a87-fb1e-4200-bf45-8e60a5bf65be" />
+    </procedureReference>
+  </procedure>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Blue Cross Blue Shield" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="410620009" />
+        <display value="Well child visit (procedure)" />
+      </coding>
+      <text value="Well child visit (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:6e3d2bd3-77e5-406f-8a46-702aa02ac9a2" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <informationSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="20" />
+        <display value="DTaP" />
+      </coding>
+      <text value="DTaP" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="3" />
+    <procedureSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="430193006" />
+        <display value="Medication Reconciliation (procedure)" />
+      </coding>
+      <text value="Medication Reconciliation (procedure)" />
+    </productOrService>
+    <net>
+      <value value="524.51" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

@@ -1,0 +1,30 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="49b06863044b40ed9d76dbefd14c8edb" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:19.8088218-07:00" />
+  </meta>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi" />
+    <value value="58170" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Keeling57" />
+    <given value="Yoko498" />
+    <prefix value="Dr." />
+  </name>
+  <telecom>
+    <system value="email" />
+    <value value="Yoko498.Keeling57@example.com" />
+    <use value="work" />
+  </telecom>
+  <address>
+    <line value="19 BRIDLE PATH RD" />
+    <city value="LYNN" />
+    <state value="MA" />
+    <postalCode value="01904-1260" />
+    <country value="US" />
+  </address>
+  <gender value="female" />
+</Practitioner>

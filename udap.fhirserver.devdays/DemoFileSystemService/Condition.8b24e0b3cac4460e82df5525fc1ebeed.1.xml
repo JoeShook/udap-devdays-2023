@@ -1,0 +1,35 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="8b24e0b3cac4460e82df5525fc1ebeed" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:17.9317768-07:00" />
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+      <code value="active" />
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+      <code value="confirmed" />
+    </coding>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="110030002" />
+      <display value="Concussion injury of brain" />
+    </coding>
+    <text value="Concussion injury of brain" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:84214c96-dad0-4b63-ad9b-589246ef432d" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:89e11db5-83ce-43d0-b0cc-c3b075177643" />
+  </encounter>
+  <onsetDateTime value="1999-11-03T11:10:52-05:00" />
+  <recordedDate value="1999-11-03T11:10:52-05:00" />
+</Condition>

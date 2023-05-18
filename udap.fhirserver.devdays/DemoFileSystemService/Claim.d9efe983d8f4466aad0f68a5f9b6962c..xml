@@ -1,0 +1,109 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="d9efe983d8f4466aad0f68a5f9b6962c" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.7100484-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+    <display value="Ray930 Waters156" />
+  </patient>
+  <billablePeriod>
+    <start value="2010-08-28T08:24:07-04:00" />
+    <end value="2010-08-28T08:39:07-04:00" />
+  </billablePeriod>
+  <created value="2010-08-28T08:39:07-04:00" />
+  <provider>
+    <reference value="urn:uuid:3bd5eda0-16da-3ba5-8500-4dfd6ae118b8" />
+    <display value="NORWOOD HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <supportingInfo>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:effb44d4-7f88-463f-bad8-565b8dde8bcd" />
+    </valueReference>
+  </supportingInfo>
+  <procedure>
+    <sequence value="1" />
+    <procedureReference>
+      <reference value="urn:uuid:ffd84027-6762-41f0-9c18-593eb2095738" />
+    </procedureReference>
+  </procedure>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Blue Cross Blue Shield" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="185349003" />
+        <display value="Encounter for check up (procedure)" />
+      </coding>
+      <text value="Encounter for check up (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:c94ae7db-792f-4aff-b09a-483155d1f949" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <informationSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="140" />
+        <display value="Influenza, seasonal, injectable, preservative free" />
+      </coding>
+      <text value="Influenza, seasonal, injectable, preservative free" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="3" />
+    <procedureSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="430193006" />
+        <display value="Medication Reconciliation (procedure)" />
+      </coding>
+      <text value="Medication Reconciliation (procedure)" />
+    </productOrService>
+    <net>
+      <value value="544.88" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

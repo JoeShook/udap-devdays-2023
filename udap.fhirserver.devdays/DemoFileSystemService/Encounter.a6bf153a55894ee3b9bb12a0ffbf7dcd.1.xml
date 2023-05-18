@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="a6bf153a55894ee3b9bb12a0ffbf7dcd" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:12.2907594-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="162673000" />
+      <display value="General examination of patient (procedure)" />
+    </coding>
+    <text value="General examination of patient (procedure)" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:8cb876ad-9376-4685-827d-3f947a144abe" />
+    <display value="Mr. Christoper325 Ritchie586" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000305c" />
+      <display value="Dr. Bo157 Koss676" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2015-10-19T17:32:50-04:00" />
+    <end value="2015-10-19T17:47:50-04:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:e8eb26cc-0992-3470-b297-58a425631b10" />
+    <display value="PCP18051" />
+  </serviceProvider>
+</Encounter>

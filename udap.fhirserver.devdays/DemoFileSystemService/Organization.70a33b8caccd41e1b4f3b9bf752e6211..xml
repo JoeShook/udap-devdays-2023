@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="70a33b8caccd41e1b4f3b9bf752e6211" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:15.7904637-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="dc4ea7a8-6193-304e-9f3a-d59060321577" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="PCP7947" />
+  <telecom>
+    <system value="phone" />
+    <value value="617-477-4208" />
+  </telecom>
+  <address>
+    <line value="111 PERKINS ST" />
+    <city value="JAMAICA PLAIN" />
+    <state value="MA" />
+    <postalCode value="02130-4323" />
+    <country value="US" />
+  </address>
+</Organization>

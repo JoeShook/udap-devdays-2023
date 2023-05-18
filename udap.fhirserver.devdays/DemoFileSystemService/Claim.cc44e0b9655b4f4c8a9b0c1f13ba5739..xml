@@ -1,0 +1,109 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="cc44e0b9655b4f4c8a9b0c1f13ba5739" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:14.8555211-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+    <display value="Jarod376 Wehner319" />
+  </patient>
+  <billablePeriod>
+    <start value="2012-12-25T02:47:35-05:00" />
+    <end value="2012-12-25T03:17:35-05:00" />
+  </billablePeriod>
+  <created value="2012-12-25T03:17:35-05:00" />
+  <provider>
+    <reference value="urn:uuid:5130de58-f582-3d17-a71a-da8f29418409" />
+    <display value="WESTFORD INTERNAL MEDICINE PC" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <supportingInfo>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:9087121f-a69e-4e01-afce-4d94d0505bf1" />
+    </valueReference>
+  </supportingInfo>
+  <procedure>
+    <sequence value="1" />
+    <procedureReference>
+      <reference value="urn:uuid:3a2ffdd9-9803-4525-bbbc-dfe72ae798ca" />
+    </procedureReference>
+  </procedure>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Cigna Health" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="162673000" />
+        <display value="General examination of patient (procedure)" />
+      </coding>
+      <text value="General examination of patient (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:7701437d-a793-43e8-9d86-a8a1ead0f0e6" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <informationSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="140" />
+        <display value="Influenza, seasonal, injectable, preservative free" />
+      </coding>
+      <text value="Influenza, seasonal, injectable, preservative free" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="3" />
+    <procedureSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="430193006" />
+        <display value="Medication Reconciliation (procedure)" />
+      </coding>
+      <text value="Medication Reconciliation (procedure)" />
+    </productOrService>
+    <net>
+      <value value="742.05" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

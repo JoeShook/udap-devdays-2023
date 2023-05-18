@@ -1,0 +1,45 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="7b33006c479644938c8514b13af43169" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:16.0607089-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="185345009" />
+      <display value="Encounter for symptom" />
+    </coding>
+    <text value="Encounter for symptom" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:eed483f7-c02a-4a74-bbed-1ca1029765f1" />
+    <display value="Matilde468 Jakubowski832" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001e0" />
+      <display value="Dr. Darin74 Hermiston71" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2019-08-17T18:56:16-04:00" />
+    <end value="2019-08-17T19:11:16-04:00" />
+  </period>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="65363002" />
+      <display value="Otitis media" />
+    </coding>
+  </reasonCode>
+  <serviceProvider>
+    <reference value="urn:uuid:d733d4a9-080d-3593-b910-2366e652b7ea" />
+    <display value="BRIGHAM AND WOMEN'S FAULKNER HOSPITAL" />
+  </serviceProvider>
+</Encounter>

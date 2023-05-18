@@ -1,0 +1,87 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="5d75e9abbbe04cf2af62a3f9c1b4c8db" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.5141524-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+    <display value="Byron202 Vandervort697" />
+  </patient>
+  <billablePeriod>
+    <start value="2010-04-03T06:12:24-04:00" />
+    <end value="2010-04-03T06:27:24-04:00" />
+  </billablePeriod>
+  <created value="2010-04-03T06:27:24-04:00" />
+  <provider>
+    <reference value="urn:uuid:2567a7b5-eed4-3251-9936-8cd456261e24" />
+    <display value="PCP161397" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <supportingInfo>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:e60b7d17-f2b4-4c65-b810-b1d23a1de527" />
+    </valueReference>
+  </supportingInfo>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="162673000" />
+        <display value="General examination of patient (procedure)" />
+      </coding>
+      <text value="General examination of patient (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:8de353d1-61be-42e5-a3bc-4ec44e1c2cea" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <informationSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="140" />
+        <display value="Influenza, seasonal, injectable, preservative free" />
+      </coding>
+      <text value="Influenza, seasonal, injectable, preservative free" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

@@ -1,0 +1,59 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="7a12616df7464e548d291f72ee6de958" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:08.5015114-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+    <display value="Alejandro916 Treutel973" />
+  </patient>
+  <billablePeriod>
+    <start value="2015-06-15T08:41:34-04:00" />
+    <end value="2015-06-15T08:56:34-04:00" />
+  </billablePeriod>
+  <created value="2015-06-15T08:56:34-04:00" />
+  <provider>
+    <reference value="urn:uuid:69176529-fd1f-3b3f-abce-a0a3626769eb" />
+    <display value="MOUNT AUBURN HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Cigna Health" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="185349003" />
+        <display value="Encounter for 'check-up'" />
+      </coding>
+      <text value="Encounter for 'check-up'" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:59f89e5f-9352-4a8a-9641-18fb599250f9" />
+    </encounter>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

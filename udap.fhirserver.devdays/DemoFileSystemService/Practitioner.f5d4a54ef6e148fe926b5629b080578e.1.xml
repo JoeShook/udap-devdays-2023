@@ -1,0 +1,30 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="f5d4a54ef6e148fe926b5629b080578e" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:15.7968572-07:00" />
+  </meta>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi" />
+    <value value="5600" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Lang846" />
+    <given value="Delana41" />
+    <prefix value="Dr." />
+  </name>
+  <telecom>
+    <system value="email" />
+    <value value="Delana41.Lang846@example.com" />
+    <use value="work" />
+  </telecom>
+  <address>
+    <line value="111 PERKINS ST" />
+    <city value="JAMAICA PLAIN" />
+    <state value="MA" />
+    <postalCode value="02130-4323" />
+    <country value="US" />
+  </address>
+  <gender value="female" />
+</Practitioner>

@@ -1,0 +1,24 @@
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="d3946fabeaeb4235919ec8c34e721391" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:20.3797216-07:00" />
+  </meta>
+  <status value="completed" />
+  <vaccineCode>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/cvx" />
+      <code value="20" />
+      <display value="DTaP" />
+    </coding>
+    <text value="DTaP" />
+  </vaccineCode>
+  <patient>
+    <reference value="urn:uuid:73d58836-0439-4251-87d1-40e5f2f8c113" />
+  </patient>
+  <encounter>
+    <reference value="urn:uuid:c135fc72-e70e-4274-9b71-b52032459ed1" />
+  </encounter>
+  <occurrenceDateTime value="2018-06-06T11:39:41-04:00" />
+  <primarySource value="true" />
+</Immunization>

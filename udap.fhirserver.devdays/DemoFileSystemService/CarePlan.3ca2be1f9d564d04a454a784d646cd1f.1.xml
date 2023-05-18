@@ -1,0 +1,85 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="3ca2be1f9d564d04a454a784d646cd1f" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:08.4451759-07:00" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">Care Plan for Burn care.<br />Activities: <ul><li>Burn care</li><li>Burn care</li><li>Burn care</li></ul><br />Care plan is meant to treat First degree burn.</div>
+  </text>
+  <status value="completed" />
+  <intent value="order" />
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="133901003" />
+      <display value="Burn care" />
+    </coding>
+    <text value="Burn care" />
+  </category>
+  <subject>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:765b7916-94c8-4cc5-9cf7-910c78ced155" />
+  </encounter>
+  <period>
+    <start value="2015-05-11T08:41:34-04:00" />
+    <end value="2015-06-15T08:41:34-04:00" />
+  </period>
+  <careTeam>
+    <reference value="urn:uuid:153adffe-65ca-477d-972b-eca950d9fecb" />
+  </careTeam>
+  <addresses>
+    <reference value="urn:uuid:7455a3b4-549c-4c1f-9aec-aa3d056d334b" />
+  </addresses>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="385949008" />
+          <display value="Dressing change management" />
+        </coding>
+        <text value="Dressing change management" />
+      </code>
+      <status value="completed" />
+      <location>
+        <display value="MOUNT AUBURN HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="440381005" />
+          <display value="Behavior to prevent sun exposure" />
+        </coding>
+        <text value="Behavior to prevent sun exposure" />
+      </code>
+      <status value="completed" />
+      <location>
+        <display value="MOUNT AUBURN HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="439830001" />
+          <display value="Behavior to prevent infection" />
+        </coding>
+        <text value="Behavior to prevent infection" />
+      </code>
+      <status value="completed" />
+      <location>
+        <display value="MOUNT AUBURN HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+</CarePlan>

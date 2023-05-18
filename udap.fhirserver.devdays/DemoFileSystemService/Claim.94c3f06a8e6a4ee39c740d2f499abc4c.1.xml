@@ -1,0 +1,61 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="94c3f06a8e6a4ee39c740d2f499abc4c" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:15.508824-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="pharmacy" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+  </patient>
+  <billablePeriod>
+    <start value="2018-06-13T03:47:35-04:00" />
+    <end value="2018-06-13T04:02:35-04:00" />
+  </billablePeriod>
+  <created value="2018-06-13T04:02:35-04:00" />
+  <provider>
+    <reference value="urn:uuid:ac8356a5-78f8-3a63-8a1e-59e832fd54e7" />
+    <display value="NASHOBA VALLEY MEDICAL CENTER" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <prescription>
+    <reference value="urn:uuid:e02e726b-1745-4d8e-aec9-1c95815ece52" />
+  </prescription>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="185345009" />
+        <display value="Encounter for symptom" />
+      </coding>
+      <text value="Encounter for symptom" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:bd456dcf-43d8-4036-8a74-bf35630cc594" />
+    </encounter>
+  </item>
+  <total>
+    <value value="6.09" />
+    <currency value="USD" />
+  </total>
+</Claim>

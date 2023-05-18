@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="e992fd54c8ff41d9b81eb4bda44a2883" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:17.1928152-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="vital-signs" />
+      <display value="vital-signs" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="72514-3" />
+      <display value="Pain severity - 0-10 verbal numeric rating [Score] - Reported" />
+    </coding>
+    <text value="Pain severity - 0-10 verbal numeric rating [Score] - Reported" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:84214c96-dad0-4b63-ad9b-589246ef432d" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:276bca70-2daf-4e67-b344-e0d77948925e" />
+  </encounter>
+  <effectiveDateTime value="1997-09-26T12:10:52-04:00" />
+  <issued value="1997-09-26T12:10:52.368-04:00" />
+  <valueQuantity>
+    <value value="1.687728480271868" />
+    <unit value="{score}" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="{score}" />
+  </valueQuantity>
+</Observation>

@@ -1,0 +1,45 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="dd48522c9c9c4a8e92b03dacf1b499bf" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.4393092-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="185345009" />
+      <display value="Encounter for symptom" />
+    </coding>
+    <text value="Encounter for symptom" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+    <display value="Mr. Ray930 Waters156" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001ea" />
+      <display value="Dr. Carmina141 Oberbrunner298" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2010-08-13T08:24:07-04:00" />
+    <end value="2010-08-13T08:39:07-04:00" />
+  </period>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="43878008" />
+      <display value="Streptococcal sore throat (disorder)" />
+    </coding>
+  </reasonCode>
+  <serviceProvider>
+    <reference value="urn:uuid:3bd5eda0-16da-3ba5-8500-4dfd6ae118b8" />
+    <display value="NORWOOD HOSPITAL" />
+  </serviceProvider>
+</Encounter>

@@ -1,0 +1,69 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="68033b76d71b40c8b39fc520d8b0c2dc" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.9667094-07:00" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">Care Plan for Physical therapy procedure.<br />Activities: <ul><li>Physical therapy procedure</li><li>Physical therapy procedure</li></ul><br />Care plan is meant to treat Sprain of wrist.</div>
+  </text>
+  <status value="completed" />
+  <intent value="order" />
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="91251008" />
+      <display value="Physical therapy procedure" />
+    </coding>
+    <text value="Physical therapy procedure" />
+  </category>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:1cae9510-21ad-4e57-a139-3dfa22a0a9d9" />
+  </encounter>
+  <period>
+    <start value="2014-12-08T05:12:24-05:00" />
+    <end value="2014-12-29T05:12:24-05:00" />
+  </period>
+  <careTeam>
+    <reference value="urn:uuid:5b3628d0-5623-43e4-99a9-16dfec4fda4f" />
+  </careTeam>
+  <addresses>
+    <reference value="urn:uuid:ae75a282-ddde-4119-a09c-501f0624a432" />
+  </addresses>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="229586001" />
+          <display value="Rest, ice, compression and elevation treatment programme" />
+        </coding>
+        <text value="Rest, ice, compression and elevation treatment programme" />
+      </code>
+      <status value="completed" />
+      <location>
+        <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="229070002" />
+          <display value="Stretching exercises" />
+        </coding>
+        <text value="Stretching exercises" />
+      </code>
+      <status value="completed" />
+      <location>
+        <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+</CarePlan>

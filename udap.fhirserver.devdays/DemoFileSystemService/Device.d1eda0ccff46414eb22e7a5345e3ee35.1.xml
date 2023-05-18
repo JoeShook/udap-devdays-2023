@@ -1,0 +1,32 @@
+<Device xmlns="http://hl7.org/fhir">
+  <id value="d1eda0ccff46414eb22e7a5345e3ee35" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.2359032-07:00" />
+  </meta>
+  <udiCarrier>
+    <deviceIdentifier value="19598602379714" />
+    <carrierHRF value="(01)19598602379714(11)901020(17)151104(10)1398316178(21)766778188099375" />
+  </udiCarrier>
+  <status value="active" />
+  <distinctIdentifier value="19598602379714" />
+  <manufactureDate value="1990-10-20T08:24:07-04:00" />
+  <expirationDate value="2015-11-04T07:24:07-05:00" />
+  <lotNumber value="1398316178" />
+  <serialNumber value="766778188099375" />
+  <deviceName>
+    <name value="Implantable defibrillator, device (physical object)" />
+    <type value="user-friendly-name" />
+  </deviceName>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="72506001" />
+      <display value="Implantable defibrillator, device (physical object)" />
+    </coding>
+    <text value="Implantable defibrillator, device (physical object)" />
+  </type>
+  <patient>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </patient>
+</Device>

@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="6cc1d490139e4009b4655756c35a4e55" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:11.7722724-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="49318f80-bd8b-3fc7-a096-ac43088b0c12" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="COOLEY DICKINSON HOSPITAL INC,THE" />
+  <telecom>
+    <system value="phone" />
+    <value value="4135822000" />
+  </telecom>
+  <address>
+    <line value="30 LOCUST STREET" />
+    <city value="NORTHAMPTON" />
+    <state value="MA" />
+    <postalCode value="01060" />
+    <country value="US" />
+  </address>
+</Organization>

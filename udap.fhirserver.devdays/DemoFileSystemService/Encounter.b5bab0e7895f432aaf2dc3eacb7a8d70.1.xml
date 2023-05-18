@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="b5bab0e7895f432aaf2dc3eacb7a8d70" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.5078809-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="702927004" />
+      <display value="Urgent care clinic (procedure)" />
+    </coding>
+    <text value="Urgent care clinic (procedure)" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+    <display value="Mr. Ray930 Waters156" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-000000016d32" />
+      <display value="Dr. Mira443 Pacocha935" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2010-08-21T08:24:07-04:00" />
+    <end value="2010-08-21T08:39:07-04:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:b06770b5-b695-3c1a-9685-ae2223966ff7" />
+    <display value="GENERAL HEALTH CARE" />
+  </serviceProvider>
+</Encounter>

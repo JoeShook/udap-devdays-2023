@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="d4a9a6f721484f56bae1f7efe868d965" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.6092448-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="4544-3" />
+      <display value="Hematocrit [Volume Fraction] of Blood by Automated count" />
+    </coding>
+    <text value="Hematocrit [Volume Fraction] of Blood by Automated count" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:c94ae7db-792f-4aff-b09a-483155d1f949" />
+  </encounter>
+  <effectiveDateTime value="2010-08-28T08:24:07-04:00" />
+  <issued value="2010-08-28T08:24:07.775-04:00" />
+  <valueQuantity>
+    <value value="36.111193758881946" />
+    <unit value="%" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="%" />
+  </valueQuantity>
+</Observation>

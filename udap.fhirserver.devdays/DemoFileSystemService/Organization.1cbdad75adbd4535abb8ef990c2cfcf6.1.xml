@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="1cbdad75adbd4535abb8ef990c2cfcf6" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.4165302-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="2567a7b5-eed4-3251-9936-8cd456261e24" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="PCP161397" />
+  <telecom>
+    <system value="phone" />
+    <value value="781-982-3118" />
+  </telecom>
+  <address>
+    <line value="80 N AVE" />
+    <city value="ABINGTON" />
+    <state value="MA" />
+    <postalCode value="02351-1707" />
+    <country value="US" />
+  </address>
+</Organization>

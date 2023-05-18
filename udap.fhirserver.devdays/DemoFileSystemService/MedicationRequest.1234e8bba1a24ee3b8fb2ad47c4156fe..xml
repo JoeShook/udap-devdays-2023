@@ -1,0 +1,32 @@
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="1234e8bba1a24ee3b8fb2ad47c4156fe" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:16.3224336-07:00" />
+  </meta>
+  <status value="stopped" />
+  <intent value="order" />
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+      <code value="198405" />
+      <display value="Ibuprofen 100 MG Oral Tablet" />
+    </coding>
+    <text value="Ibuprofen 100 MG Oral Tablet" />
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="urn:uuid:eed483f7-c02a-4a74-bbed-1ca1029765f1" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:854222fa-1e0b-44a1-9c74-1cce40ca1ce2" />
+  </encounter>
+  <authoredOn value="2019-08-17T18:56:16-04:00" />
+  <requester>
+    <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001e0" />
+    <display value="Dr. Darin74 Hermiston71" />
+  </requester>
+  <dosageInstruction>
+    <sequence value="1" />
+    <asNeededBoolean value="true" />
+  </dosageInstruction>
+</MedicationRequest>

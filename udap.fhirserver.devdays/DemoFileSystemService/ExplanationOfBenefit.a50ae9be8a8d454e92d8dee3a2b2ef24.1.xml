@@ -1,0 +1,147 @@
+<ExplanationOfBenefit xmlns="http://hl7.org/fhir">
+  <id value="a50ae9be8a8d454e92d8dee3a2b2ef24" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:08.5136356-07:00" />
+  </meta>
+  <contained>
+    <ServiceRequest>
+      <id value="referral" />
+      <status value="completed" />
+      <intent value="order" />
+      <subject>
+        <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+      </subject>
+      <requester>
+        <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000000a" />
+      </requester>
+      <performer>
+        <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000000a" />
+      </performer>
+    </ServiceRequest>
+  </contained>
+  <contained>
+    <Coverage>
+      <id value="coverage" />
+      <status value="active" />
+      <type>
+        <text value="Cigna Health" />
+      </type>
+      <beneficiary>
+        <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+      </beneficiary>
+      <payor>
+        <display value="Cigna Health" />
+      </payor>
+    </Coverage>
+  </contained>
+  <identifier>
+    <system value="https://bluebutton.cms.gov/resources/variables/clm_id" />
+    <value value="0686080d-604b-4931-83bc-1b5e56c3a4ec" />
+  </identifier>
+  <identifier>
+    <system value="https://bluebutton.cms.gov/resources/identifier/claim-group" />
+    <value value="99999999999" />
+  </identifier>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+  </patient>
+  <billablePeriod>
+    <start value="2015-06-15T08:56:34-04:00" />
+    <end value="2016-06-15T08:56:34-04:00" />
+  </billablePeriod>
+  <created value="2015-06-15T08:56:34-04:00" />
+  <insurer>
+    <display value="Cigna Health" />
+  </insurer>
+  <provider>
+    <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000000a" />
+  </provider>
+  <referral>
+    <reference value="#referral" />
+  </referral>
+  <claim>
+    <reference value="urn:uuid:0686080d-604b-4931-83bc-1b5e56c3a4ec" />
+  </claim>
+  <outcome value="complete" />
+  <careTeam>
+    <sequence value="1" />
+    <provider>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000000a" />
+    </provider>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claimcareteamrole" />
+        <code value="primary" />
+        <display value="Primary Care Practitioner" />
+      </coding>
+    </role>
+  </careTeam>
+  <insurance>
+    <focal value="true" />
+    <coverage>
+      <reference value="#coverage" />
+      <display value="Cigna Health" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd" />
+        <code value="1" />
+        <display value="Medical care" />
+      </coding>
+    </category>
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="185349003" />
+        <display value="Encounter for 'check-up'" />
+      </coding>
+      <text value="Encounter for 'check-up'" />
+    </productOrService>
+    <servicedPeriod>
+      <start value="2015-06-15T08:41:34-04:00" />
+      <end value="2015-06-15T08:56:34-04:00" />
+    </servicedPeriod>
+    <locationCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-serviceplace" />
+        <code value="21" />
+        <display value="Inpatient Hospital" />
+      </coding>
+    </locationCodeableConcept>
+    <encounter>
+      <reference value="urn:uuid:59f89e5f-9352-4a8a-9641-18fb599250f9" />
+    </encounter>
+  </item>
+  <total>
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/adjudication" />
+        <code value="submitted" />
+        <display value="Submitted Amount" />
+      </coding>
+      <text value="Submitted Amount" />
+    </category>
+    <amount>
+      <value value="129.16" />
+      <currency value="USD" />
+    </amount>
+  </total>
+  <payment>
+    <amount>
+      <value value="0.0" />
+      <currency value="USD" />
+    </amount>
+  </payment>
+</ExplanationOfBenefit>

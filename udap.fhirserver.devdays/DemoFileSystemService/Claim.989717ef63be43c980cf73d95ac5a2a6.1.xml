@@ -1,0 +1,77 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="989717ef63be43c980cf73d95ac5a2a6" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:21.3508982-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:d44bc588-587f-409f-b955-6541be165ac5" />
+    <display value="Young120 Denesik803" />
+  </patient>
+  <billablePeriod>
+    <start value="2013-01-11T20:10:37-05:00" />
+    <end value="2013-01-11T20:25:37-05:00" />
+  </billablePeriod>
+  <created value="2013-01-11T20:25:37-05:00" />
+  <provider>
+    <reference value="urn:uuid:12c9daf5-a29c-36c9-ac55-28972463e566" />
+    <display value="BETH ISRAEL DEACONESS HOSPITAL-MILTON INC" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <diagnosis>
+    <sequence value="1" />
+    <diagnosisReference>
+      <reference value="urn:uuid:71834544-24fa-463f-be07-2abb2e47dc82" />
+    </diagnosisReference>
+  </diagnosis>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="UnitedHealthcare" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="185345009" />
+        <display value="Encounter for symptom" />
+      </coding>
+      <text value="Encounter for symptom" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:179e2f1f-75f8-452b-8750-92e805e85a51" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <diagnosisSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="43878008" />
+        <display value="Streptococcal sore throat (disorder)" />
+      </coding>
+      <text value="Streptococcal sore throat (disorder)" />
+    </productOrService>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

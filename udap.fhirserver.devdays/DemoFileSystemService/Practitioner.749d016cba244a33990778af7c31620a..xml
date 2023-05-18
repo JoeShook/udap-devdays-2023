@@ -1,0 +1,30 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="749d016cba244a33990778af7c31620a" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:11.7231706-07:00" />
+  </meta>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi" />
+    <value value="12380" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Koss676" />
+    <given value="Bo157" />
+    <prefix value="Dr." />
+  </name>
+  <telecom>
+    <system value="email" />
+    <value value="Bo157.Koss676@example.com" />
+    <use value="work" />
+  </telecom>
+  <address>
+    <line value="104 RUSSELL ST" />
+    <city value="HADLEY" />
+    <state value="MA" />
+    <postalCode value="01035-9570" />
+    <country value="US" />
+  </address>
+  <gender value="male" />
+</Practitioner>

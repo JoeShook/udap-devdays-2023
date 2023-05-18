@@ -1,0 +1,77 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="63272949c4a04587afa4896199583906" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:11.4357236-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+    <display value="Byron202 Vandervort697" />
+  </patient>
+  <billablePeriod>
+    <start value="2019-05-15T06:12:24-04:00" />
+    <end value="2019-05-15T06:27:24-04:00" />
+  </billablePeriod>
+  <created value="2019-05-15T06:27:24-04:00" />
+  <provider>
+    <reference value="urn:uuid:c44f361c-2efb-3050-8f97-0354a12e2920" />
+    <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <diagnosis>
+    <sequence value="1" />
+    <diagnosisReference>
+      <reference value="urn:uuid:c498adb0-08b0-454f-9dae-12bc011744e7" />
+    </diagnosisReference>
+  </diagnosis>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="185345009" />
+        <display value="Encounter for symptom" />
+      </coding>
+      <text value="Encounter for symptom" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:30a459d9-447b-4e27-986f-d7b695da8f45" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <diagnosisSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="195662009" />
+        <display value="Acute viral pharyngitis (disorder)" />
+      </coding>
+      <text value="Acute viral pharyngitis (disorder)" />
+    </productOrService>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

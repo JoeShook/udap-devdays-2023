@@ -1,0 +1,77 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="498c692f1ae84104b34fc5471be526f9" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:11.7456796-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:8cb876ad-9376-4685-827d-3f947a144abe" />
+    <display value="Christoper325 Ritchie586" />
+  </patient>
+  <billablePeriod>
+    <start value="1991-12-02T16:32:50-05:00" />
+    <end value="1991-12-02T16:47:50-05:00" />
+  </billablePeriod>
+  <created value="1991-12-02T16:47:50-05:00" />
+  <provider>
+    <reference value="urn:uuid:e8eb26cc-0992-3470-b297-58a425631b10" />
+    <display value="PCP18051" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <diagnosis>
+    <sequence value="1" />
+    <diagnosisReference>
+      <reference value="urn:uuid:01d63c26-f655-4e13-b1c7-f4237c704a9a" />
+    </diagnosisReference>
+  </diagnosis>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="162673000" />
+        <display value="General examination of patient (procedure)" />
+      </coding>
+      <text value="General examination of patient (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:156b8c9f-591a-4e92-868b-6da95004f1ae" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <diagnosisSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="162864005" />
+        <display value="Body mass index 30+ - obesity (finding)" />
+      </coding>
+      <text value="Body mass index 30+ - obesity (finding)" />
+    </productOrService>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="bdfe800de0b94490bff341ec9ab759b0" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.9327356-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="785-6" />
+      <display value="MCH [Entitic mass] by Automated count" />
+    </coding>
+    <text value="MCH [Entitic mass] by Automated count" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:a311cd3b-5a18-4f5f-9cd4-5b332da15884" />
+  </encounter>
+  <effectiveDateTime value="2019-04-13T06:12:24-04:00" />
+  <issued value="2019-04-13T06:12:24.661-04:00" />
+  <valueQuantity>
+    <value value="27.86982388418352" />
+    <unit value="pg" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="pg" />
+  </valueQuantity>
+</Observation>

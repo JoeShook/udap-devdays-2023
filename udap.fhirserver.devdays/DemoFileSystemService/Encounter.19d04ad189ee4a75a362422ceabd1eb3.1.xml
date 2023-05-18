@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="19d04ad189ee4a75a362422ceabd1eb3" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:15.4476249-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="702927004" />
+      <display value="Urgent care clinic (procedure)" />
+    </coding>
+    <text value="Urgent care clinic (procedure)" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+    <display value="Mr. Jarod376 Wehner319" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-000000016c60" />
+      <display value="Dr. Isiah14 Jakubowski832" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2018-06-19T03:47:35-04:00" />
+    <end value="2018-06-19T04:02:35-04:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:7116c200-6663-3503-8314-1ee16845e5d3" />
+    <display value="SAINTS WALK-IN MEDICAL CENTER - URGENT CARE AND OCCUPATIONAL HEALTH" />
+  </serviceProvider>
+</Encounter>

@@ -1,0 +1,199 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="09225d3174f94c5e860efced8a531274" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:20.5377652-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:73d58836-0439-4251-87d1-40e5f2f8c113" />
+    <display value="Shelia548 Sipes176" />
+  </patient>
+  <billablePeriod>
+    <start value="2018-09-05T11:39:41-04:00" />
+    <end value="2018-09-05T11:54:41-04:00" />
+  </billablePeriod>
+  <created value="2018-09-05T11:54:41-04:00" />
+  <provider>
+    <reference value="urn:uuid:56a38ca0-3e76-3ec7-8781-c0fd559345bd" />
+    <display value="PCP184847" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <supportingInfo>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:3756db34-288e-4a4e-a22a-836a1feb702c" />
+    </valueReference>
+  </supportingInfo>
+  <supportingInfo>
+    <sequence value="2" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:0db9f69c-c3fe-4c0d-93cd-c6f2e35af8a0" />
+    </valueReference>
+  </supportingInfo>
+  <supportingInfo>
+    <sequence value="3" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:69b27f00-d88c-4b6d-b3d9-c4913748799f" />
+    </valueReference>
+  </supportingInfo>
+  <supportingInfo>
+    <sequence value="4" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:10921cf9-c29f-4206-8761-a0ad32d3ab3b" />
+    </valueReference>
+  </supportingInfo>
+  <supportingInfo>
+    <sequence value="5" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:405a3b5c-08e3-4910-b187-9d34c0174954" />
+    </valueReference>
+  </supportingInfo>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Blue Cross Blue Shield" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="410620009" />
+        <display value="Well child visit (procedure)" />
+      </coding>
+      <text value="Well child visit (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:2fed5808-c713-4f1f-a12a-0282902b4a11" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <informationSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="10" />
+        <display value="IPV" />
+      </coding>
+      <text value="IPV" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="3" />
+    <informationSequence value="2" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="140" />
+        <display value="Influenza, seasonal, injectable, preservative free" />
+      </coding>
+      <text value="Influenza, seasonal, injectable, preservative free" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="4" />
+    <informationSequence value="3" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="20" />
+        <display value="DTaP" />
+      </coding>
+      <text value="DTaP" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="5" />
+    <informationSequence value="4" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="133" />
+        <display value="Pneumococcal conjugate PCV 13" />
+      </coding>
+      <text value="Pneumococcal conjugate PCV 13" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="6" />
+    <informationSequence value="5" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="08" />
+        <display value="Hep B, adolescent or pediatric" />
+      </coding>
+      <text value="Hep B, adolescent or pediatric" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

@@ -1,0 +1,61 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="5dae2c09174c4ae28061e0d93b834d77" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.3389613-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="pharmacy" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </patient>
+  <billablePeriod>
+    <start value="2010-01-12T05:12:24-05:00" />
+    <end value="2010-01-12T06:28:24-05:00" />
+  </billablePeriod>
+  <created value="2010-01-12T06:28:24-05:00" />
+  <provider>
+    <reference value="urn:uuid:c44f361c-2efb-3050-8f97-0354a12e2920" />
+    <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <prescription>
+    <reference value="urn:uuid:3021ba0a-04f6-4775-98ed-3c95da92ce44" />
+  </prescription>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="50849002" />
+        <display value="Emergency room admission (procedure)" />
+      </coding>
+      <text value="Emergency room admission (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:d0643e5c-cf30-4d31-8754-38c1883ef958" />
+    </encounter>
+  </item>
+  <total>
+    <value value="5.1" />
+    <currency value="USD" />
+  </total>
+</Claim>

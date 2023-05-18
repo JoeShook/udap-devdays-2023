@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="6dd84a10fa944917bc363117d46f2a27" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:21.3240454-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="vital-signs" />
+      <display value="vital-signs" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="8331-1" />
+      <display value="Oral temperature" />
+    </coding>
+    <text value="Oral temperature" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:d44bc588-587f-409f-b955-6541be165ac5" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:179e2f1f-75f8-452b-8750-92e805e85a51" />
+  </encounter>
+  <effectiveDateTime value="2013-01-11T20:10:37-05:00" />
+  <issued value="2013-01-11T20:10:37.118-05:00" />
+  <valueQuantity>
+    <value value="38.32726552948156" />
+    <unit value="Cel" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="Cel" />
+  </valueQuantity>
+</Observation>

@@ -1,0 +1,45 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="161e5f368a9241dba1d9814533c6e991" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:21.3978384-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="185345009" />
+      <display value="Encounter for symptom" />
+    </coding>
+    <text value="Encounter for symptom" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:d44bc588-587f-409f-b955-6541be165ac5" />
+    <display value="Mr. Young120 Denesik803" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001b8" />
+      <display value="Dr. Juana825 Benavídez820" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2013-04-21T21:10:37-04:00" />
+    <end value="2013-04-21T21:25:37-04:00" />
+  </period>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="444814009" />
+      <display value="Viral sinusitis (disorder)" />
+    </coding>
+  </reasonCode>
+  <serviceProvider>
+    <reference value="urn:uuid:12c9daf5-a29c-36c9-ac55-28972463e566" />
+    <display value="BETH ISRAEL DEACONESS HOSPITAL-MILTON INC" />
+  </serviceProvider>
+</Encounter>

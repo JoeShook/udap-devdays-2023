@@ -1,0 +1,30 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="ca4f96778b4d48b785b498fa7b6197e5" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:16.6040903-07:00" />
+  </meta>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi" />
+    <value value="35180" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Kuvalis369" />
+    <given value="Merle11" />
+    <prefix value="Dr." />
+  </name>
+  <telecom>
+    <system value="email" />
+    <value value="Merle11.Kuvalis369@example.com" />
+    <use value="work" />
+  </telecom>
+  <address>
+    <line value="140 N VALLEY RD" />
+    <city value="PELHAM" />
+    <state value="MA" />
+    <postalCode value="01002-9766" />
+    <country value="US" />
+  </address>
+  <gender value="female" />
+</Practitioner>

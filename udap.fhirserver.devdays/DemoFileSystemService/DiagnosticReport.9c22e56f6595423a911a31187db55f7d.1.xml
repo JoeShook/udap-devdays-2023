@@ -1,0 +1,75 @@
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="9c22e56f6595423a911a31187db55f7d" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:13.977216-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+      <code value="LAB" />
+      <display value="Laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="58410-2" />
+      <display value="Complete blood count (hemogram) panel - Blood by Automated count" />
+    </coding>
+    <text value="Complete blood count (hemogram) panel - Blood by Automated count" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:d1b67f7e-d427-49c7-9c97-214dd68bdace" />
+  </encounter>
+  <effectiveDateTime value="2016-12-30T20:23:12-05:00" />
+  <issued value="2016-12-30T20:23:12.378-05:00" />
+  <result>
+    <reference value="urn:uuid:e9a2394f-ad92-4b2e-8507-f83f1d9b7054" />
+    <display value="Leukocytes [#/volume] in Blood by Automated count" />
+  </result>
+  <result>
+    <reference value="urn:uuid:f326e1af-0753-4bae-a51c-ee1ad012cca3" />
+    <display value="Erythrocytes [#/volume] in Blood by Automated count" />
+  </result>
+  <result>
+    <reference value="urn:uuid:b800170e-be71-425b-ad4d-eec5e01f5c6d" />
+    <display value="Hemoglobin [Mass/volume] in Blood" />
+  </result>
+  <result>
+    <reference value="urn:uuid:097760c3-c59f-435e-8b6b-f5b4073d00ee" />
+    <display value="Hematocrit [Volume Fraction] of Blood by Automated count" />
+  </result>
+  <result>
+    <reference value="urn:uuid:cef7c65a-8c49-4d77-a672-3253d1b9cc51" />
+    <display value="MCV [Entitic volume] by Automated count" />
+  </result>
+  <result>
+    <reference value="urn:uuid:4c5c555a-dabf-4c05-ae2e-1f02e0133d81" />
+    <display value="MCH [Entitic mass] by Automated count" />
+  </result>
+  <result>
+    <reference value="urn:uuid:59821a3d-227e-4d59-9731-d12f2c495d3e" />
+    <display value="MCHC [Mass/volume] by Automated count" />
+  </result>
+  <result>
+    <reference value="urn:uuid:e0d2df5e-baf8-44bb-98c2-e5b5f3fcaa51" />
+    <display value="Erythrocyte distribution width [Entitic volume] by Automated count" />
+  </result>
+  <result>
+    <reference value="urn:uuid:6b630f92-32af-499c-b42f-a11148b278bf" />
+    <display value="Platelets [#/volume] in Blood by Automated count" />
+  </result>
+  <result>
+    <reference value="urn:uuid:66545df5-9d28-44e9-89b8-d5011c6a02ff" />
+    <display value="Platelet distribution width [Entitic volume] in Blood by Automated count" />
+  </result>
+  <result>
+    <reference value="urn:uuid:5e526fcc-06de-4c4b-b468-8519b90df926" />
+    <display value="Platelet mean volume [Entitic volume] in Blood by Automated count" />
+  </result>
+</DiagnosticReport>

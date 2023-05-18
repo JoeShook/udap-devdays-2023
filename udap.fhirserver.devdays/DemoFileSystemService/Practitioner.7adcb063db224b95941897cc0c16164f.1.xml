@@ -1,0 +1,30 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="7adcb063db224b95941897cc0c16164f" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:21.1354344-07:00" />
+  </meta>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi" />
+    <value value="88860" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Jaskolski867" />
+    <given value="Selina302" />
+    <prefix value="Dr." />
+  </name>
+  <telecom>
+    <system value="email" />
+    <value value="Selina302.Jaskolski867@example.com" />
+    <use value="work" />
+  </telecom>
+  <address>
+    <line value="1 CREDIT UNION WAY FL" />
+    <city value="RANDOLPH" />
+    <state value="MA" />
+    <postalCode value="02368-4633" />
+    <country value="US" />
+  </address>
+  <gender value="female" />
+</Practitioner>

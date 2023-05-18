@@ -1,0 +1,61 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="8f1f153b88a2449b965730d03e17af36" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:07.5448305-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="pharmacy" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+  </patient>
+  <billablePeriod>
+    <start value="2010-05-23T08:41:34-04:00" />
+    <end value="2010-05-23T10:07:34-04:00" />
+  </billablePeriod>
+  <created value="2010-05-23T10:07:34-04:00" />
+  <provider>
+    <reference value="urn:uuid:69176529-fd1f-3b3f-abce-a0a3626769eb" />
+    <display value="MOUNT AUBURN HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <prescription>
+    <reference value="urn:uuid:2815d992-2d15-4d98-a373-d8306b04b5ba" />
+  </prescription>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="50849002" />
+        <display value="Emergency room admission (procedure)" />
+      </coding>
+      <text value="Emergency room admission (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:b3c557ab-4468-455b-9b83-152f9bc84b14" />
+    </encounter>
+  </item>
+  <total>
+    <value value="5.69" />
+    <currency value="USD" />
+  </total>
+</Claim>

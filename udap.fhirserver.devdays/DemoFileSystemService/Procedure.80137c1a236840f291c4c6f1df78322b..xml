@@ -1,0 +1,30 @@
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="80137c1a236840f291c4c6f1df78322b" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.6743604-07:00" />
+  </meta>
+  <status value="completed" />
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="699253003" />
+      <display value="Surgical manipulation of joint of knee" />
+    </coding>
+    <text value="Surgical manipulation of joint of knee" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:a22d3ceb-6bcc-4ede-9f45-4dd9fb826ee5" />
+  </encounter>
+  <performedPeriod>
+    <start value="2018-11-15T05:12:24-05:00" />
+    <end value="2018-11-15T08:12:24-05:00" />
+  </performedPeriod>
+  <reasonReference>
+    <reference value="urn:uuid:76b3f733-02ad-42cf-94de-4ce0fc03d168" />
+    <display value="Injury of medial collateral ligament of knee" />
+  </reasonReference>
+</Procedure>

@@ -1,0 +1,47 @@
+<ImagingStudy xmlns="http://hl7.org/fhir">
+  <id value="0ce12437092449b5950082c2cf86ebde" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.4465256-07:00" />
+  </meta>
+  <identifier>
+    <use value="official" />
+    <system value="urn:ietf:rfc:3986" />
+    <value value="urn:oid:1.2.840.99999999.57888163.1568644974150" />
+  </identifier>
+  <status value="available" />
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:95016ee5-f3e0-41a6-9169-a031741bf911" />
+  </encounter>
+  <started value="2018-11-08T05:12:24-05:00" />
+  <numberOfSeries value="1" />
+  <numberOfInstances value="1" />
+  <series>
+    <uid value="1.2.840.99999999.1.88185836.1568644974150" />
+    <number value="1" />
+    <modality>
+      <system value="http://dicom.nema.org/resources/ontology/DCM" />
+      <code value="DX" />
+      <display value="Digital Radiography" />
+    </modality>
+    <numberOfInstances value="1" />
+    <bodySite>
+      <system value="http://snomed.info/sct" />
+      <code value="72696002" />
+      <display value="Knee" />
+    </bodySite>
+    <started value="2018-11-08T05:12:24-05:00" />
+    <instance>
+      <uid value="1.2.840.99999999.1.1.70819409.1568644974150" />
+      <sopClass>
+        <system value="urn:ietf:rfc:3986" />
+        <code value="1.2.840.10008.5.1.4.1.1.1.1" />
+      </sopClass>
+      <number value="1" />
+      <title value="Image of knee" />
+    </instance>
+  </series>
+</ImagingStudy>

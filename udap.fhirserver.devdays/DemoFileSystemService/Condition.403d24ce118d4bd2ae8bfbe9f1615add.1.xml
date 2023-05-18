@@ -1,0 +1,36 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="403d24ce118d4bd2ae8bfbe9f1615add" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.446292-07:00" />
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+      <code value="resolved" />
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+      <code value="confirmed" />
+    </coding>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="43878008" />
+      <display value="Streptococcal sore throat (disorder)" />
+    </coding>
+    <text value="Streptococcal sore throat (disorder)" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:57462014-d4ff-47d0-8099-38ae6ca253dd" />
+  </encounter>
+  <onsetDateTime value="2010-08-13T08:24:07-04:00" />
+  <abatementDateTime value="2010-08-22T08:24:07-04:00" />
+  <recordedDate value="2010-08-13T08:24:07-04:00" />
+</Condition>

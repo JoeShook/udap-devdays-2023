@@ -1,0 +1,362 @@
+<ExplanationOfBenefit xmlns="http://hl7.org/fhir">
+  <id value="4f8fb7d1e4a2409e9f79fab9e80fd6de" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:13.6909127-07:00" />
+  </meta>
+  <contained>
+    <ServiceRequest>
+      <id value="referral" />
+      <status value="completed" />
+      <intent value="order" />
+      <subject>
+        <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+      </subject>
+      <requester>
+        <reference value="urn:uuid:0000016d-3a85-4cca-0000-000000014582" />
+      </requester>
+      <performer>
+        <reference value="urn:uuid:0000016d-3a85-4cca-0000-000000014582" />
+      </performer>
+    </ServiceRequest>
+  </contained>
+  <contained>
+    <Coverage>
+      <id value="coverage" />
+      <status value="active" />
+      <type>
+        <text value="Anthem" />
+      </type>
+      <beneficiary>
+        <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+      </beneficiary>
+      <payor>
+        <display value="Anthem" />
+      </payor>
+    </Coverage>
+  </contained>
+  <identifier>
+    <system value="https://bluebutton.cms.gov/resources/variables/clm_id" />
+    <value value="5c060466-31bd-4234-a76b-d32986e675eb" />
+  </identifier>
+  <identifier>
+    <system value="https://bluebutton.cms.gov/resources/identifier/claim-group" />
+    <value value="99999999999" />
+  </identifier>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+  </patient>
+  <billablePeriod>
+    <start value="2013-12-27T20:53:12-05:00" />
+    <end value="2014-12-27T20:53:12-05:00" />
+  </billablePeriod>
+  <created value="2013-12-27T20:53:12-05:00" />
+  <insurer>
+    <display value="Anthem" />
+  </insurer>
+  <provider>
+    <reference value="urn:uuid:0000016d-3a85-4cca-0000-000000014582" />
+  </provider>
+  <referral>
+    <reference value="#referral" />
+  </referral>
+  <claim>
+    <reference value="urn:uuid:5c060466-31bd-4234-a76b-d32986e675eb" />
+  </claim>
+  <outcome value="complete" />
+  <careTeam>
+    <sequence value="1" />
+    <provider>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-000000014582" />
+    </provider>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claimcareteamrole" />
+        <code value="primary" />
+        <display value="Primary Care Practitioner" />
+      </coding>
+    </role>
+  </careTeam>
+  <insurance>
+    <focal value="true" />
+    <coverage>
+      <reference value="#coverage" />
+      <display value="Anthem" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd" />
+        <code value="1" />
+        <display value="Medical care" />
+      </coding>
+    </category>
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="162673000" />
+        <display value="General examination of patient (procedure)" />
+      </coding>
+      <text value="General examination of patient (procedure)" />
+    </productOrService>
+    <servicedPeriod>
+      <start value="2013-12-27T20:23:12-05:00" />
+      <end value="2013-12-27T20:53:12-05:00" />
+    </servicedPeriod>
+    <locationCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-serviceplace" />
+        <code value="19" />
+        <display value="Off Campus-Outpatient Hospital" />
+      </coding>
+    </locationCodeableConcept>
+    <encounter>
+      <reference value="urn:uuid:1e5118da-0a82-4241-811a-ea5c0887df7c" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <informationSequence value="1" />
+    <category>
+      <coding>
+        <system value="https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd" />
+        <code value="1" />
+        <display value="Medical care" />
+      </coding>
+    </category>
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="140" />
+        <display value="Influenza, seasonal, injectable, preservative free" />
+      </coding>
+      <text value="Influenza, seasonal, injectable, preservative free" />
+    </productOrService>
+    <servicedPeriod>
+      <start value="2013-12-27T20:23:12-05:00" />
+      <end value="2013-12-27T20:53:12-05:00" />
+    </servicedPeriod>
+    <locationCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-serviceplace" />
+        <code value="19" />
+        <display value="Off Campus-Outpatient Hospital" />
+      </coding>
+    </locationCodeableConcept>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="https://bluebutton.cms.gov/resources/codesystem/adjudication" />
+          <code value="https://bluebutton.cms.gov/resources/variables/line_coinsrnc_amt" />
+          <display value="Line Beneficiary Coinsurance Amount" />
+        </coding>
+      </category>
+      <amount>
+        <value value="28.104000000000003" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="https://bluebutton.cms.gov/resources/codesystem/adjudication" />
+          <code value="https://bluebutton.cms.gov/resources/variables/line_prvdr_pmt_amt" />
+          <display value="Line Provider Payment Amount" />
+        </coding>
+      </category>
+      <amount>
+        <value value="112.41600000000001" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="https://bluebutton.cms.gov/resources/codesystem/adjudication" />
+          <code value="https://bluebutton.cms.gov/resources/variables/line_sbmtd_chrg_amt" />
+          <display value="Line Submitted Charge Amount" />
+        </coding>
+      </category>
+      <amount>
+        <value value="140.52" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="https://bluebutton.cms.gov/resources/codesystem/adjudication" />
+          <code value="https://bluebutton.cms.gov/resources/variables/line_alowd_chrg_amt" />
+          <display value="Line Allowed Charge Amount" />
+        </coding>
+      </category>
+      <amount>
+        <value value="140.52" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="https://bluebutton.cms.gov/resources/codesystem/adjudication" />
+          <code value="https://bluebutton.cms.gov/resources/variables/line_bene_ptb_ddctbl_amt" />
+          <display value="Line Beneficiary Part B Deductible Amount" />
+        </coding>
+      </category>
+      <amount>
+        <value value="0" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="https://bluebutton.cms.gov/resources/codesystem/adjudication" />
+          <code value="https://bluebutton.cms.gov/resources/variables/line_prcsg_ind_cd" />
+          <display value="Line Processing Indicator Code" />
+        </coding>
+      </category>
+    </adjudication>
+  </item>
+  <item>
+    <sequence value="3" />
+    <category>
+      <coding>
+        <system value="https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd" />
+        <code value="1" />
+        <display value="Medical care" />
+      </coding>
+    </category>
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="430193006" />
+        <display value="Medication Reconciliation (procedure)" />
+      </coding>
+      <text value="Medication Reconciliation (procedure)" />
+    </productOrService>
+    <servicedPeriod>
+      <start value="2013-12-27T20:23:12-05:00" />
+      <end value="2013-12-27T20:53:12-05:00" />
+    </servicedPeriod>
+    <locationCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-serviceplace" />
+        <code value="19" />
+        <display value="Off Campus-Outpatient Hospital" />
+      </coding>
+    </locationCodeableConcept>
+    <net>
+      <value value="523.06" />
+      <currency value="USD" />
+    </net>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="https://bluebutton.cms.gov/resources/codesystem/adjudication" />
+          <code value="https://bluebutton.cms.gov/resources/variables/line_coinsrnc_amt" />
+          <display value="Line Beneficiary Coinsurance Amount" />
+        </coding>
+      </category>
+      <amount>
+        <value value="104.612" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="https://bluebutton.cms.gov/resources/codesystem/adjudication" />
+          <code value="https://bluebutton.cms.gov/resources/variables/line_prvdr_pmt_amt" />
+          <display value="Line Provider Payment Amount" />
+        </coding>
+      </category>
+      <amount>
+        <value value="418.448" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="https://bluebutton.cms.gov/resources/codesystem/adjudication" />
+          <code value="https://bluebutton.cms.gov/resources/variables/line_sbmtd_chrg_amt" />
+          <display value="Line Submitted Charge Amount" />
+        </coding>
+      </category>
+      <amount>
+        <value value="523.06" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="https://bluebutton.cms.gov/resources/codesystem/adjudication" />
+          <code value="https://bluebutton.cms.gov/resources/variables/line_alowd_chrg_amt" />
+          <display value="Line Allowed Charge Amount" />
+        </coding>
+      </category>
+      <amount>
+        <value value="523.06" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="https://bluebutton.cms.gov/resources/codesystem/adjudication" />
+          <code value="https://bluebutton.cms.gov/resources/variables/line_bene_ptb_ddctbl_amt" />
+          <display value="Line Beneficiary Part B Deductible Amount" />
+        </coding>
+      </category>
+      <amount>
+        <value value="0" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="https://bluebutton.cms.gov/resources/codesystem/adjudication" />
+          <code value="https://bluebutton.cms.gov/resources/variables/line_prcsg_ind_cd" />
+          <display value="Line Processing Indicator Code" />
+        </coding>
+      </category>
+    </adjudication>
+  </item>
+  <total>
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/adjudication" />
+        <code value="submitted" />
+        <display value="Submitted Amount" />
+      </coding>
+      <text value="Submitted Amount" />
+    </category>
+    <amount>
+      <value value="129.16" />
+      <currency value="USD" />
+    </amount>
+  </total>
+  <payment>
+    <amount>
+      <value value="530.864" />
+      <currency value="USD" />
+    </amount>
+  </payment>
+</ExplanationOfBenefit>

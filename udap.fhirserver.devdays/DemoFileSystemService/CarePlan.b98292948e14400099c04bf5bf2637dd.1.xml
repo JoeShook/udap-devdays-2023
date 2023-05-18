@@ -1,0 +1,66 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="b98292948e14400099c04bf5bf2637dd" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:14.4275379-07:00" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">Care Plan for Respiratory therapy.<br />Activities: <ul><li>Respiratory therapy</li><li>Respiratory therapy</li></ul><br />Care plan is meant to treat Acute bronchitis (disorder).</div>
+  </text>
+  <status value="completed" />
+  <intent value="order" />
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="53950000" />
+      <display value="Respiratory therapy" />
+    </coding>
+    <text value="Respiratory therapy" />
+  </category>
+  <subject>
+    <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:cc7bf88f-6017-4cdd-9cad-2f170c0b2717" />
+  </encounter>
+  <period>
+    <start value="1998-12-04T02:47:35-05:00" />
+    <end value="2000-12-12T02:47:35-05:00" />
+  </period>
+  <careTeam>
+    <reference value="urn:uuid:a8038eaa-e885-4344-aecd-33b5903e8e84" />
+  </careTeam>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="304510005" />
+          <display value="Recommendation to avoid exercise" />
+        </coding>
+        <text value="Recommendation to avoid exercise" />
+      </code>
+      <status value="completed" />
+      <location>
+        <display value="NASHOBA VALLEY MEDICAL CENTER" />
+      </location>
+    </detail>
+  </activity>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="371605008" />
+          <display value="Deep breathing and coughing exercises" />
+        </coding>
+        <text value="Deep breathing and coughing exercises" />
+      </code>
+      <status value="completed" />
+      <location>
+        <display value="NASHOBA VALLEY MEDICAL CENTER" />
+      </location>
+    </detail>
+  </activity>
+</CarePlan>

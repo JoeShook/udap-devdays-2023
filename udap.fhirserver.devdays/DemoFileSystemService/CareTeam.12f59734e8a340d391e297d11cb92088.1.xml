@@ -1,0 +1,71 @@
+<CareTeam xmlns="http://hl7.org/fhir">
+  <id value="12f59734e8a340d391e297d11cb92088" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.1064656-07:00" />
+  </meta>
+  <status value="active" />
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:f6603f7f-3083-485e-9db8-7f9753e33e73" />
+  </encounter>
+  <period>
+    <start value="2016-04-09T06:12:24-04:00" />
+  </period>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="116153009" />
+        <display value="Patient" />
+      </coding>
+      <text value="Patient" />
+    </role>
+    <member>
+      <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+      <display value="Mr. Byron202 Vandervort697" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Person in the healthcare environment (person)" />
+      </coding>
+      <text value="Person in the healthcare environment (person)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000d07a" />
+      <display value="Dr. Will178 Lubowitz58" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Healthcare related organization (qualifier value)" />
+      </coding>
+      <text value="Healthcare related organization (qualifier value)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:2567a7b5-eed4-3251-9936-8cd456261e24" />
+      <display value="PCP161397" />
+    </member>
+  </participant>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="15777000" />
+      <display value="Prediabetes" />
+    </coding>
+    <text value="Prediabetes" />
+  </reasonCode>
+  <managingOrganization>
+    <reference value="urn:uuid:2567a7b5-eed4-3251-9936-8cd456261e24" />
+    <display value="PCP161397" />
+  </managingOrganization>
+</CareTeam>

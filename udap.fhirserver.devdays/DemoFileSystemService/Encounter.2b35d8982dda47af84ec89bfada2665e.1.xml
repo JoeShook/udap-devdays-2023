@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="2b35d8982dda47af84ec89bfada2665e" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:13.5865857-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="162673000" />
+      <display value="General examination of patient (procedure)" />
+    </coding>
+    <text value="General examination of patient (procedure)" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+    <display value="Mr. Edgardo196 Berge125" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-000000014582" />
+      <display value="Dr. Hugh686 Brakus656" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2013-12-27T20:23:12-05:00" />
+    <end value="2013-12-27T20:53:12-05:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:5a9ded14-4f2b-3d66-9301-02c8fb81c8fd" />
+    <display value="RELIANT MEDICAL GROUP, INC" />
+  </serviceProvider>
+</Encounter>

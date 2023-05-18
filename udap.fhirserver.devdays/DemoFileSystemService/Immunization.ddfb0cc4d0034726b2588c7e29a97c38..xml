@@ -1,0 +1,24 @@
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="ddfb0cc4d0034726b2588c7e29a97c38" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:20.7700849-07:00" />
+  </meta>
+  <status value="completed" />
+  <vaccineCode>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/cvx" />
+      <code value="83" />
+      <display value="Hep A, ped/adol, 2 dose" />
+    </coding>
+    <text value="Hep A, ped/adol, 2 dose" />
+  </vaccineCode>
+  <patient>
+    <reference value="urn:uuid:73d58836-0439-4251-87d1-40e5f2f8c113" />
+  </patient>
+  <encounter>
+    <reference value="urn:uuid:f78d4fb0-1b93-4167-9074-291f29f3c507" />
+  </encounter>
+  <occurrenceDateTime value="2019-03-06T10:39:41-05:00" />
+  <primarySource value="true" />
+</Immunization>

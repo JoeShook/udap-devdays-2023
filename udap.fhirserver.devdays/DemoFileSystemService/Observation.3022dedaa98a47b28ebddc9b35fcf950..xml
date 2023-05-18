@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="3022dedaa98a47b28ebddc9b35fcf950" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:16.0932114-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="vital-signs" />
+      <display value="vital-signs" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="77606-2" />
+      <display value="Weight-for-length Per age and sex" />
+    </coding>
+    <text value="Weight-for-length Per age and sex" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:eed483f7-c02a-4a74-bbed-1ca1029765f1" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:854222fa-1e0b-44a1-9c74-1cce40ca1ce2" />
+  </encounter>
+  <effectiveDateTime value="2019-08-22T18:56:16-04:00" />
+  <issued value="2019-08-22T18:56:16.593-04:00" />
+  <valueQuantity>
+    <value value="0.00009670339341855026" />
+    <unit value="%" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="%" />
+  </valueQuantity>
+</Observation>

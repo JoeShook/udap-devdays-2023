@@ -1,0 +1,72 @@
+<CareTeam xmlns="http://hl7.org/fhir">
+  <id value="48763cf9ae894c60b1f14bb97581da5c" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:13.359132-07:00" />
+  </meta>
+  <status value="inactive" />
+  <subject>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:4815e697-5ae1-4e06-9f00-e4995666b080" />
+  </encounter>
+  <period>
+    <start value="2011-04-02T21:23:12-04:00" />
+    <end value="2011-04-30T21:23:12-04:00" />
+  </period>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="116153009" />
+        <display value="Patient" />
+      </coding>
+      <text value="Patient" />
+    </role>
+    <member>
+      <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+      <display value="Mr. Edgardo196 Berge125" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Person in the healthcare environment (person)" />
+      </coding>
+      <text value="Person in the healthcare environment (person)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000000be" />
+      <display value="Dr. Jamaal34 Funk324" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Healthcare related organization (qualifier value)" />
+      </coding>
+      <text value="Healthcare related organization (qualifier value)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:f71ce1a9-cca7-3295-9a1e-c88ac3479b6f" />
+      <display value="MARLBOROUGH HOSPITAL" />
+    </member>
+  </participant>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="44465007" />
+      <display value="Sprain of ankle" />
+    </coding>
+    <text value="Sprain of ankle" />
+  </reasonCode>
+  <managingOrganization>
+    <reference value="urn:uuid:f71ce1a9-cca7-3295-9a1e-c88ac3479b6f" />
+    <display value="MARLBOROUGH HOSPITAL" />
+  </managingOrganization>
+</CareTeam>

@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="6f516740834c4693808335ab152d7722" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.4305853-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="162673000" />
+      <display value="General examination of patient (procedure)" />
+    </coding>
+    <text value="General examination of patient (procedure)" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+    <display value="Mr. Byron202 Vandervort697" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000d07a" />
+      <display value="Dr. Will178 Lubowitz58" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2010-04-03T06:12:24-04:00" />
+    <end value="2010-04-03T06:27:24-04:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:2567a7b5-eed4-3251-9936-8cd456261e24" />
+    <display value="PCP161397" />
+  </serviceProvider>
+</Encounter>

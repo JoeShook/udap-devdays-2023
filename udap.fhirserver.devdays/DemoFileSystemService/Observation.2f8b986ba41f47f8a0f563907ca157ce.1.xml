@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="2f8b986ba41f47f8a0f563907ca157ce" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.7555165-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="vital-signs" />
+      <display value="vital-signs" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="8302-2" />
+      <display value="Body Height" />
+    </coding>
+    <text value="Body Height" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:579fb7f9-ba23-4caa-af14-9fa587c80343" />
+  </encounter>
+  <effectiveDateTime value="2011-01-01T07:24:07-05:00" />
+  <issued value="2011-01-01T07:24:07.775-05:00" />
+  <valueQuantity>
+    <value value="173.1881143870159" />
+    <unit value="cm" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="cm" />
+  </valueQuantity>
+</Observation>

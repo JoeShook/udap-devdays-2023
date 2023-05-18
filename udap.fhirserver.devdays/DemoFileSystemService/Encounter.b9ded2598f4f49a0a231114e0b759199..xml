@@ -1,0 +1,45 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="b9ded2598f4f49a0a231114e0b759199" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:12.0300814-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="185345009" />
+      <display value="Encounter for symptom" />
+    </coding>
+    <text value="Encounter for symptom" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:8cb876ad-9376-4685-827d-3f947a144abe" />
+    <display value="Mr. Christoper325 Ritchie586" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000003c" />
+      <display value="Dr. Malcolm243 Wilderman619" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2011-06-06T17:32:50-04:00" />
+    <end value="2011-06-06T17:47:50-04:00" />
+  </period>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="444814009" />
+      <display value="Viral sinusitis (disorder)" />
+    </coding>
+  </reasonCode>
+  <serviceProvider>
+    <reference value="urn:uuid:49318f80-bd8b-3fc7-a096-ac43088b0c12" />
+    <display value="COOLEY DICKINSON HOSPITAL INC,THE" />
+  </serviceProvider>
+</Encounter>

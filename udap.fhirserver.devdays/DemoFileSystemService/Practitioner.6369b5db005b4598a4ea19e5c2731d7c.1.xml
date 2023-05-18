@@ -1,0 +1,30 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="6369b5db005b4598a4ea19e5c2731d7c" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:14.3488167-07:00" />
+  </meta>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi" />
+    <value value="400" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Hoeger474" />
+    <given value="Stephaine613" />
+    <prefix value="Dr." />
+  </name>
+  <telecom>
+    <system value="email" />
+    <value value="Stephaine613.Hoeger474@example.com" />
+    <use value="work" />
+  </telecom>
+  <address>
+    <line value="200 GROTON ROAD" />
+    <city value="AYER" />
+    <state value="MA" />
+    <postalCode value="01432" />
+    <country value="US" />
+  </address>
+  <gender value="female" />
+</Practitioner>

@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="4ced3f13b31e4356ad7489b4126f5c6e" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:14.4767894-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="162673000" />
+      <display value="General examination of patient (procedure)" />
+    </coding>
+    <text value="General examination of patient (procedure)" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+    <display value="Mr. Jarod376 Wehner319" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000fa96" />
+      <display value="Dr. Rafael239 Wunsch504" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2009-12-22T02:47:35-05:00" />
+    <end value="2009-12-22T03:02:35-05:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:5130de58-f582-3d17-a71a-da8f29418409" />
+    <display value="WESTFORD INTERNAL MEDICINE PC" />
+  </serviceProvider>
+</Encounter>

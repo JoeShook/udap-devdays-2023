@@ -1,0 +1,68 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="f336a7ad276f46d5abeb0d074d4059fa" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:19.5376763-07:00" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">Care Plan for Musculoskeletal care.<br />Activities: <ul><li>Musculoskeletal care</li><li>Musculoskeletal care</li></ul><br />Care plan is meant to treat Whiplash injury to neck.</div>
+  </text>
+  <status value="active" />
+  <intent value="order" />
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="408869004" />
+      <display value="Musculoskeletal care" />
+    </coding>
+    <text value="Musculoskeletal care" />
+  </category>
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:6348d0e6-4e62-43a1-af19-5a32dbb40d48" />
+  </encounter>
+  <period>
+    <start value="2019-09-09T08:24:07-04:00" />
+  </period>
+  <careTeam>
+    <reference value="urn:uuid:e72e43b2-3ac2-4c61-8221-14bfd608fc1b" />
+  </careTeam>
+  <addresses>
+    <reference value="urn:uuid:755ddf3f-f4e7-4a39-9c5f-c703c7345d69" />
+  </addresses>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="266694003" />
+          <display value="Heat therapy" />
+        </coding>
+        <text value="Heat therapy" />
+      </code>
+      <status value="in-progress" />
+      <location>
+        <display value="NORWOOD HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="183051005" />
+          <display value="Recommendation to rest" />
+        </coding>
+        <text value="Recommendation to rest" />
+      </code>
+      <status value="in-progress" />
+      <location>
+        <display value="NORWOOD HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+</CarePlan>

@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="d96fba8d7f75458c81b6b1c5db61f624" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:17.9241165-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="EMER" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="50849002" />
+      <display value="Emergency room admission (procedure)" />
+    </coding>
+    <text value="Emergency room admission (procedure)" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:84214c96-dad0-4b63-ad9b-589246ef432d" />
+    <display value="Norberto865 Jerde200" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-000000000082" />
+      <display value="Dr. Jorge203 Hernández971" />
+    </individual>
+  </participant>
+  <period>
+    <start value="1999-11-03T11:10:52-05:00" />
+    <end value="1999-11-03T12:10:52-05:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:5844ad77-f653-3c2b-b7dd-e97576ab3b03" />
+    <display value="BAYSTATE WING HOSPITAL AND MEDICAL CENTERS" />
+  </serviceProvider>
+</Encounter>

@@ -1,0 +1,32 @@
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="256bd9ea44bd43f9961663630266d74f" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:08.3807576-07:00" />
+  </meta>
+  <status value="stopped" />
+  <intent value="order" />
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+      <code value="313782" />
+      <display value="Acetaminophen 325 MG Oral Tablet" />
+    </coding>
+    <text value="Acetaminophen 325 MG Oral Tablet" />
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:765b7916-94c8-4cc5-9cf7-910c78ced155" />
+  </encounter>
+  <authoredOn value="2015-05-11T08:41:34-04:00" />
+  <requester>
+    <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000000a" />
+    <display value="Dr. Buford910 Feil794" />
+  </requester>
+  <dosageInstruction>
+    <sequence value="1" />
+    <asNeededBoolean value="true" />
+  </dosageInstruction>
+</MedicationRequest>

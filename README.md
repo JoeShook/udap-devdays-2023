@@ -24,10 +24,10 @@ git clone https://github.com/udap-tools/udap-dotnet.git
 We will run the UdapEd.Server project locally to test Discovery, DCR, Token Access and finally request a resource.
 Ensure you can compile and run UdapEd.Server ahead of time.
 
-Within this [udap-devdays-2023]( JoeShook/udap-devdays-2023: udap-dotnet tutorial. (github.com)) repository ensure you can compile and run both udap.fhirserver.devdays and udap.authserver.devdays
+Within this [udap-devdays-2023]([JoeShook/udap-devdays-2023](https://github.com/JoeShook/udap-devdays-2023)): udap-dotnet tutorial repository ensure you can compile and run both udap.fhirserver.devdays and udap.authserver.devdays
 
 udap.fhirserver.devdays has one patient resource loaded.  This FHIR server is a simple DemoFileSystemFhirServer implementation of 
-Brian Postlethwaite’s fhir-net-web-api, which has its roots in the original Spark FHIR Server prior to DSTU2 release.  
+Brian Postlethwaite’s [fhir-net-web-api](https://github.com/brianpos/fhir-net-web-api/tree/feature/r4b), which has its roots in the original Spark FHIR Server prior to DSTU2 release.  
 
 udap.authserver.devdays is an Identity Server with a SQLite data store without DCR on UDAP.
 

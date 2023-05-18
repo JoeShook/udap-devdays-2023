@@ -1,0 +1,39 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="e292d0a8d9ed4ca6bf636468a0035e50" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:19.0294835-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="survey" />
+      <display value="survey" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="72166-2" />
+      <display value="Tobacco smoking status NHIS" />
+    </coding>
+    <text value="Tobacco smoking status NHIS" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:26c9f7dc-1420-4f0f-809e-9e72989d3415" />
+  </encounter>
+  <effectiveDateTime value="2014-01-04T07:24:07-05:00" />
+  <issued value="2014-01-04T07:24:07.775-05:00" />
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="8517006" />
+      <display value="Former smoker" />
+    </coding>
+    <text value="Former smoker" />
+  </valueCodeableConcept>
+</Observation>

@@ -1,0 +1,30 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="72742f36d8cc495bb6579d517a5d5369" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.5012825-07:00" />
+  </meta>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi" />
+    <value value="93490" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Pacocha935" />
+    <given value="Mira443" />
+    <prefix value="Dr." />
+  </name>
+  <telecom>
+    <system value="email" />
+    <value value="Mira443.Pacocha935@example.com" />
+    <use value="work" />
+  </telecom>
+  <address>
+    <line value="66 SOUTH WASHINGTON STREET" />
+    <city value="NORTH ATTLEBORO" />
+    <state value="MA" />
+    <postalCode value="2760" />
+    <country value="US" />
+  </address>
+  <gender value="female" />
+</Practitioner>

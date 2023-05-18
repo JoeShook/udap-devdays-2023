@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="63d9ff257ab24cb4933c670379304ee1" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:19.9145513-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="21000-5" />
+      <display value="Erythrocyte distribution width [Entitic volume] by Automated count" />
+    </coding>
+    <text value="Erythrocyte distribution width [Entitic volume] by Automated count" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:73d58836-0439-4251-87d1-40e5f2f8c113" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:21d29d69-0abe-47bf-acda-9a241f1b4c91" />
+  </encounter>
+  <effectiveDateTime value="2017-12-27T10:39:41-05:00" />
+  <issued value="2017-12-27T10:39:41.6-05:00" />
+  <valueQuantity>
+    <value value="43.453489593444246" />
+    <unit value="fL" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="fL" />
+  </valueQuantity>
+</Observation>

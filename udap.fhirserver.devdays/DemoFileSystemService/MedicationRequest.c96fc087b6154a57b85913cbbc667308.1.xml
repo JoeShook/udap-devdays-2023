@@ -1,0 +1,32 @@
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="c96fc087b6154a57b85913cbbc667308" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.9376024-07:00" />
+  </meta>
+  <status value="stopped" />
+  <intent value="order" />
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+      <code value="849574" />
+      <display value="Naproxen sodium 220 MG Oral Tablet" />
+    </coding>
+    <text value="Naproxen sodium 220 MG Oral Tablet" />
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:1cae9510-21ad-4e57-a139-3dfa22a0a9d9" />
+  </encounter>
+  <authoredOn value="2014-12-08T05:12:24-05:00" />
+  <requester>
+    <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000000c8" />
+    <display value="Dr. Amos720 Towne435" />
+  </requester>
+  <dosageInstruction>
+    <sequence value="1" />
+    <asNeededBoolean value="true" />
+  </dosageInstruction>
+</MedicationRequest>

@@ -1,0 +1,45 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="b13adb778a694db78ed70cad7f40e5dd" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.6658578-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="IMP" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="183495009" />
+      <display value="Non-urgent orthopedic admission" />
+    </coding>
+    <text value="Non-urgent orthopedic admission" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+    <display value="Mr. Byron202 Vandervort697" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001cc" />
+      <display value="Dr. Gillian484 Satterfield305" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2018-11-15T05:12:24-05:00" />
+    <end value="2018-11-16T08:12:24-05:00" />
+  </period>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="444448004" />
+      <display value="Injury of medial collateral ligament of knee" />
+    </coding>
+  </reasonCode>
+  <serviceProvider>
+    <reference value="urn:uuid:226098a2-6a40-3588-b5bb-db56c3a30a04" />
+    <display value="GOOD SAMARITAN MEDICAL CENTER" />
+  </serviceProvider>
+</Encounter>

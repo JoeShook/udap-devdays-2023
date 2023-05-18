@@ -1,0 +1,59 @@
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="f51c8c10435e4258b592610e0565a52c" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:16.2819433-07:00" />
+  </meta>
+  <status value="stopped" />
+  <intent value="order" />
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+      <code value="308182" />
+      <display value="Amoxicillin 250 MG Oral Capsule" />
+    </coding>
+    <text value="Amoxicillin 250 MG Oral Capsule" />
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="urn:uuid:eed483f7-c02a-4a74-bbed-1ca1029765f1" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:854222fa-1e0b-44a1-9c74-1cce40ca1ce2" />
+  </encounter>
+  <authoredOn value="2019-08-17T18:56:16-04:00" />
+  <requester>
+    <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001e0" />
+    <display value="Dr. Darin74 Hermiston71" />
+  </requester>
+  <dosageInstruction>
+    <sequence value="1" />
+    <additionalInstruction>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="418577003" />
+        <display value="Take at regular intervals. Complete the prescribed course unless otherwise directed." />
+      </coding>
+      <text value="Take at regular intervals. Complete the prescribed course unless otherwise directed." />
+    </additionalInstruction>
+    <timing>
+      <repeat>
+        <frequency value="2" />
+        <period value="1.0" />
+        <periodUnit value="d" />
+      </repeat>
+    </timing>
+    <asNeededBoolean value="false" />
+    <doseAndRate>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type" />
+          <code value="ordered" />
+          <display value="Ordered" />
+        </coding>
+      </type>
+      <doseQuantity>
+        <value value="1.0" />
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationRequest>

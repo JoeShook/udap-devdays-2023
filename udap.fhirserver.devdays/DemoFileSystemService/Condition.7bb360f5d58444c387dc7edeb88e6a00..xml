@@ -1,0 +1,36 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="7bb360f5d58444c387dc7edeb88e6a00" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:13.3383099-07:00" />
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+      <code value="resolved" />
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+      <code value="confirmed" />
+    </coding>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="44465007" />
+      <display value="Sprain of ankle" />
+    </coding>
+    <text value="Sprain of ankle" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:4815e697-5ae1-4e06-9f00-e4995666b080" />
+  </encounter>
+  <onsetDateTime value="2011-04-02T21:23:12-04:00" />
+  <abatementDateTime value="2011-04-30T21:23:12-04:00" />
+  <recordedDate value="2011-04-02T21:23:12-04:00" />
+</Condition>

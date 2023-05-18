@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="44ec9ee8bea342d7ac206dc556f84785" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:17.3459728-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="410620009" />
+      <display value="Well child visit (procedure)" />
+    </coding>
+    <text value="Well child visit (procedure)" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:84214c96-dad0-4b63-ad9b-589246ef432d" />
+    <display value="Norberto865 Jerde200" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000896c" />
+      <display value="Dr. Merle11 Kuvalis369" />
+    </individual>
+  </participant>
+  <period>
+    <start value="1997-12-26T11:10:52-05:00" />
+    <end value="1997-12-26T11:40:52-05:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:04b0900a-2ae4-3360-b9a5-1b3eb2bdd8a2" />
+    <display value="PCP67456" />
+  </serviceProvider>
+</Encounter>

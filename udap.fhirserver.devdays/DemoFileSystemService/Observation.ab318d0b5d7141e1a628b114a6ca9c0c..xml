@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ab318d0b5d7141e1a628b114a6ca9c0c" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:11.2079698-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="777-3" />
+      <display value="Platelets [#/volume] in Blood by Automated count" />
+    </coding>
+    <text value="Platelets [#/volume] in Blood by Automated count" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:755eded1-966e-493f-a4e2-8cefe7c0ba06" />
+  </encounter>
+  <effectiveDateTime value="2019-04-13T06:12:24-04:00" />
+  <issued value="2019-04-13T06:12:24.661-04:00" />
+  <valueQuantity>
+    <value value="308.87483104347706" />
+    <unit value="10*3/uL" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="10*3/uL" />
+  </valueQuantity>
+</Observation>

@@ -1,0 +1,36 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="ec0f96424b924e9894961436ad1fdc94" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.3151319-07:00" />
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+      <code value="resolved" />
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+      <code value="confirmed" />
+    </coding>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="284551006" />
+      <display value="Laceration of foot" />
+    </coding>
+    <text value="Laceration of foot" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:d0643e5c-cf30-4d31-8754-38c1883ef958" />
+  </encounter>
+  <onsetDateTime value="2010-01-12T05:12:24-05:00" />
+  <abatementDateTime value="2010-02-02T05:12:24-05:00" />
+  <recordedDate value="2010-01-12T05:12:24-05:00" />
+</Condition>

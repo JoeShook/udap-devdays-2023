@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="cdf2c8769e7f4247a8fcdc7aa5adc1d0" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:17.4580872-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="vital-signs" />
+      <display value="vital-signs" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="29463-7" />
+      <display value="Body Weight" />
+    </coding>
+    <text value="Body Weight" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:84214c96-dad0-4b63-ad9b-589246ef432d" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:880d8a79-44f9-4051-ac13-f0bcb9fc4a47" />
+  </encounter>
+  <effectiveDateTime value="1998-03-27T11:10:52-05:00" />
+  <issued value="1998-03-27T11:10:52.368-05:00" />
+  <valueQuantity>
+    <value value="10.07267315140677" />
+    <unit value="kg" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="kg" />
+  </valueQuantity>
+</Observation>

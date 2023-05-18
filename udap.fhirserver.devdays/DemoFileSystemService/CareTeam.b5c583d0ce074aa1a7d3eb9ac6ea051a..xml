@@ -1,0 +1,72 @@
+<CareTeam xmlns="http://hl7.org/fhir">
+  <id value="b5c583d0ce074aa1a7d3eb9ac6ea051a" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:07.5565058-07:00" />
+  </meta>
+  <status value="inactive" />
+  <subject>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:b3c557ab-4468-455b-9b83-152f9bc84b14" />
+  </encounter>
+  <period>
+    <start value="2010-05-23T08:41:34-04:00" />
+    <end value="2010-06-06T08:41:34-04:00" />
+  </period>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="116153009" />
+        <display value="Patient" />
+      </coding>
+      <text value="Patient" />
+    </role>
+    <member>
+      <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+      <display value="Mr. Alejandro916 Treutel973" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Person in the healthcare environment (person)" />
+      </coding>
+      <text value="Person in the healthcare environment (person)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000000a" />
+      <display value="Dr. Buford910 Feil794" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Healthcare related organization (qualifier value)" />
+      </coding>
+      <text value="Healthcare related organization (qualifier value)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:69176529-fd1f-3b3f-abce-a0a3626769eb" />
+      <display value="MOUNT AUBURN HOSPITAL" />
+    </member>
+  </participant>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="283385000" />
+      <display value="Laceration of thigh" />
+    </coding>
+    <text value="Laceration of thigh" />
+  </reasonCode>
+  <managingOrganization>
+    <reference value="urn:uuid:69176529-fd1f-3b3f-abce-a0a3626769eb" />
+    <display value="MOUNT AUBURN HOSPITAL" />
+  </managingOrganization>
+</CareTeam>

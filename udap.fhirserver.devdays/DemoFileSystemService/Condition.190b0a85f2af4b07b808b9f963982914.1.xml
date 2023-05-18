@@ -1,0 +1,36 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="190b0a85f2af4b07b808b9f963982914" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.5748551-07:00" />
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+      <code value="resolved" />
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+      <code value="confirmed" />
+    </coding>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="444814009" />
+      <display value="Viral sinusitis (disorder)" />
+    </coding>
+    <text value="Viral sinusitis (disorder)" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:ab3af32c-cb75-4a38-abca-a34118c83247" />
+  </encounter>
+  <onsetDateTime value="2012-06-07T06:12:24-04:00" />
+  <abatementDateTime value="2012-06-28T06:12:24-04:00" />
+  <recordedDate value="2012-06-07T06:12:24-04:00" />
+</Condition>

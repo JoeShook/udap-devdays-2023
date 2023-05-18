@@ -1,0 +1,59 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="ba0cc92bbe274b508fe236702026458b" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:12.9830095-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+    <display value="Edgardo196 Berge125" />
+  </patient>
+  <billablePeriod>
+    <start value="1995-10-11T21:23:12-04:00" />
+    <end value="1995-10-11T22:08:12-04:00" />
+  </billablePeriod>
+  <created value="1995-10-11T22:08:12-04:00" />
+  <provider>
+    <reference value="urn:uuid:f71ce1a9-cca7-3295-9a1e-c88ac3479b6f" />
+    <display value="MARLBOROUGH HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="185347001" />
+        <display value="Encounter for problem" />
+      </coding>
+      <text value="Encounter for problem" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:c7eab285-b2f0-49b0-8850-d6cac444fb22" />
+    </encounter>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

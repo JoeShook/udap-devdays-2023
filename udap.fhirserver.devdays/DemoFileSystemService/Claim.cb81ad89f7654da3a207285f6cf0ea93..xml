@@ -1,0 +1,99 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="cb81ad89f7654da3a207285f6cf0ea93" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.6186258-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+    <display value="Byron202 Vandervort697" />
+  </patient>
+  <billablePeriod>
+    <start value="2018-11-08T05:12:24-05:00" />
+    <end value="2018-11-08T06:42:24-05:00" />
+  </billablePeriod>
+  <created value="2018-11-08T06:42:24-05:00" />
+  <provider>
+    <reference value="urn:uuid:c44f361c-2efb-3050-8f97-0354a12e2920" />
+    <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <diagnosis>
+    <sequence value="1" />
+    <diagnosisReference>
+      <reference value="urn:uuid:76b3f733-02ad-42cf-94de-4ce0fc03d168" />
+    </diagnosisReference>
+  </diagnosis>
+  <procedure>
+    <sequence value="1" />
+    <procedureReference>
+      <reference value="urn:uuid:ebadb9c1-0c28-4e70-bc92-eb80cae38e4e" />
+    </procedureReference>
+  </procedure>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="50849002" />
+        <display value="Emergency room admission (procedure)" />
+      </coding>
+      <text value="Emergency room admission (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:95016ee5-f3e0-41a6-9169-a031741bf911" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <diagnosisSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="444448004" />
+        <display value="Injury of medial collateral ligament of knee" />
+      </coding>
+      <text value="Injury of medial collateral ligament of knee" />
+    </productOrService>
+  </item>
+  <item>
+    <sequence value="3" />
+    <procedureSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="74016001" />
+        <display value="Knee X-ray" />
+      </coding>
+      <text value="Knee X-ray" />
+    </productOrService>
+    <net>
+      <value value="516.65" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="4fa6cb254bc74f59b59ab6c2eb9fc197" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.6531092-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="226098a2-6a40-3588-b5bb-db56c3a30a04" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="GOOD SAMARITAN MEDICAL CENTER" />
+  <telecom>
+    <system value="phone" />
+    <value value="5084273000" />
+  </telecom>
+  <address>
+    <line value="235 NORTH PEARL STREET" />
+    <city value="BROCKTON" />
+    <state value="MA" />
+    <postalCode value="02301" />
+    <country value="US" />
+  </address>
+</Organization>

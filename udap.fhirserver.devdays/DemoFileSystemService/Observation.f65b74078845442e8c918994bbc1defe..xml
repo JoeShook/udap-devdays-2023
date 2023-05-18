@@ -1,0 +1,63 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="f65b74078845442e8c918994bbc1defe" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:16.1019825-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="vital-signs" />
+      <display value="vital-signs" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="55284-4" />
+      <display value="Blood Pressure" />
+    </coding>
+    <text value="Blood Pressure" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:eed483f7-c02a-4a74-bbed-1ca1029765f1" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:854222fa-1e0b-44a1-9c74-1cce40ca1ce2" />
+  </encounter>
+  <effectiveDateTime value="2019-08-22T18:56:16-04:00" />
+  <issued value="2019-08-22T18:56:16.593-04:00" />
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org" />
+        <code value="8462-4" />
+        <display value="Diastolic Blood Pressure" />
+      </coding>
+      <text value="Diastolic Blood Pressure" />
+    </code>
+    <valueQuantity>
+      <value value="75.77562511387183" />
+      <unit value="mm[Hg]" />
+      <system value="http://unitsofmeasure.org" />
+      <code value="mm[Hg]" />
+    </valueQuantity>
+  </component>
+  <component>
+    <code>
+      <coding>
+        <system value="http://loinc.org" />
+        <code value="8480-6" />
+        <display value="Systolic Blood Pressure" />
+      </coding>
+      <text value="Systolic Blood Pressure" />
+    </code>
+    <valueQuantity>
+      <value value="112.06334606714353" />
+      <unit value="mm[Hg]" />
+      <system value="http://unitsofmeasure.org" />
+      <code value="mm[Hg]" />
+    </valueQuantity>
+  </component>
+</Observation>

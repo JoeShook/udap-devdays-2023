@@ -1,0 +1,31 @@
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="0d3a337b4893495b95c5f025eb8422dc" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.4592823-07:00" />
+  </meta>
+  <status value="stopped" />
+  <intent value="order" />
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+      <code value="834102" />
+      <display value="Penicillin V Potassium 500 MG Oral Tablet" />
+    </coding>
+    <text value="Penicillin V Potassium 500 MG Oral Tablet" />
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:57462014-d4ff-47d0-8099-38ae6ca253dd" />
+  </encounter>
+  <authoredOn value="2010-08-13T08:24:07-04:00" />
+  <requester>
+    <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001ea" />
+    <display value="Dr. Carmina141 Oberbrunner298" />
+  </requester>
+  <reasonReference>
+    <reference value="urn:uuid:118d9f99-b0dc-4fbd-abb9-544eed5d7ac9" />
+  </reasonReference>
+</MedicationRequest>

@@ -1,0 +1,69 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="1cd23d1f6cf546d6b6a2a2613e4c6bb1" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.4329323-07:00" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">Care Plan for Physical therapy procedure.<br />Activities: <ul><li>Physical therapy procedure</li><li>Physical therapy procedure</li></ul><br />Care plan is meant to treat Injury of medial collateral ligament of knee.</div>
+  </text>
+  <status value="completed" />
+  <intent value="order" />
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="91251008" />
+      <display value="Physical therapy procedure" />
+    </coding>
+    <text value="Physical therapy procedure" />
+  </category>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:95016ee5-f3e0-41a6-9169-a031741bf911" />
+  </encounter>
+  <period>
+    <start value="2018-11-08T05:12:24-05:00" />
+    <end value="2018-12-15T05:12:24-05:00" />
+  </period>
+  <careTeam>
+    <reference value="urn:uuid:ac807717-30b8-4a70-b5cc-e144f37c88c7" />
+  </careTeam>
+  <addresses>
+    <reference value="urn:uuid:76b3f733-02ad-42cf-94de-4ce0fc03d168" />
+  </addresses>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="229586001" />
+          <display value="Rest, ice, compression and elevation treatment programme" />
+        </coding>
+        <text value="Rest, ice, compression and elevation treatment programme" />
+      </code>
+      <status value="completed" />
+      <location>
+        <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="229070002" />
+          <display value="Stretching exercises" />
+        </coding>
+        <text value="Stretching exercises" />
+      </code>
+      <status value="completed" />
+      <location>
+        <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+</CarePlan>

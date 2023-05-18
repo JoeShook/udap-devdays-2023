@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="08f642632ff8476b9c508fc41883d674" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:19.4897326-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="EMER" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="50849002" />
+      <display value="Emergency room admission (procedure)" />
+    </coding>
+    <text value="Emergency room admission (procedure)" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+    <display value="Mr. Ray930 Waters156" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001ea" />
+      <display value="Dr. Carmina141 Oberbrunner298" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2019-09-09T08:24:07-04:00" />
+    <end value="2019-09-09T09:24:07-04:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:3bd5eda0-16da-3ba5-8500-4dfd6ae118b8" />
+    <display value="NORWOOD HOSPITAL" />
+  </serviceProvider>
+</Encounter>

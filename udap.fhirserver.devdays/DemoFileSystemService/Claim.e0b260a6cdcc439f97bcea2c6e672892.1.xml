@@ -1,0 +1,121 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="e0b260a6cdcc439f97bcea2c6e672892" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:07.7797481-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+    <display value="Alejandro916 Treutel973" />
+  </patient>
+  <billablePeriod>
+    <start value="2010-05-23T08:41:34-04:00" />
+    <end value="2010-05-23T10:07:34-04:00" />
+  </billablePeriod>
+  <created value="2010-05-23T10:07:34-04:00" />
+  <provider>
+    <reference value="urn:uuid:69176529-fd1f-3b3f-abce-a0a3626769eb" />
+    <display value="MOUNT AUBURN HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <diagnosis>
+    <sequence value="1" />
+    <diagnosisReference>
+      <reference value="urn:uuid:c0f830b5-fb6b-4be5-bd9f-1165160b9659" />
+    </diagnosisReference>
+  </diagnosis>
+  <procedure>
+    <sequence value="1" />
+    <procedureReference>
+      <reference value="urn:uuid:fb3d0074-4f68-4550-8a59-4115c913c79f" />
+    </procedureReference>
+  </procedure>
+  <procedure>
+    <sequence value="2" />
+    <procedureReference>
+      <reference value="urn:uuid:d4ab1b41-cdf0-47ab-910b-563a61c78aaa" />
+    </procedureReference>
+  </procedure>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Cigna Health" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="50849002" />
+        <display value="Emergency room admission (procedure)" />
+      </coding>
+      <text value="Emergency room admission (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:b3c557ab-4468-455b-9b83-152f9bc84b14" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <diagnosisSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="283385000" />
+        <display value="Laceration of thigh" />
+      </coding>
+      <text value="Laceration of thigh" />
+    </productOrService>
+  </item>
+  <item>
+    <sequence value="3" />
+    <procedureSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="288086009" />
+        <display value="Suture open wound" />
+      </coding>
+      <text value="Suture open wound" />
+    </productOrService>
+    <net>
+      <value value="10042.82" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="4" />
+    <procedureSequence value="2" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="384700001" />
+        <display value="Injection of tetanus antitoxin" />
+      </coding>
+      <text value="Injection of tetanus antitoxin" />
+    </productOrService>
+    <net>
+      <value value="3078.72" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

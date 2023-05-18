@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="e291ff60b5274566a9830aecac9103dd" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:16.5961291-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="04b0900a-2ae4-3360-b9a5-1b3eb2bdd8a2" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="PCP67456" />
+  <telecom>
+    <system value="phone" />
+    <value value="202-445-7271" />
+  </telecom>
+  <address>
+    <line value="140 N VALLEY RD" />
+    <city value="PELHAM" />
+    <state value="MA" />
+    <postalCode value="01002-9766" />
+    <country value="US" />
+  </address>
+</Organization>

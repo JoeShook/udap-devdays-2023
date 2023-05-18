@@ -1,0 +1,77 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="4077da5355db45dd8b4fc6e42959ee64" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.9786927-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+    <display value="Byron202 Vandervort697" />
+  </patient>
+  <billablePeriod>
+    <start value="2014-12-08T05:12:24-05:00" />
+    <end value="2014-12-08T06:12:24-05:00" />
+  </billablePeriod>
+  <created value="2014-12-08T06:12:24-05:00" />
+  <provider>
+    <reference value="urn:uuid:c44f361c-2efb-3050-8f97-0354a12e2920" />
+    <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <diagnosis>
+    <sequence value="1" />
+    <diagnosisReference>
+      <reference value="urn:uuid:ae75a282-ddde-4119-a09c-501f0624a432" />
+    </diagnosisReference>
+  </diagnosis>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="50849002" />
+        <display value="Emergency room admission (procedure)" />
+      </coding>
+      <text value="Emergency room admission (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:1cae9510-21ad-4e57-a139-3dfa22a0a9d9" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <diagnosisSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="70704007" />
+        <display value="Sprain of wrist" />
+      </coding>
+      <text value="Sprain of wrist" />
+    </productOrService>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

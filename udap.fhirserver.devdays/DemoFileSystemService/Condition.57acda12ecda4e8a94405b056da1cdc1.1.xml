@@ -1,0 +1,36 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="57acda12ecda4e8a94405b056da1cdc1" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:08.5513466-07:00" />
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+      <code value="resolved" />
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+      <code value="confirmed" />
+    </coding>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="195662009" />
+      <display value="Acute viral pharyngitis (disorder)" />
+    </coding>
+    <text value="Acute viral pharyngitis (disorder)" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:d5d42d5e-721f-4da6-b33f-be0c03eb9c25" />
+  </encounter>
+  <onsetDateTime value="2016-06-14T08:41:34-04:00" />
+  <abatementDateTime value="2016-06-24T08:41:34-04:00" />
+  <recordedDate value="2016-06-14T08:41:34-04:00" />
+</Condition>

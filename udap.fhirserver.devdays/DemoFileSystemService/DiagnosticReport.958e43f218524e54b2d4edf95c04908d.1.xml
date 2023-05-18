@@ -1,0 +1,63 @@
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="958e43f218524e54b2d4edf95c04908d" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:11.0129463-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+      <code value="LAB" />
+      <display value="Laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="51990-0" />
+      <display value="Basic Metabolic Panel" />
+    </coding>
+    <text value="Basic Metabolic Panel" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:a311cd3b-5a18-4f5f-9cd4-5b332da15884" />
+  </encounter>
+  <effectiveDateTime value="2019-04-13T06:12:24-04:00" />
+  <issued value="2019-04-13T06:12:24.661-04:00" />
+  <result>
+    <reference value="urn:uuid:359efcdd-d3cd-405e-aff9-f8c5946e6c9f" />
+    <display value="Glucose" />
+  </result>
+  <result>
+    <reference value="urn:uuid:70349d35-11cf-4dcd-9959-12c3be71972e" />
+    <display value="Urea Nitrogen" />
+  </result>
+  <result>
+    <reference value="urn:uuid:b5d005e5-5a37-4052-ac56-141ccbc34bfe" />
+    <display value="Creatinine" />
+  </result>
+  <result>
+    <reference value="urn:uuid:2e0c5c23-edb1-4cd7-8b24-738b915035d0" />
+    <display value="Calcium" />
+  </result>
+  <result>
+    <reference value="urn:uuid:aa5f8140-afdf-410e-a200-822f4dbf42ea" />
+    <display value="Sodium" />
+  </result>
+  <result>
+    <reference value="urn:uuid:1c8c90f5-3946-40c2-b904-52c0643e0118" />
+    <display value="Potassium" />
+  </result>
+  <result>
+    <reference value="urn:uuid:5d451cdb-6ea6-4031-9762-a41c45733b9b" />
+    <display value="Chloride" />
+  </result>
+  <result>
+    <reference value="urn:uuid:80b9a9a2-05ec-41ab-8391-57ca5d8e94b3" />
+    <display value="Carbon Dioxide" />
+  </result>
+</DiagnosticReport>

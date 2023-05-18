@@ -1,0 +1,72 @@
+<CareTeam xmlns="http://hl7.org/fhir">
+  <id value="28829f9430154b029818f6268ee774c8" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.956011-07:00" />
+  </meta>
+  <status value="inactive" />
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:1cae9510-21ad-4e57-a139-3dfa22a0a9d9" />
+  </encounter>
+  <period>
+    <start value="2014-12-08T05:12:24-05:00" />
+    <end value="2014-12-29T05:12:24-05:00" />
+  </period>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="116153009" />
+        <display value="Patient" />
+      </coding>
+      <text value="Patient" />
+    </role>
+    <member>
+      <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+      <display value="Mr. Byron202 Vandervort697" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Person in the healthcare environment (person)" />
+      </coding>
+      <text value="Person in the healthcare environment (person)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000000c8" />
+      <display value="Dr. Amos720 Towne435" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Healthcare related organization (qualifier value)" />
+      </coding>
+      <text value="Healthcare related organization (qualifier value)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:c44f361c-2efb-3050-8f97-0354a12e2920" />
+      <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+    </member>
+  </participant>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="70704007" />
+      <display value="Sprain of wrist" />
+    </coding>
+    <text value="Sprain of wrist" />
+  </reasonCode>
+  <managingOrganization>
+    <reference value="urn:uuid:c44f361c-2efb-3050-8f97-0354a12e2920" />
+    <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+  </managingOrganization>
+</CareTeam>

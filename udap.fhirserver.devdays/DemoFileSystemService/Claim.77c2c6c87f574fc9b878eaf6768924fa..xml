@@ -1,0 +1,95 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="77c2c6c87f574fc9b878eaf6768924fa" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.3601103-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+    <display value="Ray930 Waters156" />
+  </patient>
+  <billablePeriod>
+    <start value="1990-11-10T07:24:07-05:00" />
+    <end value="1990-11-10T09:09:07-05:00" />
+  </billablePeriod>
+  <created value="1990-11-10T09:09:07-05:00" />
+  <provider>
+    <reference value="urn:uuid:3bd5eda0-16da-3ba5-8500-4dfd6ae118b8" />
+    <display value="NORWOOD HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <diagnosis>
+    <sequence value="1" />
+    <diagnosisReference>
+      <reference value="urn:uuid:4ce66cee-3a21-4669-98c7-36967454a9f8" />
+    </diagnosisReference>
+  </diagnosis>
+  <diagnosis>
+    <sequence value="2" />
+    <diagnosisReference>
+      <reference value="urn:uuid:6f22283c-b515-4aa3-9ef4-fbda40370656" />
+    </diagnosisReference>
+  </diagnosis>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Blue Cross Blue Shield" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="410429000" />
+        <display value="Cardiac Arrest" />
+      </coding>
+      <text value="Cardiac Arrest" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:fbec7c5c-3944-49bc-827a-d9af6698d58f" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <diagnosisSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="410429000" />
+        <display value="Cardiac Arrest" />
+      </coding>
+      <text value="Cardiac Arrest" />
+    </productOrService>
+  </item>
+  <item>
+    <sequence value="3" />
+    <diagnosisSequence value="2" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="429007001" />
+        <display value="History of cardiac arrest (situation)" />
+      </coding>
+      <text value="History of cardiac arrest (situation)" />
+    </productOrService>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

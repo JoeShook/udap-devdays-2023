@@ -1,0 +1,69 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="267d406c591d44a6bf4994196fc279d8" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.3618204-07:00" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">Care Plan for Wound care.<br />Activities: <ul><li>Wound care</li><li>Wound care</li></ul><br />Care plan is meant to treat Laceration of foot.</div>
+  </text>
+  <status value="completed" />
+  <intent value="order" />
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="225358003" />
+      <display value="Wound care" />
+    </coding>
+    <text value="Wound care" />
+  </category>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:d0643e5c-cf30-4d31-8754-38c1883ef958" />
+  </encounter>
+  <period>
+    <start value="2010-01-12T05:12:24-05:00" />
+    <end value="2010-02-02T05:12:24-05:00" />
+  </period>
+  <careTeam>
+    <reference value="urn:uuid:1acb94d9-5ce8-49c6-8b62-267face5b9da" />
+  </careTeam>
+  <addresses>
+    <reference value="urn:uuid:dbeae2cd-302a-4cfa-8d2b-e50dd9a514eb" />
+  </addresses>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="385949008" />
+          <display value="Dressing change management" />
+        </coding>
+        <text value="Dressing change management" />
+      </code>
+      <status value="completed" />
+      <location>
+        <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="439830001" />
+          <display value="Behavior to prevent infection" />
+        </coding>
+        <text value="Behavior to prevent infection" />
+      </code>
+      <status value="completed" />
+      <location>
+        <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+</CarePlan>

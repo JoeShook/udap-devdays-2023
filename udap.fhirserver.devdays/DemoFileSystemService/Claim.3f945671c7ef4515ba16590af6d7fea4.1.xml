@@ -1,0 +1,77 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="3f945671c7ef4515ba16590af6d7fea4" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:05.5011379-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+    <display value="Alejandro916 Treutel973" />
+  </patient>
+  <billablePeriod>
+    <start value="2000-12-15T07:41:34-05:00" />
+    <end value="2000-12-15T07:56:34-05:00" />
+  </billablePeriod>
+  <created value="2000-12-15T07:56:34-05:00" />
+  <provider>
+    <reference value="urn:uuid:2468bb56-3ceb-37c9-8140-14cbe3d36948" />
+    <display value="CAREWELL URGENT CARE CENTERS OF MA, PC" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <diagnosis>
+    <sequence value="1" />
+    <diagnosisReference>
+      <reference value="urn:uuid:51bdd5b5-d72a-49f7-8c21-3e37dea29ce4" />
+    </diagnosisReference>
+  </diagnosis>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Cigna Health" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="410620009" />
+        <display value="Well child visit (procedure)" />
+      </coding>
+      <text value="Well child visit (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:c96362e0-f979-442c-ab3a-ea5d4e402700" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <diagnosisSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="162864005" />
+        <display value="Body mass index 30+ - obesity (finding)" />
+      </coding>
+      <text value="Body mass index 30+ - obesity (finding)" />
+    </productOrService>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

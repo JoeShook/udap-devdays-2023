@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="810de57893974fe7b5c66928082fd7e8" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:06.741-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="69176529-fd1f-3b3f-abce-a0a3626769eb" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="MOUNT AUBURN HOSPITAL" />
+  <telecom>
+    <system value="phone" />
+    <value value="6174923500" />
+  </telecom>
+  <address>
+    <line value="330 MOUNT AUBURN STREET" />
+    <city value="CAMBRIDGE" />
+    <state value="MA" />
+    <postalCode value="02138" />
+    <country value="US" />
+  </address>
+</Organization>

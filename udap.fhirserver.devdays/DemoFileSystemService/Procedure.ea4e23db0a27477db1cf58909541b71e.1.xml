@@ -1,0 +1,30 @@
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="ea4e23db0a27477db1cf58909541b71e" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.3230231-07:00" />
+  </meta>
+  <status value="completed" />
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="288086009" />
+      <display value="Suture open wound" />
+    </coding>
+    <text value="Suture open wound" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:d0643e5c-cf30-4d31-8754-38c1883ef958" />
+  </encounter>
+  <performedPeriod>
+    <start value="2010-01-12T05:12:24-05:00" />
+    <end value="2010-01-12T05:28:24-05:00" />
+  </performedPeriod>
+  <reasonReference>
+    <reference value="urn:uuid:dbeae2cd-302a-4cfa-8d2b-e50dd9a514eb" />
+    <display value="Laceration of foot" />
+  </reasonReference>
+</Procedure>

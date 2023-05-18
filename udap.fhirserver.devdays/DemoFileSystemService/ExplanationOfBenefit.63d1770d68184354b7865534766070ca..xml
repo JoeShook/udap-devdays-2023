@@ -1,0 +1,189 @@
+<ExplanationOfBenefit xmlns="http://hl7.org/fhir">
+  <id value="63d1770d68184354b7865534766070ca" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.4233342-07:00" />
+  </meta>
+  <contained>
+    <ServiceRequest>
+      <id value="referral" />
+      <status value="completed" />
+      <intent value="order" />
+      <subject>
+        <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+      </subject>
+      <requester>
+        <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000dc64" />
+      </requester>
+      <performer>
+        <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000dc64" />
+      </performer>
+    </ServiceRequest>
+  </contained>
+  <contained>
+    <Coverage>
+      <id value="coverage" />
+      <status value="active" />
+      <type>
+        <text value="Blue Cross Blue Shield" />
+      </type>
+      <beneficiary>
+        <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+      </beneficiary>
+      <payor>
+        <display value="Blue Cross Blue Shield" />
+      </payor>
+    </Coverage>
+  </contained>
+  <identifier>
+    <system value="https://bluebutton.cms.gov/resources/variables/clm_id" />
+    <value value="97ddb8ad-1e91-4172-b30c-508acf4484d2" />
+  </identifier>
+  <identifier>
+    <system value="https://bluebutton.cms.gov/resources/identifier/claim-group" />
+    <value value="99999999999" />
+  </identifier>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </patient>
+  <billablePeriod>
+    <start value="2007-12-29T07:54:07-05:00" />
+    <end value="2008-12-29T07:54:07-05:00" />
+  </billablePeriod>
+  <created value="2007-12-29T07:54:07-05:00" />
+  <insurer>
+    <display value="Blue Cross Blue Shield" />
+  </insurer>
+  <provider>
+    <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000dc64" />
+  </provider>
+  <referral>
+    <reference value="#referral" />
+  </referral>
+  <claim>
+    <reference value="urn:uuid:97ddb8ad-1e91-4172-b30c-508acf4484d2" />
+  </claim>
+  <outcome value="complete" />
+  <careTeam>
+    <sequence value="1" />
+    <provider>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-00000000dc64" />
+    </provider>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claimcareteamrole" />
+        <code value="primary" />
+        <display value="Primary Care Practitioner" />
+      </coding>
+    </role>
+  </careTeam>
+  <diagnosis>
+    <sequence value="1" />
+    <diagnosisReference>
+      <reference value="urn:uuid:515ab967-143f-42f5-baca-6c965d0f3fbd" />
+    </diagnosisReference>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-diagnosistype" />
+        <code value="principal" />
+      </coding>
+    </type>
+  </diagnosis>
+  <insurance>
+    <focal value="true" />
+    <coverage>
+      <reference value="#coverage" />
+      <display value="Blue Cross Blue Shield" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd" />
+        <code value="1" />
+        <display value="Medical care" />
+      </coding>
+    </category>
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="162673000" />
+        <display value="General examination of patient (procedure)" />
+      </coding>
+      <text value="General examination of patient (procedure)" />
+    </productOrService>
+    <servicedPeriod>
+      <start value="2007-12-29T07:24:07-05:00" />
+      <end value="2007-12-29T07:54:07-05:00" />
+    </servicedPeriod>
+    <locationCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-serviceplace" />
+        <code value="19" />
+        <display value="Off Campus-Outpatient Hospital" />
+      </coding>
+    </locationCodeableConcept>
+    <encounter>
+      <reference value="urn:uuid:b5e12245-d21c-4acb-b8e7-91e474a7496e" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <diagnosisSequence value="1" />
+    <category>
+      <coding>
+        <system value="https://bluebutton.cms.gov/resources/variables/line_cms_type_srvc_cd" />
+        <code value="1" />
+        <display value="Medical care" />
+      </coding>
+    </category>
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="162864005" />
+        <display value="Body mass index 30+ - obesity (finding)" />
+      </coding>
+      <text value="Body mass index 30+ - obesity (finding)" />
+    </productOrService>
+    <servicedPeriod>
+      <start value="2007-12-29T07:24:07-05:00" />
+      <end value="2007-12-29T07:54:07-05:00" />
+    </servicedPeriod>
+    <locationCodeableConcept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ex-serviceplace" />
+        <code value="19" />
+        <display value="Off Campus-Outpatient Hospital" />
+      </coding>
+    </locationCodeableConcept>
+  </item>
+  <total>
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/adjudication" />
+        <code value="submitted" />
+        <display value="Submitted Amount" />
+      </coding>
+      <text value="Submitted Amount" />
+    </category>
+    <amount>
+      <value value="129.16" />
+      <currency value="USD" />
+    </amount>
+  </total>
+  <payment>
+    <amount>
+      <value value="0.0" />
+      <currency value="USD" />
+    </amount>
+  </payment>
+</ExplanationOfBenefit>

@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="8a3243fc363f4b4da45354ced3a648b5" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:14.8152225-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="2085-9" />
+      <display value="High Density Lipoprotein Cholesterol" />
+    </coding>
+    <text value="High Density Lipoprotein Cholesterol" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:7701437d-a793-43e8-9d86-a8a1ead0f0e6" />
+  </encounter>
+  <effectiveDateTime value="2012-12-25T02:47:35-05:00" />
+  <issued value="2012-12-25T02:47:35.453-05:00" />
+  <valueQuantity>
+    <value value="64.07082989307992" />
+    <unit value="mg/dL" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="mg/dL" />
+  </valueQuantity>
+</Observation>

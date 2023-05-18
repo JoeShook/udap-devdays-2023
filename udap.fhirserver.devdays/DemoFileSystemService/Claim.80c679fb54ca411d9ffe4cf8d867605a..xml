@@ -1,0 +1,61 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="80c679fb54ca411d9ffe4cf8d867605a" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:13.3509847-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="pharmacy" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+  </patient>
+  <billablePeriod>
+    <start value="2011-04-02T21:23:12-04:00" />
+    <end value="2011-04-02T22:23:12-04:00" />
+  </billablePeriod>
+  <created value="2011-04-02T22:23:12-04:00" />
+  <provider>
+    <reference value="urn:uuid:f71ce1a9-cca7-3295-9a1e-c88ac3479b6f" />
+    <display value="MARLBOROUGH HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <prescription>
+    <reference value="urn:uuid:10f21b1f-0fbe-4d3a-9627-1819d6d5b256" />
+  </prescription>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="50849002" />
+        <display value="Emergency room admission (procedure)" />
+      </coding>
+      <text value="Emergency room admission (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:4815e697-5ae1-4e06-9f00-e4995666b080" />
+    </encounter>
+  </item>
+  <total>
+    <value value="6.76" />
+    <currency value="USD" />
+  </total>
+</Claim>

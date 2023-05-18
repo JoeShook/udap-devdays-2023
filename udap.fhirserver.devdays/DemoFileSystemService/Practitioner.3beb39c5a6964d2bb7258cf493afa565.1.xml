@@ -1,0 +1,30 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="3beb39c5a6964d2bb7258cf493afa565" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:06.7474714-07:00" />
+  </meta>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi" />
+    <value value="10" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Feil794" />
+    <given value="Buford910" />
+    <prefix value="Dr." />
+  </name>
+  <telecom>
+    <system value="email" />
+    <value value="Buford910.Feil794@example.com" />
+    <use value="work" />
+  </telecom>
+  <address>
+    <line value="330 MOUNT AUBURN STREET" />
+    <city value="CAMBRIDGE" />
+    <state value="MA" />
+    <postalCode value="02138" />
+    <country value="US" />
+  </address>
+  <gender value="male" />
+</Practitioner>

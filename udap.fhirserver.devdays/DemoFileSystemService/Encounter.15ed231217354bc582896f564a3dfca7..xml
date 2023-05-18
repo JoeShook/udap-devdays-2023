@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="15ed231217354bc582896f564a3dfca7" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:08.6494175-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="162673000" />
+      <display value="General examination of patient (procedure)" />
+    </coding>
+    <text value="General examination of patient (procedure)" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+    <display value="Mr. Alejandro916 Treutel973" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-000000014ce4" />
+      <display value="Dr. Claudia969 Romero158" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2018-01-12T07:41:34-05:00" />
+    <end value="2018-01-12T07:56:34-05:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:2468bb56-3ceb-37c9-8140-14cbe3d36948" />
+    <display value="CAREWELL URGENT CARE CENTERS OF MA, PC" />
+  </serviceProvider>
+</Encounter>

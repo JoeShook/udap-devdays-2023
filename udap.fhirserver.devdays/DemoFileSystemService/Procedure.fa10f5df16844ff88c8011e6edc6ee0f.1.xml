@@ -1,0 +1,26 @@
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="fa10f5df16844ff88c8011e6edc6ee0f" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:15.3446967-07:00" />
+  </meta>
+  <status value="completed" />
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="430193006" />
+      <display value="Medication Reconciliation (procedure)" />
+    </coding>
+    <text value="Medication Reconciliation (procedure)" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:8d8c82b6-6e4f-4bb0-bd46-7cd4347c366f" />
+  </encounter>
+  <performedPeriod>
+    <start value="2017-10-17T03:47:35-04:00" />
+    <end value="2017-10-17T04:02:35-04:00" />
+  </performedPeriod>
+</Procedure>

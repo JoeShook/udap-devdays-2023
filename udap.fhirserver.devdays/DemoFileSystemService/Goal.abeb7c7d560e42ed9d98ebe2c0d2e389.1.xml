@@ -1,0 +1,20 @@
+<Goal xmlns="http://hl7.org/fhir">
+  <id value="abeb7c7d560e42ed9d98ebe2c0d2e389" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.261724-07:00" />
+  </meta>
+  <lifecycleStatus value="accepted" />
+  <achievementStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/goal-achievement" />
+      <code value="in-progress" />
+    </coding>
+  </achievementStatus>
+  <description>
+    <text value="Improve and maintenance of optimal foot health: aim at early detection of peripheral vascular problems and neuropathy presumed due to diabetes; and prevention of diabetic foot ulcer, gangrene" />
+  </description>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+</Goal>

@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="65c199fd9e484655b680ac949a16454e" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.3882482-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="29769c4a-4330-3209-b546-1e1f12c7adc5" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="EYE CARE SPECIALISTS PC" />
+  <telecom>
+    <system value="phone" />
+    <value value="508-623-3880" />
+  </telecom>
+  <address>
+    <line value="31 PINE ST" />
+    <city value="NORFOLK" />
+    <state value="MA" />
+    <postalCode value="02056-1642" />
+    <country value="US" />
+  </address>
+</Organization>

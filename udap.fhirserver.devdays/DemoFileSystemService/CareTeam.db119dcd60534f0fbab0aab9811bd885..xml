@@ -1,0 +1,72 @@
+<CareTeam xmlns="http://hl7.org/fhir">
+  <id value="db119dcd60534f0fbab0aab9811bd885" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:14.3626147-07:00" />
+  </meta>
+  <status value="inactive" />
+  <subject>
+    <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:739c6709-0b13-4434-8ad2-353ca06ee341" />
+  </encounter>
+  <period>
+    <start value="1981-12-05T02:47:35-05:00" />
+    <end value="1982-09-28T03:47:35-04:00" />
+  </period>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="116153009" />
+        <display value="Patient" />
+      </coding>
+      <text value="Patient" />
+    </role>
+    <member>
+      <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+      <display value="Mr. Jarod376 Wehner319" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Person in the healthcare environment (person)" />
+      </coding>
+      <text value="Person in the healthcare environment (person)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-000000000190" />
+      <display value="Dr. Stephaine613 Hoeger474" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Healthcare related organization (qualifier value)" />
+      </coding>
+      <text value="Healthcare related organization (qualifier value)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:ac8356a5-78f8-3a63-8a1e-59e832fd54e7" />
+      <display value="NASHOBA VALLEY MEDICAL CENTER" />
+    </member>
+  </participant>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="10509002" />
+      <display value="Acute bronchitis (disorder)" />
+    </coding>
+    <text value="Acute bronchitis (disorder)" />
+  </reasonCode>
+  <managingOrganization>
+    <reference value="urn:uuid:ac8356a5-78f8-3a63-8a1e-59e832fd54e7" />
+    <display value="NASHOBA VALLEY MEDICAL CENTER" />
+  </managingOrganization>
+</CareTeam>

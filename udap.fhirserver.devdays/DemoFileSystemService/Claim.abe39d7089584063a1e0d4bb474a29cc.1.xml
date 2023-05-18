@@ -1,0 +1,99 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="abe39d7089584063a1e0d4bb474a29cc" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:08.5849557-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+    <display value="Alejandro916 Treutel973" />
+  </patient>
+  <billablePeriod>
+    <start value="2016-06-14T08:41:34-04:00" />
+    <end value="2016-06-14T09:11:34-04:00" />
+  </billablePeriod>
+  <created value="2016-06-14T09:11:34-04:00" />
+  <provider>
+    <reference value="urn:uuid:69176529-fd1f-3b3f-abce-a0a3626769eb" />
+    <display value="MOUNT AUBURN HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <diagnosis>
+    <sequence value="1" />
+    <diagnosisReference>
+      <reference value="urn:uuid:09eedc0b-8bb1-4245-bf24-b0fb434fb306" />
+    </diagnosisReference>
+  </diagnosis>
+  <procedure>
+    <sequence value="1" />
+    <procedureReference>
+      <reference value="urn:uuid:4c18bd0f-c024-4754-9116-2516113b0538" />
+    </procedureReference>
+  </procedure>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Cigna Health" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="185345009" />
+        <display value="Encounter for symptom" />
+      </coding>
+      <text value="Encounter for symptom" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:d5d42d5e-721f-4da6-b33f-be0c03eb9c25" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <diagnosisSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="195662009" />
+        <display value="Acute viral pharyngitis (disorder)" />
+      </coding>
+      <text value="Acute viral pharyngitis (disorder)" />
+    </productOrService>
+  </item>
+  <item>
+    <sequence value="3" />
+    <procedureSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="117015009" />
+        <display value="Throat culture (procedure)" />
+      </coding>
+      <text value="Throat culture (procedure)" />
+    </productOrService>
+    <net>
+      <value value="1613.42" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

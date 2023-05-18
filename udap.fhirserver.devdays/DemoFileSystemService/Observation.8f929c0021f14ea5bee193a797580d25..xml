@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="8f929c0021f14ea5bee193a797580d25" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:19.2378834-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="2093-3" />
+      <display value="Total Cholesterol" />
+    </coding>
+    <text value="Total Cholesterol" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:535c49f9-51b3-4606-98ec-424d23c6d1ef" />
+  </encounter>
+  <effectiveDateTime value="2017-01-07T07:24:07-05:00" />
+  <issued value="2017-01-07T07:24:07.775-05:00" />
+  <valueQuantity>
+    <value value="184.21878823568596" />
+    <unit value="mg/dL" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="mg/dL" />
+  </valueQuantity>
+</Observation>

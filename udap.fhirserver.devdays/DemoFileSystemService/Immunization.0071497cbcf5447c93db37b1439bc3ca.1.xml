@@ -1,0 +1,24 @@
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="0071497cbcf5447c93db37b1439bc3ca" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:16.011376-07:00" />
+  </meta>
+  <status value="completed" />
+  <vaccineCode>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/cvx" />
+      <code value="08" />
+      <display value="Hep B, adolescent or pediatric" />
+    </coding>
+    <text value="Hep B, adolescent or pediatric" />
+  </vaccineCode>
+  <patient>
+    <reference value="urn:uuid:eed483f7-c02a-4a74-bbed-1ca1029765f1" />
+  </patient>
+  <encounter>
+    <reference value="urn:uuid:7a0c8c3b-6317-418f-90a2-a6004bb35473" />
+  </encounter>
+  <occurrenceDateTime value="2019-08-22T18:56:16-04:00" />
+  <primarySource value="true" />
+</Immunization>

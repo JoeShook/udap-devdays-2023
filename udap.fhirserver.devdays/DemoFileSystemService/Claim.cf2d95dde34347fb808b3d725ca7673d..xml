@@ -1,0 +1,87 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="cf2d95dde34347fb808b3d725ca7673d" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:15.4598966-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+    <display value="Jarod376 Wehner319" />
+  </patient>
+  <billablePeriod>
+    <start value="2018-06-19T03:47:35-04:00" />
+    <end value="2018-06-19T04:02:35-04:00" />
+  </billablePeriod>
+  <created value="2018-06-19T04:02:35-04:00" />
+  <provider>
+    <reference value="urn:uuid:7116c200-6663-3503-8314-1ee16845e5d3" />
+    <display value="SAINTS WALK-IN MEDICAL CENTER - URGENT CARE AND OCCUPATIONAL HEALTH" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <supportingInfo>
+    <sequence value="1" />
+    <category>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/claiminformationcategory" />
+        <code value="info" />
+      </coding>
+    </category>
+    <valueReference>
+      <reference value="urn:uuid:1a102ce8-ec68-4d9f-aec7-15f19fe078a4" />
+    </valueReference>
+  </supportingInfo>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Cigna Health" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="702927004" />
+        <display value="Urgent care clinic (procedure)" />
+      </coding>
+      <text value="Urgent care clinic (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:4f0f8779-40d5-46be-945e-aaeadeffc601" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <informationSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://hl7.org/fhir/sid/cvx" />
+        <code value="140" />
+        <display value="Influenza, seasonal, injectable, preservative free" />
+      </coding>
+      <text value="Influenza, seasonal, injectable, preservative free" />
+    </productOrService>
+    <net>
+      <value value="140.52" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

@@ -1,0 +1,24 @@
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="5f1f3be0884b42fe97d15ff47ff9aefb" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:13.2718591-07:00" />
+  </meta>
+  <status value="completed" />
+  <vaccineCode>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/cvx" />
+      <code value="114" />
+      <display value="meningococcal MCV4P" />
+    </coding>
+    <text value="meningococcal MCV4P" />
+  </vaccineCode>
+  <patient>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+  </patient>
+  <encounter>
+    <reference value="urn:uuid:6f1a3ff8-9da3-4d16-a962-a3d67e38c738" />
+  </encounter>
+  <occurrenceDateTime value="2010-12-10T20:23:12-05:00" />
+  <primarySource value="true" />
+</Immunization>

@@ -1,0 +1,35 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="e08bb7fe301c48f99a553b492e98f49b" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.0161899-07:00" />
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+      <code value="active" />
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+      <code value="confirmed" />
+    </coding>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="15777000" />
+      <display value="Prediabetes" />
+    </coding>
+    <text value="Prediabetes" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:f6603f7f-3083-485e-9db8-7f9753e33e73" />
+  </encounter>
+  <onsetDateTime value="2016-04-09T06:12:24-04:00" />
+  <recordedDate value="2016-04-09T06:12:24-04:00" />
+</Condition>

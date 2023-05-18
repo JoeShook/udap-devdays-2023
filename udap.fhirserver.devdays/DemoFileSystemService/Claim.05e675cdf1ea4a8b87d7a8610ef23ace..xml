@@ -1,0 +1,147 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="05e675cdf1ea4a8b87d7a8610ef23ace" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:11.313362-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+    <display value="Byron202 Vandervort697" />
+  </patient>
+  <billablePeriod>
+    <start value="2019-04-13T06:12:24-04:00" />
+    <end value="2019-04-13T07:39:24-04:00" />
+  </billablePeriod>
+  <created value="2019-04-13T07:39:24-04:00" />
+  <provider>
+    <reference value="urn:uuid:c44f361c-2efb-3050-8f97-0354a12e2920" />
+    <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <procedure>
+    <sequence value="1" />
+    <procedureReference>
+      <reference value="urn:uuid:15e210a6-902c-4aa6-8f70-ad22467d3fc0" />
+    </procedureReference>
+  </procedure>
+  <procedure>
+    <sequence value="2" />
+    <procedureReference>
+      <reference value="urn:uuid:8088291f-2f8a-4d84-970e-0db9fe18d2c5" />
+    </procedureReference>
+  </procedure>
+  <procedure>
+    <sequence value="3" />
+    <procedureReference>
+      <reference value="urn:uuid:5881d51a-2a47-474a-9007-f6e6753df102" />
+    </procedureReference>
+  </procedure>
+  <procedure>
+    <sequence value="4" />
+    <procedureReference>
+      <reference value="urn:uuid:486c6ec6-a325-49f9-a045-3f437f0883ca" />
+    </procedureReference>
+  </procedure>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="185347001" />
+        <display value="Encounter for problem" />
+      </coding>
+      <text value="Encounter for problem" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:755eded1-966e-493f-a4e2-8cefe7c0ba06" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <procedureSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="14768001" />
+        <display value="Peripheral blood smear interpretation" />
+      </coding>
+      <text value="Peripheral blood smear interpretation" />
+    </productOrService>
+    <net>
+      <value value="516.65" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="3" />
+    <procedureSequence value="2" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="415300000" />
+        <display value="Review of systems (procedure)" />
+      </coding>
+      <text value="Review of systems (procedure)" />
+    </productOrService>
+    <net>
+      <value value="516.65" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="4" />
+    <procedureSequence value="3" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="430193006" />
+        <display value="Medication Reconciliation (procedure)" />
+      </coding>
+      <text value="Medication Reconciliation (procedure)" />
+    </productOrService>
+    <net>
+      <value value="733.42" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <item>
+    <sequence value="5" />
+    <procedureSequence value="4" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="162676008" />
+        <display value="Brief general examination (procedure)" />
+      </coding>
+      <text value="Brief general examination (procedure)" />
+    </productOrService>
+    <net>
+      <value value="516.65" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

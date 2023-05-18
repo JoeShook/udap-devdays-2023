@@ -1,0 +1,72 @@
+<CareTeam xmlns="http://hl7.org/fhir">
+  <id value="ca0c2786d6c24caaad0ded446c006333" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.4235317-07:00" />
+  </meta>
+  <status value="inactive" />
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:95016ee5-f3e0-41a6-9169-a031741bf911" />
+  </encounter>
+  <period>
+    <start value="2018-11-08T05:12:24-05:00" />
+    <end value="2018-12-15T05:12:24-05:00" />
+  </period>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="116153009" />
+        <display value="Patient" />
+      </coding>
+      <text value="Patient" />
+    </role>
+    <member>
+      <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+      <display value="Mr. Byron202 Vandervort697" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Person in the healthcare environment (person)" />
+      </coding>
+      <text value="Person in the healthcare environment (person)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000000c8" />
+      <display value="Dr. Amos720 Towne435" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Healthcare related organization (qualifier value)" />
+      </coding>
+      <text value="Healthcare related organization (qualifier value)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:c44f361c-2efb-3050-8f97-0354a12e2920" />
+      <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+    </member>
+  </participant>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="444448004" />
+      <display value="Injury of medial collateral ligament of knee" />
+    </coding>
+    <text value="Injury of medial collateral ligament of knee" />
+  </reasonCode>
+  <managingOrganization>
+    <reference value="urn:uuid:c44f361c-2efb-3050-8f97-0354a12e2920" />
+    <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+  </managingOrganization>
+</CareTeam>

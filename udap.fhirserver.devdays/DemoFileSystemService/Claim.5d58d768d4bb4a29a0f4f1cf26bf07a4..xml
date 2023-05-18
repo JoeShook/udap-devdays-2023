@@ -1,0 +1,61 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="5d58d768d4bb4a29a0f4f1cf26bf07a4" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:19.519119-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="pharmacy" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </patient>
+  <billablePeriod>
+    <start value="2019-09-09T08:24:07-04:00" />
+    <end value="2019-09-09T09:24:07-04:00" />
+  </billablePeriod>
+  <created value="2019-09-09T09:24:07-04:00" />
+  <provider>
+    <reference value="urn:uuid:3bd5eda0-16da-3ba5-8500-4dfd6ae118b8" />
+    <display value="NORWOOD HOSPITAL" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <prescription>
+    <reference value="urn:uuid:936ca1f3-adf5-42fc-82b9-e47bc64c774a" />
+  </prescription>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="Blue Cross Blue Shield" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="50849002" />
+        <display value="Emergency room admission (procedure)" />
+      </coding>
+      <text value="Emergency room admission (procedure)" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:6348d0e6-4e62-43a1-af19-5a32dbb40d48" />
+    </encounter>
+  </item>
+  <total>
+    <value value="15.71" />
+    <currency value="USD" />
+  </total>
+</Claim>

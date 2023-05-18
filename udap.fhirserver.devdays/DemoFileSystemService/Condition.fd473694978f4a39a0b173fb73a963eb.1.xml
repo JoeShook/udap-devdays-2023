@@ -1,0 +1,36 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="fd473694978f4a39a0b173fb73a963eb" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:15.4959443-07:00" />
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+      <code value="resolved" />
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+      <code value="confirmed" />
+    </coding>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="10509002" />
+      <display value="Acute bronchitis (disorder)" />
+    </coding>
+    <text value="Acute bronchitis (disorder)" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:bd456dcf-43d8-4036-8a74-bf35630cc594" />
+  </encounter>
+  <onsetDateTime value="2018-06-13T03:47:35-04:00" />
+  <abatementDateTime value="2018-06-27T03:47:35-04:00" />
+  <recordedDate value="2018-06-13T03:47:35-04:00" />
+</Condition>

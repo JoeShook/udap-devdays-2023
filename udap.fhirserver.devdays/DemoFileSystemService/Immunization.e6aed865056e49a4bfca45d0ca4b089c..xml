@@ -1,0 +1,24 @@
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="e6aed865056e49a4bfca45d0ca4b089c" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:20.1896166-07:00" />
+  </meta>
+  <status value="completed" />
+  <vaccineCode>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/cvx" />
+      <code value="119" />
+      <display value="rotavirus, monovalent" />
+    </coding>
+    <text value="rotavirus, monovalent" />
+  </vaccineCode>
+  <patient>
+    <reference value="urn:uuid:73d58836-0439-4251-87d1-40e5f2f8c113" />
+  </patient>
+  <encounter>
+    <reference value="urn:uuid:2d22c69d-5f15-40a5-aa46-a2e63d8c38a2" />
+  </encounter>
+  <occurrenceDateTime value="2018-04-04T11:39:41-04:00" />
+  <primarySource value="true" />
+</Immunization>

@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="3a7da6cdc26940739053722f86527837" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:13.1531652-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="vital-signs" />
+      <display value="vital-signs" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="59576-9" />
+      <display value="Body mass index (BMI) [Percentile] Per age and gender" />
+    </coding>
+    <text value="Body mass index (BMI) [Percentile] Per age and gender" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:6f1a3ff8-9da3-4d16-a962-a3d67e38c738" />
+  </encounter>
+  <effectiveDateTime value="2010-12-10T20:23:12-05:00" />
+  <issued value="2010-12-10T20:23:12.378-05:00" />
+  <valueQuantity>
+    <value value="9.846016196425417" />
+    <unit value="%" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="%" />
+  </valueQuantity>
+</Observation>

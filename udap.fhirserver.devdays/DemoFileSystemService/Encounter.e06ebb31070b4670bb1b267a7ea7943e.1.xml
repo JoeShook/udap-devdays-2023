@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="e06ebb31070b4670bb1b267a7ea7943e" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:16.004928-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="410620009" />
+      <display value="Well child visit (procedure)" />
+    </coding>
+    <text value="Well child visit (procedure)" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:eed483f7-c02a-4a74-bbed-1ca1029765f1" />
+    <display value="Matilde468 Jakubowski832" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000015e0" />
+      <display value="Dr. Delana41 Lang846" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2019-08-22T18:56:16-04:00" />
+    <end value="2019-08-22T19:11:16-04:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:dc4ea7a8-6193-304e-9f3a-d59060321577" />
+    <display value="PCP7947" />
+  </serviceProvider>
+</Encounter>

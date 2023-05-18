@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="5734f53f272c4e51a9d1be7d54abc313" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:15.4359489-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="7116c200-6663-3503-8314-1ee16845e5d3" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="SAINTS WALK-IN MEDICAL CENTER - URGENT CARE AND OCCUPATIONAL HEALTH" />
+  <telecom>
+    <system value="phone" />
+    <value value="978-458-6868" />
+  </telecom>
+  <address>
+    <line value="85 PARKHURST ROAD" />
+    <city value="CHELMSFORD" />
+    <state value="MA" />
+    <postalCode value="1824" />
+    <country value="US" />
+  </address>
+</Organization>

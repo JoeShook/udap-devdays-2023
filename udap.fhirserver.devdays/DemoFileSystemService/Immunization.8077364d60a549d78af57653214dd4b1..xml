@@ -1,0 +1,24 @@
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="8077364d60a549d78af57653214dd4b1" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:20.5253712-07:00" />
+  </meta>
+  <status value="completed" />
+  <vaccineCode>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/cvx" />
+      <code value="133" />
+      <display value="Pneumococcal conjugate PCV 13" />
+    </coding>
+    <text value="Pneumococcal conjugate PCV 13" />
+  </vaccineCode>
+  <patient>
+    <reference value="urn:uuid:73d58836-0439-4251-87d1-40e5f2f8c113" />
+  </patient>
+  <encounter>
+    <reference value="urn:uuid:2fed5808-c713-4f1f-a12a-0282902b4a11" />
+  </encounter>
+  <occurrenceDateTime value="2018-09-05T11:39:41-04:00" />
+  <primarySource value="true" />
+</Immunization>

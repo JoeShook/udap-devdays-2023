@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="bbdcd1723e9d44db81538cb817550c76" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:19.8026059-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="56a38ca0-3e76-3ec7-8781-c0fd559345bd" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="PCP184847" />
+  <telecom>
+    <system value="phone" />
+    <value value="617-257-3467" />
+  </telecom>
+  <address>
+    <line value="19 BRIDLE PATH RD" />
+    <city value="LYNN" />
+    <state value="MA" />
+    <postalCode value="01904-1260" />
+    <country value="US" />
+  </address>
+</Organization>

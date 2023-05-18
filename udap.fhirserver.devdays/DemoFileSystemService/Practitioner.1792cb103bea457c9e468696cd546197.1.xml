@@ -1,0 +1,30 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="1792cb103bea457c9e468696cd546197" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:11.7798772-07:00" />
+  </meta>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi" />
+    <value value="60" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Wilderman619" />
+    <given value="Malcolm243" />
+    <prefix value="Dr." />
+  </name>
+  <telecom>
+    <system value="email" />
+    <value value="Malcolm243.Wilderman619@example.com" />
+    <use value="work" />
+  </telecom>
+  <address>
+    <line value="30 LOCUST STREET" />
+    <city value="NORTHAMPTON" />
+    <state value="MA" />
+    <postalCode value="01060" />
+    <country value="US" />
+  </address>
+  <gender value="male" />
+</Practitioner>

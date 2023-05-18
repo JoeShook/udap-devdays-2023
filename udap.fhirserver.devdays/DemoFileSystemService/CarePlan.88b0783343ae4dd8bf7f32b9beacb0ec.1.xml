@@ -1,0 +1,69 @@
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="88b0783343ae4dd8bf7f32b9beacb0ec" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:13.3669099-07:00" />
+  </meta>
+  <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">Care Plan for Physical therapy procedure.<br />Activities: <ul><li>Physical therapy procedure</li><li>Physical therapy procedure</li></ul><br />Care plan is meant to treat Sprain of ankle.</div>
+  </text>
+  <status value="completed" />
+  <intent value="order" />
+  <category>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="91251008" />
+      <display value="Physical therapy procedure" />
+    </coding>
+    <text value="Physical therapy procedure" />
+  </category>
+  <subject>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:4815e697-5ae1-4e06-9f00-e4995666b080" />
+  </encounter>
+  <period>
+    <start value="2011-04-02T21:23:12-04:00" />
+    <end value="2011-04-30T21:23:12-04:00" />
+  </period>
+  <careTeam>
+    <reference value="urn:uuid:3bd5a541-c3ed-40b2-b2ff-f51a5ef78dc9" />
+  </careTeam>
+  <addresses>
+    <reference value="urn:uuid:841e7ee8-0daa-4714-b365-1029af874e5f" />
+  </addresses>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="229586001" />
+          <display value="Rest, ice, compression and elevation treatment programme" />
+        </coding>
+        <text value="Rest, ice, compression and elevation treatment programme" />
+      </code>
+      <status value="completed" />
+      <location>
+        <display value="MARLBOROUGH HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+  <activity>
+    <detail>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="229070002" />
+          <display value="Stretching exercises" />
+        </coding>
+        <text value="Stretching exercises" />
+      </code>
+      <status value="completed" />
+      <location>
+        <display value="MARLBOROUGH HOSPITAL" />
+      </location>
+    </detail>
+  </activity>
+</CarePlan>

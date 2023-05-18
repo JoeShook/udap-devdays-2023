@@ -1,0 +1,24 @@
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="01516a05011345a29d8c1d6f90267aad" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:08.302781-07:00" />
+  </meta>
+  <status value="completed" />
+  <vaccineCode>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/cvx" />
+      <code value="113" />
+      <display value="Td (adult) preservative free" />
+    </coding>
+    <text value="Td (adult) preservative free" />
+  </vaccineCode>
+  <patient>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+  </patient>
+  <encounter>
+    <reference value="urn:uuid:2a4b1ca5-2042-46bc-8e1c-29775be7e203" />
+  </encounter>
+  <occurrenceDateTime value="2015-01-09T07:41:34-05:00" />
+  <primarySource value="true" />
+</Immunization>

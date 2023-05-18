@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="61f78d83e98744a481fff630cd877259" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:12.7815617-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="AMB" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="185347001" />
+      <display value="Encounter for problem" />
+    </coding>
+    <text value="Encounter for problem" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+    <display value="Mr. Edgardo196 Berge125" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000000be" />
+      <display value="Dr. Jamaal34 Funk324" />
+    </individual>
+  </participant>
+  <period>
+    <start value="1995-10-11T21:23:12-04:00" />
+    <end value="1995-10-11T22:08:12-04:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:f71ce1a9-cca7-3295-9a1e-c88ac3479b6f" />
+    <display value="MARLBOROUGH HOSPITAL" />
+  </serviceProvider>
+</Encounter>

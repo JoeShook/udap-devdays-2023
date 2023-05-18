@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="4ec7970dddcf4f90bba0869539467d2e" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:12.2028078-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="32623-1" />
+      <display value="Platelet mean volume [Entitic volume] in Blood by Automated count" />
+    </coding>
+    <text value="Platelet mean volume [Entitic volume] in Blood by Automated count" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:8cb876ad-9376-4685-827d-3f947a144abe" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:819ad2f7-37a5-46d1-ae15-bd6c67a16d7e" />
+  </encounter>
+  <effectiveDateTime value="2013-10-14T17:32:50-04:00" />
+  <issued value="2013-10-14T17:32:50.467-04:00" />
+  <valueQuantity>
+    <value value="9.51499747617239" />
+    <unit value="fL" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="fL" />
+  </valueQuantity>
+</Observation>

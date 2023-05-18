@@ -1,0 +1,32 @@
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="c292635462154c7d8c8d9ab8f35ae2fc" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:12.9676252-07:00" />
+  </meta>
+  <status value="active" />
+  <intent value="order" />
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+      <code value="1870230" />
+      <display value="NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector" />
+    </coding>
+    <text value="NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector" />
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:c7eab285-b2f0-49b0-8850-d6cac444fb22" />
+  </encounter>
+  <authoredOn value="1995-10-11T21:23:12-04:00" />
+  <requester>
+    <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000000be" />
+    <display value="Dr. Jamaal34 Funk324" />
+  </requester>
+  <dosageInstruction>
+    <sequence value="1" />
+    <asNeededBoolean value="true" />
+  </dosageInstruction>
+</MedicationRequest>

@@ -1,0 +1,36 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="4b29a96393ef4e96b87ebddc1d3702dc" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.9287678-07:00" />
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+      <code value="resolved" />
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+      <code value="confirmed" />
+    </coding>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="70704007" />
+      <display value="Sprain of wrist" />
+    </coding>
+    <text value="Sprain of wrist" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:1cae9510-21ad-4e57-a139-3dfa22a0a9d9" />
+  </encounter>
+  <onsetDateTime value="2014-12-08T05:12:24-05:00" />
+  <abatementDateTime value="2014-12-29T05:12:24-05:00" />
+  <recordedDate value="2014-12-08T05:12:24-05:00" />
+</Condition>

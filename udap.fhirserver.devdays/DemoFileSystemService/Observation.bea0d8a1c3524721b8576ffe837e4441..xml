@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="bea0d8a1c3524721b8576ffe837e4441" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.7173757-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="787-2" />
+      <display value="MCV [Entitic volume] by Automated count" />
+    </coding>
+    <text value="MCV [Entitic volume] by Automated count" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:97f02034-1df2-4f42-be43-13ce50a1934e" />
+  </encounter>
+  <effectiveDateTime value="2013-04-06T06:12:24-04:00" />
+  <issued value="2013-04-06T06:12:24.661-04:00" />
+  <valueQuantity>
+    <value value="91.12263535989902" />
+    <unit value="fL" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="fL" />
+  </valueQuantity>
+</Observation>

@@ -1,0 +1,26 @@
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="c670afe4e79e481887955dc44080b556" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.4016192-07:00" />
+  </meta>
+  <status value="completed" />
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="74016001" />
+      <display value="Knee X-ray" />
+    </coding>
+    <text value="Knee X-ray" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:95016ee5-f3e0-41a6-9169-a031741bf911" />
+  </encounter>
+  <performedPeriod>
+    <start value="2018-11-08T05:12:24-05:00" />
+    <end value="2018-11-08T05:42:24-05:00" />
+  </performedPeriod>
+</Procedure>

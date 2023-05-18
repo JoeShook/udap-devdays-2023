@@ -1,0 +1,38 @@
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="0194f6a8e76d4338902440adc44b06f0" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.388922-07:00" />
+  </meta>
+  <status value="finished" />
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+    <code value="EMER" />
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="50849002" />
+      <display value="Emergency room admission (procedure)" />
+    </coding>
+    <text value="Emergency room admission (procedure)" />
+  </type>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+    <display value="Mr. Byron202 Vandervort697" />
+  </subject>
+  <participant>
+    <individual>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000000c8" />
+      <display value="Dr. Amos720 Towne435" />
+    </individual>
+  </participant>
+  <period>
+    <start value="2018-11-08T05:12:24-05:00" />
+    <end value="2018-11-08T06:42:24-05:00" />
+  </period>
+  <serviceProvider>
+    <reference value="urn:uuid:c44f361c-2efb-3050-8f97-0354a12e2920" />
+    <display value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+  </serviceProvider>
+</Encounter>

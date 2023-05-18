@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ea2c0dbb6fd64475b9261cac6be8c1d4" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:08.2715426-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="18262-6" />
+      <display value="Low Density Lipoprotein Cholesterol" />
+    </coding>
+    <text value="Low Density Lipoprotein Cholesterol" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:ad60b8d9-6125-4814-9836-bda34011fe5c" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:2a4b1ca5-2042-46bc-8e1c-29775be7e203" />
+  </encounter>
+  <effectiveDateTime value="2015-01-09T07:41:34-05:00" />
+  <issued value="2015-01-09T07:41:34.656-05:00" />
+  <valueQuantity>
+    <value value="108.59927676345112" />
+    <unit value="mg/dL" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="mg/dL" />
+  </valueQuantity>
+</Observation>

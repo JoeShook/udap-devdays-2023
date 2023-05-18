@@ -1,0 +1,35 @@
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="f92527da99454cfcb2407cc8c3181cbb" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:15.2366344-07:00" />
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical" />
+      <code value="active" />
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status" />
+      <code value="confirmed" />
+    </coding>
+  </verificationStatus>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="162864005" />
+      <display value="Body mass index 30+ - obesity (finding)" />
+    </coding>
+    <text value="Body mass index 30+ - obesity (finding)" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:8d8c82b6-6e4f-4bb0-bd46-7cd4347c366f" />
+  </encounter>
+  <onsetDateTime value="2017-10-17T03:47:35-04:00" />
+  <recordedDate value="2017-10-17T03:47:35-04:00" />
+</Condition>

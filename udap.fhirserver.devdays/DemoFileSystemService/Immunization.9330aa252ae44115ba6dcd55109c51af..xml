@@ -1,0 +1,24 @@
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="9330aa252ae44115ba6dcd55109c51af" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:12.2325914-07:00" />
+  </meta>
+  <status value="completed" />
+  <vaccineCode>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/cvx" />
+      <code value="52" />
+      <display value="Hep A, adult" />
+    </coding>
+    <text value="Hep A, adult" />
+  </vaccineCode>
+  <patient>
+    <reference value="urn:uuid:8cb876ad-9376-4685-827d-3f947a144abe" />
+  </patient>
+  <encounter>
+    <reference value="urn:uuid:819ad2f7-37a5-46d1-ae15-bd6c67a16d7e" />
+  </encounter>
+  <occurrenceDateTime value="2013-10-14T17:32:50-04:00" />
+  <primarySource value="true" />
+</Immunization>

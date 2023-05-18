@@ -1,0 +1,34 @@
+<AllergyIntolerance xmlns="http://hl7.org/fhir">
+  <id value="bf5bd2fa7fab4568be498960c74525e0" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:12.7888729-07:00" />
+  </meta>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical" />
+      <code value="active" />
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification" />
+      <code value="confirmed" />
+    </coding>
+  </verificationStatus>
+  <type value="allergy" />
+  <category value="food" />
+  <criticality value="low" />
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="91934008" />
+      <display value="Allergy to nut" />
+    </coding>
+    <text value="Allergy to nut" />
+  </code>
+  <patient>
+    <reference value="urn:uuid:529762db-232a-4897-93cb-5f25cbd596d5" />
+  </patient>
+  <recordedDate value="1995-10-11T21:23:12-04:00" />
+</AllergyIntolerance>

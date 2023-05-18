@@ -1,0 +1,30 @@
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="39a9561ff6f44f8cba3407aad9732044" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.3492023-07:00" />
+  </meta>
+  <status value="completed" />
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="117015009" />
+      <display value="Throat culture (procedure)" />
+    </coding>
+    <text value="Throat culture (procedure)" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:326277b8-c57f-42b4-9aae-cf0a9ddc9a4e" />
+  </encounter>
+  <performedPeriod>
+    <start value="2018-05-08T06:12:24-04:00" />
+    <end value="2018-05-08T06:27:24-04:00" />
+  </performedPeriod>
+  <reasonReference>
+    <reference value="urn:uuid:acef3cde-f609-4956-a496-82ad36017422" />
+    <display value="Acute viral pharyngitis (disorder)" />
+  </reasonReference>
+</Procedure>

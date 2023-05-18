@@ -1,0 +1,47 @@
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="68e457716fea45ac9cd9b7e94267bd53" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:14.6756602-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074" />
+      <code value="LAB" />
+      <display value="Laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="57698-3" />
+      <display value="Lipid Panel" />
+    </coding>
+    <text value="Lipid Panel" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:5a45527f-a341-433b-bc62-106725a2956c" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:79942ec0-3836-4b31-a904-7fedf47c6d30" />
+  </encounter>
+  <effectiveDateTime value="2009-12-22T02:47:35-05:00" />
+  <issued value="2009-12-22T02:47:35.453-05:00" />
+  <result>
+    <reference value="urn:uuid:c0e3346b-4e7b-4bd8-a190-b22632c337a0" />
+    <display value="Total Cholesterol" />
+  </result>
+  <result>
+    <reference value="urn:uuid:57b04202-d162-40d4-bba8-b41068742a19" />
+    <display value="Triglycerides" />
+  </result>
+  <result>
+    <reference value="urn:uuid:07ed8bb0-3f10-43cb-b138-ad083135c03b" />
+    <display value="Low Density Lipoprotein Cholesterol" />
+  </result>
+  <result>
+    <reference value="urn:uuid:2eccbe59-bc36-492a-af05-a131d1ffe1b5" />
+    <display value="High Density Lipoprotein Cholesterol" />
+  </result>
+</DiagnosticReport>

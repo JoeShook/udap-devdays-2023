@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="b74eaf6b1ec245798bd1e036293dbc51" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:21.2895646-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="12c9daf5-a29c-36c9-ac55-28972463e566" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="BETH ISRAEL DEACONESS HOSPITAL-MILTON INC" />
+  <telecom>
+    <system value="phone" />
+    <value value="6176964600" />
+  </telecom>
+  <address>
+    <line value="199 REEDSDALE ROAD" />
+    <city value="MILTON" />
+    <state value="MA" />
+    <postalCode value="02186" />
+    <country value="US" />
+  </address>
+</Organization>

@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="a5bbafd90bd34ba38048860ee8fd793f" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:09.2934428-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="c44f361c-2efb-3050-8f97-0354a12e2920" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="SIGNATURE HEALTHCARE BROCKTON HOSPITAL" />
+  <telecom>
+    <system value="phone" />
+    <value value="5089417000" />
+  </telecom>
+  <address>
+    <line value="680 CENTER STREET" />
+    <city value="BROCKTON" />
+    <state value="MA" />
+    <postalCode value="02302" />
+    <country value="US" />
+  </address>
+</Organization>

@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="ac9568acd224415ba48573bb0a40c927" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:14.4614201-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="5130de58-f582-3d17-a71a-da8f29418409" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="WESTFORD INTERNAL MEDICINE PC" />
+  <telecom>
+    <system value="phone" />
+    <value value="978-577-1946" />
+  </telecom>
+  <address>
+    <line value="133 LITTLETON RD" />
+    <city value="WESTFORD" />
+    <state value="MA" />
+    <postalCode value="01886-3198" />
+    <country value="US" />
+  </address>
+</Organization>

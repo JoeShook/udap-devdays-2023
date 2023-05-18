@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="46052993e422497ebf0eb5d49e6c9180" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:14.3417338-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="ac8356a5-78f8-3a63-8a1e-59e832fd54e7" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="NASHOBA VALLEY MEDICAL CENTER" />
+  <telecom>
+    <system value="phone" />
+    <value value="9787849000" />
+  </telecom>
+  <address>
+    <line value="200 GROTON ROAD" />
+    <city value="AYER" />
+    <state value="MA" />
+    <postalCode value="01432" />
+    <country value="US" />
+  </address>
+</Organization>

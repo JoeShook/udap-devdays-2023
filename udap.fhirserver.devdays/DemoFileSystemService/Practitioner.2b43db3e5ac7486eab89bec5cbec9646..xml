@@ -1,0 +1,30 @@
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="2b43db3e5ac7486eab89bec5cbec9646" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:15.4418492-07:00" />
+  </meta>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi" />
+    <value value="93280" />
+  </identifier>
+  <active value="true" />
+  <name>
+    <family value="Jakubowski832" />
+    <given value="Isiah14" />
+    <prefix value="Dr." />
+  </name>
+  <telecom>
+    <system value="email" />
+    <value value="Isiah14.Jakubowski832@example.com" />
+    <use value="work" />
+  </telecom>
+  <address>
+    <line value="85 PARKHURST ROAD" />
+    <city value="CHELMSFORD" />
+    <state value="MA" />
+    <postalCode value="1824" />
+    <country value="US" />
+  </address>
+  <gender value="male" />
+</Practitioner>

@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="c94f32126d5a413f8c67d50ed5ec9ada" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:17.913047-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="5844ad77-f653-3c2b-b7dd-e97576ab3b03" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="BAYSTATE WING HOSPITAL AND MEDICAL CENTERS" />
+  <telecom>
+    <system value="phone" />
+    <value value="4132837651" />
+  </telecom>
+  <address>
+    <line value="40 WRIGHT STREET" />
+    <city value="PALMER" />
+    <state value="MA" />
+    <postalCode value="01069" />
+    <country value="US" />
+  </address>
+</Organization>

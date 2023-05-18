@@ -1,0 +1,71 @@
+<CareTeam xmlns="http://hl7.org/fhir">
+  <id value="fe250f51fe294e6488a1fb9866433ba5" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:19.5280437-07:00" />
+  </meta>
+  <status value="active" />
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:6348d0e6-4e62-43a1-af19-5a32dbb40d48" />
+  </encounter>
+  <period>
+    <start value="2019-09-09T08:24:07-04:00" />
+  </period>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="116153009" />
+        <display value="Patient" />
+      </coding>
+      <text value="Patient" />
+    </role>
+    <member>
+      <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+      <display value="Mr. Ray930 Waters156" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Person in the healthcare environment (person)" />
+      </coding>
+      <text value="Person in the healthcare environment (person)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:0000016d-3a85-4cca-0000-0000000001ea" />
+      <display value="Dr. Carmina141 Oberbrunner298" />
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="303118004" />
+        <display value="Healthcare related organization (qualifier value)" />
+      </coding>
+      <text value="Healthcare related organization (qualifier value)" />
+    </role>
+    <member>
+      <reference value="urn:uuid:3bd5eda0-16da-3ba5-8500-4dfd6ae118b8" />
+      <display value="NORWOOD HOSPITAL" />
+    </member>
+  </participant>
+  <reasonCode>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="39848009" />
+      <display value="Whiplash injury to neck" />
+    </coding>
+    <text value="Whiplash injury to neck" />
+  </reasonCode>
+  <managingOrganization>
+    <reference value="urn:uuid:3bd5eda0-16da-3ba5-8500-4dfd6ae118b8" />
+    <display value="NORWOOD HOSPITAL" />
+  </managingOrganization>
+</CareTeam>

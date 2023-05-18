@@ -1,0 +1,24 @@
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="926e57b96cfe464b9236fe4fe4d6ce82" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:12.38274-07:00" />
+  </meta>
+  <status value="completed" />
+  <vaccineCode>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/cvx" />
+      <code value="140" />
+      <display value="Influenza, seasonal, injectable, preservative free" />
+    </coding>
+    <text value="Influenza, seasonal, injectable, preservative free" />
+  </vaccineCode>
+  <patient>
+    <reference value="urn:uuid:8cb876ad-9376-4685-827d-3f947a144abe" />
+  </patient>
+  <encounter>
+    <reference value="urn:uuid:768ea992-9484-4df7-beb4-9b9dbde9d385" />
+  </encounter>
+  <occurrenceDateTime value="2015-10-19T17:32:50-04:00" />
+  <primarySource value="true" />
+</Immunization>

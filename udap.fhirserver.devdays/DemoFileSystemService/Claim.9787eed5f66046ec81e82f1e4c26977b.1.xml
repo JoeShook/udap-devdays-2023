@@ -1,0 +1,81 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="9787eed5f66046ec81e82f1e4c26977b" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:10.7587271-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="institutional" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:1fedded9-cab0-486e-bacb-1a166bbbefa8" />
+    <display value="Byron202 Vandervort697" />
+  </patient>
+  <billablePeriod>
+    <start value="2018-11-15T05:12:24-05:00" />
+    <end value="2018-11-16T08:12:24-05:00" />
+  </billablePeriod>
+  <created value="2018-11-16T08:12:24-05:00" />
+  <provider>
+    <reference value="urn:uuid:226098a2-6a40-3588-b5bb-db56c3a30a04" />
+    <display value="GOOD SAMARITAN MEDICAL CENTER" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <procedure>
+    <sequence value="1" />
+    <procedureReference>
+      <reference value="urn:uuid:481ce18e-789e-457c-b15e-62a2472c9422" />
+    </procedureReference>
+  </procedure>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="183495009" />
+        <display value="Non-urgent orthopedic admission" />
+      </coding>
+      <text value="Non-urgent orthopedic admission" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:a22d3ceb-6bcc-4ede-9f45-4dd9fb826ee5" />
+    </encounter>
+  </item>
+  <item>
+    <sequence value="2" />
+    <procedureSequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="699253003" />
+        <display value="Surgical manipulation of joint of knee" />
+      </coding>
+      <text value="Surgical manipulation of joint of knee" />
+    </productOrService>
+    <net>
+      <value value="15531.60" />
+      <currency value="USD" />
+    </net>
+  </item>
+  <total>
+    <value value="129.16" />
+    <currency value="USD" />
+  </total>
+</Claim>

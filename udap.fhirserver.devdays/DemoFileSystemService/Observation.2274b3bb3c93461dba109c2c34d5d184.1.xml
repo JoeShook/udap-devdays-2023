@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="2274b3bb3c93461dba109c2c34d5d184" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:18.6020401-07:00" />
+  </meta>
+  <status value="final" />
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+      <code value="laboratory" />
+      <display value="laboratory" />
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org" />
+      <code value="718-7" />
+      <display value="Hemoglobin [Mass/volume] in Blood" />
+    </coding>
+    <text value="Hemoglobin [Mass/volume] in Blood" />
+  </code>
+  <subject>
+    <reference value="urn:uuid:02f3c474-fefb-4ceb-a1f8-a0467012cd2b" />
+  </subject>
+  <encounter>
+    <reference value="urn:uuid:c94ae7db-792f-4aff-b09a-483155d1f949" />
+  </encounter>
+  <effectiveDateTime value="2010-08-28T08:24:07-04:00" />
+  <issued value="2010-08-28T08:24:07.775-04:00" />
+  <valueQuantity>
+    <value value="12.127075822935218" />
+    <unit value="g/dL" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="g/dL" />
+  </valueQuantity>
+</Observation>

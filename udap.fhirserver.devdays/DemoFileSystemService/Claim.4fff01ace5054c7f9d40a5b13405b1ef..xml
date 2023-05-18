@@ -1,0 +1,61 @@
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="4fff01ace5054c7f9d40a5b13405b1ef" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:11.8118567-07:00" />
+  </meta>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="pharmacy" />
+    </coding>
+  </type>
+  <use value="claim" />
+  <patient>
+    <reference value="urn:uuid:8cb876ad-9376-4685-827d-3f947a144abe" />
+  </patient>
+  <billablePeriod>
+    <start value="2009-09-13T17:32:50-04:00" />
+    <end value="2009-09-13T18:02:50-04:00" />
+  </billablePeriod>
+  <created value="2009-09-13T18:02:50-04:00" />
+  <provider>
+    <reference value="urn:uuid:49318f80-bd8b-3fc7-a096-ac43088b0c12" />
+    <display value="COOLEY DICKINSON HOSPITAL INC,THE" />
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority" />
+      <code value="normal" />
+    </coding>
+  </priority>
+  <prescription>
+    <reference value="urn:uuid:6b8817bd-b3f3-4f93-97ac-b03b9b3f14f2" />
+  </prescription>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <display value="NO_INSURANCE" />
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1" />
+    <productOrService>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="185345009" />
+        <display value="Encounter for symptom" />
+      </coding>
+      <text value="Encounter for symptom" />
+    </productOrService>
+    <encounter>
+      <reference value="urn:uuid:87a903c4-3793-4cc8-a3fa-fb6263c97e17" />
+    </encounter>
+  </item>
+  <total>
+    <value value="11.29" />
+    <currency value="USD" />
+  </total>
+</Claim>

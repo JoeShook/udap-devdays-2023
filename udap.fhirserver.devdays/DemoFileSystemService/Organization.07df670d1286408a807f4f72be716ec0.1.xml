@@ -1,0 +1,32 @@
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="07df670d1286408a807f4f72be716ec0" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2023-05-18T14:54:16.0502253-07:00" />
+  </meta>
+  <identifier>
+    <system value="https://github.com/synthetichealth/synthea" />
+    <value value="d733d4a9-080d-3593-b910-2366e652b7ea" />
+  </identifier>
+  <active value="true" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type" />
+      <code value="prov" />
+      <display value="Healthcare Provider" />
+    </coding>
+    <text value="Healthcare Provider" />
+  </type>
+  <name value="BRIGHAM AND WOMEN'S FAULKNER HOSPITAL" />
+  <telecom>
+    <system value="phone" />
+    <value value="6179837000" />
+  </telecom>
+  <address>
+    <line value="1153 CENTRE STREET" />
+    <city value="BOSTON" />
+    <state value="MA" />
+    <postalCode value="02130" />
+    <country value="US" />
+  </address>
+</Organization>
