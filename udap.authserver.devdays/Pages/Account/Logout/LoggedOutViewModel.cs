@@ -3,7 +3,7 @@
 // See LICENSE in the project root for license information.
 
 
-namespace udap.authserver.devdays.Pages.Logout;
+namespace udap.authserver.devdays.Pages.Account.Logout;
 
 public class LoggedOutViewModel
 {

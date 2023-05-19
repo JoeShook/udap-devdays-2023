@@ -3,7 +3,7 @@
 
 using Duende.IdentityServer.Models;
 
-namespace udap.authserver.devdays.Pages.Error;
+namespace udap.authserver.devdays.Pages.Home.Error;
 
 public class ViewModel
 {

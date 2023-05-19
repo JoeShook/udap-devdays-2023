@@ -4,7 +4,7 @@
 
 using System.ComponentModel.DataAnnotations;
 
-namespace udap.authserver.devdays.Pages.Login;
+namespace udap.authserver.devdays.Pages.Account.Login;
 
 public class InputModel
 {

@@ -1,5 +1,5 @@
 
-namespace udap.authserver.devdays.Pages.Logout;
+namespace udap.authserver.devdays.Pages.Account.Logout;
 
 public class LogoutOptions
 {

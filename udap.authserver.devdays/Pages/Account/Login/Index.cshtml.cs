@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace udap.authserver.devdays.Pages.Login;
+namespace udap.authserver.devdays.Pages.Account.Login;
 
 [SecurityHeaders]
 [AllowAnonymous]
