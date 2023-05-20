@@ -7,6 +7,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Org.BouncyCastle.Asn1;
 using Org.BouncyCastle.Asn1.X509;
+using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Crypto.Operators;
 using Org.BouncyCastle.Math;
 using Org.BouncyCastle.Security;
@@ -25,8 +26,8 @@ MakeUdapPki(
     $"{certificateStore}/Community1",                                       //communityStorePath
     "DevDaysCA_1",                                                          //anchorName
     "DevDaysSubCA_1",                                                       //intermediateName
-    "DevDaysRsaClient",                                                     //issuedName
-    "CN=localhost, OU=DevDays, O=Fhir Coding, L=Portland, S=Oregon, C=US",  //issuedDistinguishedName
+    "DevDaysRSAClient",                                                     //issuedName
+    "CN=localhost, OU=DevDays-Community1, O=Fhir Coding, L=Portland, S=Oregon, C=US",  //issuedDistinguishedName
     new List<string>
     {
         "https://localhost:7016/fhir/r4",
@@ -39,8 +40,8 @@ MakeUdapPki(
     $"{certificateStore}/Community2",                                       //communityStorePath
     "DevDaysCA_2",                                                          //anchorName
     "DevDaysSubCA_2",                                                       //intermediateName
-    "DevDaysRsaClient",                                                     //issuedName
-    "CN=localhost, OU=DevDays, O=Fhir Coding, L=Portland, S=Oregon, C=US",  //issuedDistinguishedName
+    "DevDaysECDSAClient",                                                   //issuedName
+    "CN=localhost, OU=DevDays-Community2, O=Fhir Coding, L=Portland, S=Oregon, C=US",  //issuedDistinguishedName
     new List<string>
     {
         "https://localhost:7016/fhir/r4",
@@ -48,6 +49,36 @@ MakeUdapPki(
     },                                                                      //SubjAltNames (Demonstrate multiple)
     "ECDSA"
 );
+
+//
+// Let's revoke a certificate
+//
+// Add another Community and certificate to revoke
+//
+
+MakeUdapPki(
+    $"{certificateStore}/Community3",                                       //communityStorePath
+    "DevDaysCA_3",                                                          //anchorName
+    "DevDaysSubCA_3",                                                       //intermediateName
+    "DevDaysRevokedClient",                                                 //issuedName
+    "CN=localhost, OU=DevDays-Community3, O=Fhir Coding, L=Portland, S=Oregon, C=US",  //issuedDistinguishedName
+    new List<string>
+    {
+        "https://localhost:7016/fhir/r4",
+        "http://localhost/fhir/r4",
+    },                                                                      //SubjAltNames (Demonstrate multiple)
+    "RSA"
+);
+
+// Revoke
+
+var subCA = new X509Certificate2($"{certificateStore}/Community3/intermediates/DevDaysSubCA_3.pfx", "udap-test", X509KeyStorageFlags.Exportable);
+var revokeCertificate = new X509Certificate2($"{certificateStore}/Community3/issued/DevDaysRevokedClient.pfx", "udap-test");
+
+RevokeCertificate(subCA, revokeCertificate, $"{certificateStore}/Community3/crl/DevDaysSubCA_3.crl");
+
+
+
 
 void MakeUdapPki(
             string communityStorePath,
@@ -67,7 +98,8 @@ void MakeUdapPki(
     var intermediateCdp = $"http://localhost:{staticCertPort}/crl/{anchorName}.crl";
     var clientCdp = $"http://localhost:{staticCertPort}/crl/{intermediateName}.crl";
 
-    string intermediateHostedUrl = $"https://localhost:{staticCertPort}/{intermediateName}.crt";
+    string anchorHostedUrl = $"https://localhost:{staticCertPort}/certs/{anchorName}.crt";
+    string intermediateHostedUrl = $"https://localhost:{staticCertPort}/certs/{intermediateName}.crt";
 
     var localhostUdapIntermediateFolder = $"{communityStorePath}/intermediates";
     var localhostUdapIssuedFolder = $"{communityStorePath}/issued";
@@ -77,7 +109,7 @@ void MakeUdapPki(
     using (RSA intermediate = RSA.Create(4096))
     {
         var parentReq = new CertificateRequest(
-            $"CN={anchorName}, OU=Root, O=Fhir Coding, L=Portland, S=Oregon, C=US",
+            $"CN={anchorName}, OU=DevDays, O=Fhir Coding, L=Portland, S=Oregon, C=US",
             parent,
             HashAlgorithmName.SHA256,
             RSASignaturePadding.Pkcs1);
@@ -102,13 +134,18 @@ void MakeUdapPki(
             communityStorePath.EnsureDirectoryExists();
             File.WriteAllBytes($"{communityStorePath}/{anchorName}.pfx", parentBytes);
             var caPem = PemEncoding.Write("CERTIFICATE", caCert.RawData);
-            File.WriteAllBytes($"{communityStorePath}/{anchorName}.crt",
-                caPem.Select(c => (byte)c).ToArray());
+            var caFilePath = $"{communityStorePath}/{anchorName}.crt";
+            File.WriteAllBytes(caFilePath, caPem.Select(c => (byte)c).ToArray());
+
+            //Distribute
+            var caAiaFile = $"{BaseDir()}/../udap.certificates.server.devdays/wwwroot/certs/{new FileInfo(caFilePath).Name}";
+            caAiaFile.EnsureDirectoryExistFromFilePath();
+            File.Copy(caFilePath, caAiaFile, true);
 
             CreateCertificateRevocationList(caCert, anchorCrlFile);
-
+            
             var intermediateReq = new CertificateRequest(
-                $"CN={intermediateName}, OU=Intermediate, O=Fhir Coding, L=Portland, S=Oregon, C=US",
+                $"CN={intermediateName}, OU=DevDays, O=Fhir Coding, L=Portland, S=Oregon, C=US",
                 intermediate,
                 HashAlgorithmName.SHA256,
                 RSASignaturePadding.Pkcs1);
@@ -130,7 +167,11 @@ void MakeUdapPki(
             intermediateReq.CertificateExtensions.Add(
                 MakeCdp(intermediateCdp));
 
-            
+            var authorityInfoAccessBuilder = new AuthorityInformationAccessBuilder();
+            authorityInfoAccessBuilder.AdCertificateAuthorityIssuerUri(new Uri(anchorHostedUrl));
+            var aiaExtension = authorityInfoAccessBuilder.Build();
+            intermediateReq.CertificateExtensions.Add(aiaExtension);
+
             using var intermediateCert = intermediateReq.Create(
                 caCert,
                 DateTimeOffset.UtcNow.AddDays(-1),
@@ -139,11 +180,15 @@ void MakeUdapPki(
             var intermediateCertWithKey = intermediateCert.CopyWithPrivateKey(intermediate);
             var intermediateBytes = intermediateCertWithKey.Export(X509ContentType.Pkcs12, "udap-test");
             localhostUdapIntermediateFolder.EnsureDirectoryExists();
-            File.WriteAllBytes($"{localhostUdapIntermediateFolder}/{intermediateName}.pfx",
-                intermediateBytes);
-            char[] intermediatePem = PemEncoding.Write("CERTIFICATE", intermediateCert.RawData);
-            File.WriteAllBytes($"{localhostUdapIntermediateFolder}/{intermediateName}.crt",
-                intermediatePem.Select(c => (byte)c).ToArray());
+            File.WriteAllBytes($"{localhostUdapIntermediateFolder}/{intermediateName}.pfx", intermediateBytes);
+            var intermediatePem = PemEncoding.Write("CERTIFICATE", intermediateCert.RawData);
+            var subCaFilePath = $"{localhostUdapIntermediateFolder}/{intermediateName}.crt";
+            File.WriteAllBytes(subCaFilePath, intermediatePem.Select(c => (byte)c).ToArray());
+
+            //Distribute
+            var subCaCopyToFilePath = $"{BaseDir()}/../udap.certificates.server.devdays/wwwroot/certs/{new FileInfo(subCaFilePath).Name}";
+            subCaCopyToFilePath.EnsureDirectoryExistFromFilePath();
+            File.Copy(subCaFilePath, subCaCopyToFilePath, true);
 
             CreateCertificateRevocationList(intermediateCertWithKey, intermediateCrlFile);
 
@@ -275,7 +320,9 @@ X509Certificate2 BuildClientCertificate(
 
 
     //Distribute
-    File.Copy($"{clientCertFilePath}.pfx", $"{BaseDir()}/../udap.fhirserver.devdays/{clientCertFilePath}.pfx",
+    var clientP12File = $"{BaseDir()}/../udap.fhirserver.devdays/{clientCertFilePath}.pfx";
+    clientP12File.EnsureDirectoryExistFromFilePath();
+    File.Copy($"{clientCertFilePath}.pfx", clientP12File,
         true);
 
     return clientCert;
@@ -372,6 +419,12 @@ X509Certificate2 BuildClientCertificateECDSA(
     var clientPem = PemEncoding.Write("CERTIFICATE", clientCert.RawData);
     File.WriteAllBytes($"{clientCertFilePath}.crt", clientPem.Select(c => (byte)c).ToArray());
 
+    //Distribute
+    var clientP12File = $"{BaseDir()}/../udap.fhirserver.devdays/{clientCertFilePath}.pfx";
+    clientP12File.EnsureDirectoryExistFromFilePath();
+    File.Copy($"{clientCertFilePath}.pfx", clientP12File,
+        true);
+    
     return clientCert;
 }
 
@@ -380,32 +433,95 @@ void CreateCertificateRevocationList(X509Certificate2 certificate, string crlFil
     // Certificate Revocation
     var bouncyCaCert = DotNetUtilities.FromX509Certificate(certificate);
 
-    var crlIntermediateGen = new X509V2CrlGenerator();
+    var crlGen = new X509V2CrlGenerator();
     var intermediateNow = DateTime.UtcNow;
-    crlIntermediateGen.SetIssuerDN(bouncyCaCert.SubjectDN);
-    crlIntermediateGen.SetThisUpdate(intermediateNow);
-    crlIntermediateGen.SetNextUpdate(intermediateNow.AddYears(1));
+    crlGen.SetIssuerDN(bouncyCaCert.SubjectDN);
+    crlGen.SetThisUpdate(intermediateNow);
+    crlGen.SetNextUpdate(intermediateNow.AddYears(1));
 
-    crlIntermediateGen.AddCrlEntry(BigInteger.One, intermediateNow, CrlReason.PrivilegeWithdrawn);
+    crlGen.AddCrlEntry(BigInteger.One, intermediateNow, CrlReason.PrivilegeWithdrawn);
 
-    crlIntermediateGen.AddExtension(X509Extensions.AuthorityKeyIdentifier,
+    crlGen.AddExtension(X509Extensions.AuthorityKeyIdentifier,
         false,
         new AuthorityKeyIdentifierStructure(bouncyCaCert.GetPublicKey()));
 
-    var nextsureFhirIntermediateCrlNum = GetNextCrlNumber(crlFilePath);
+    var nextCrlNum = GetNextCrlNumber(crlFilePath);
 
-    crlIntermediateGen.AddExtension(X509Extensions.CrlNumber, false, nextsureFhirIntermediateCrlNum);
-
-    // var intermediateRandomGenerator = new CryptoApiRandomGenerator();
-    // var intermediateRandom = new SecureRandom(intermediateRandomGenerator);
-
-    var intermediateAkp = DotNetUtilities.GetKeyPair(certificate.GetRSAPrivateKey()).Private;
-
-    // var intermediateCrl = crlIntermediateGen.Generate(new Asn1SignatureFactory("SHA256WithRSAEncryption", intermediateAkp, intermediateRandom));
-    var intermediateCrl = crlIntermediateGen.Generate(new Asn1SignatureFactory("SHA256WithRSAEncryption", intermediateAkp));
+    crlGen.AddExtension(X509Extensions.CrlNumber, false, nextCrlNum);
     
-    File.WriteAllBytes(crlFilePath, intermediateCrl.GetEncoded());
+    var akp = DotNetUtilities.GetKeyPair(certificate.GetRSAPrivateKey()).Private;
+    var crl = crlGen.Generate(new Asn1SignatureFactory("SHA256WithRSAEncryption", akp));
+    
+    File.WriteAllBytes(crlFilePath, crl.GetEncoded());
+
+    //Distribute
+    var crlFile = $"{BaseDir()}/../udap.certificates.server.devdays/wwwroot/crl/{new FileInfo(crlFilePath).Name}";
+    crlFile.EnsureDirectoryExistFromFilePath();
+    File.Copy(crlFilePath, crlFile, true);
+
 }
+
+
+void RevokeCertificate(X509Certificate2 signingCertificate, X509Certificate2 certificateToRevoke, string crlFilePath)
+{
+    var bouncyIntermediateCert = DotNetUtilities.FromX509Certificate(signingCertificate);
+
+    var crlGen = new X509V2CrlGenerator();
+    var now = DateTime.UtcNow;
+    crlGen.SetIssuerDN(bouncyIntermediateCert.SubjectDN);
+    crlGen.SetThisUpdate(now);
+    crlGen.SetNextUpdate(now.AddMonths(1));
+    // crlGen.SetSignatureAlgorithm("SHA256withRSA");
+
+    //
+    // revokeCertificate.SerialNumberBytes requires target framework net7.0
+    //
+    crlGen.AddCrlEntry(new BigInteger(certificateToRevoke.SerialNumberBytes.ToArray()), now,
+        CrlReason.PrivilegeWithdrawn);
+
+    crlGen.AddExtension(X509Extensions.AuthorityKeyIdentifier,
+        false,
+        new AuthorityKeyIdentifierStructure(bouncyIntermediateCert.GetPublicKey()));
+
+    var nextSureFhirClientCrlNum = GetNextCrlNumber(crlFilePath);
+
+    crlGen.AddExtension(X509Extensions.CrlNumber, false, nextSureFhirClientCrlNum);
+
+    var key = signingCertificate.GetRSAPrivateKey();
+    using var rsa = RSA.Create(4096);
+
+#if Windows
+    //
+    // Windows work around.  Otherwise works on Linux
+    // Short answer: Windows behaves in such a way when importing the pfx
+    // it creates the CNG key so it can only be exported encrypted
+    // https://github.com/dotnet/runtime/issues/77590#issuecomment-1325896560
+    // https://stackoverflow.com/a/57330499/6115838
+    //
+        byte[] encryptedPrivKeyBytes = key.ExportEncryptedPkcs8PrivateKey(
+            "ILikePasswords",
+            new PbeParameters(
+                PbeEncryptionAlgorithm.Aes256Cbc,
+                HashAlgorithmName.SHA256,
+                iterationCount: 100_000));
+
+        rsa.ImportEncryptedPkcs8PrivateKey("ILikePasswords".AsSpan(), encryptedPrivKeyBytes.AsSpan(), out int bytesRead);
+#else
+    rsa.ImportECPrivateKey(key?.ExportECPrivateKey(), out _);
+#endif
+    
+    var akp = DotNetUtilities.GetKeyPair(rsa).Private;
+    var crl = crlGen.Generate(new Asn1SignatureFactory("SHA256WithRSAEncryption", akp));
+
+    File.WriteAllBytes(crlFilePath, crl.GetEncoded());
+
+    //Distribute
+    var crlFile = $"{BaseDir()}/../udap.certificates.server.devdays/wwwroot/crl/{new FileInfo(crlFilePath).Name}";
+    crlFile.EnsureDirectoryExistFromFilePath();
+    File.Copy(crlFilePath, crlFile, true);
+}
+
+
 
 static void AddAuthorityKeyIdentifier(X509Certificate2 caCert, CertificateRequest intermediateReq)
 {

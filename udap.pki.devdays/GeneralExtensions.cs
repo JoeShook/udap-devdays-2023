@@ -1,4 +1,4 @@
-﻿#region (c) 2022 Joseph Shook. All rights reserved.
+﻿#region (c) 2023 Joseph Shook. All rights reserved.
 // /*
 //  Authors:
 //     Joseph Shook   Joseph.Shook@Surescripts.com
@@ -6,9 +6,6 @@
 //  See LICENSE in the project root for license information.
 // */
 #endregion
-
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 
 namespace udap.pki.devdays;
 
@@ -19,6 +16,15 @@ public static class GeneralExtensions
         if (!Directory.Exists(source))
         {
             Directory.CreateDirectory(source);
+        }
+    }
+
+    public static void EnsureDirectoryExistFromFilePath(this string source)
+    {
+        var directoryPath = Path.GetDirectoryName(source);
+        if (!Directory.Exists(directoryPath))
+        {
+            EnsureDirectoryExists(directoryPath);
         }
     }
 }
