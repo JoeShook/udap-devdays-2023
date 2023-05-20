@@ -32,15 +32,23 @@ udap.authserver.devdays is a Duende Identity Server implementation with a SQLite
 
 :spiral_notepad: Note: the udap.authserver.devdays prerequisite was built from the [EntityFramework Quickstart](https://docs.duendesoftware.com/identityserver/v5/quickstarts/4_ef/).
 
-## 📖 Start Tutorial
+### dotnet tye
+
+dotnet tye is not required.  The included tye.yaml is pre-configured to launch three services needed for the tutorial and includes handy links.  Try it out!
+
+[See Project Tye](https://github.com/dotnet/tye)
+
+```txt
+dotnet tool install -g Microsoft.Tye --version "0.12.0-*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet6/nuget/v3/index.json
+```
 
 ### **🧩 udap.fhirserver.devdays Project**
 
 #### 1. :boom: Add UDAP Metadata
 
-````csharp
+```csharp
 builder.Services.AddUdapMetadataServer(builder.Configuration);
-````
+```
 
 #### 2. :boom: Add Certificates and Configuration
 

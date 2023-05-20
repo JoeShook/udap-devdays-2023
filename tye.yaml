@@ -1,0 +1,37 @@
+# tye application configuration file
+# read all about it at https://github.com/dotnet/tye
+#
+# when you've given us a try, we'd love to know what you think:
+#    https://aka.ms/AA7q20u
+#
+name: udap.devdays
+services:
+
+- name: udap-fhirserver-devdays
+  project: udap.fhirserver.devdays/udap.fhirserver.devdays.csproj
+  bindings:
+  - protocol: https
+    name: https
+    host: localhost
+    port: 7016
+    routes:
+     - /fhir/r4?_format=json
+     - /fhir/r4/.well-known/udap
+     - /fhir/r4/.well-known/udap/communities
+     - /fhir/r4/.well-known/udap/communities/ashtml
+
+- name: udap-authserver-devdays
+  project: udap.authserver.devdays/udap.authserver.devdays.csproj
+  bindings:
+  - protocol: https
+    name: https
+    host: localhost
+    port: 5002
+
+- name: udap-certificates-server-devdays
+  project: udap.certificates.server.devdays/udap.certificates.server.devdays.csproj
+  bindings:
+  - protocol: https
+    name: https
+    host: localhost
+    port: 5033
