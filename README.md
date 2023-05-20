@@ -64,8 +64,8 @@ builder.Services.AddUdapMetadataServer(builder.Configuration);
         "SignedMetadataConfig": {
           "RegistrationSigningAlgorithms": [ "ES384" ],
           "TokenSigningAlgorithms": [ "ES384" ],
-          "Issuer": "http://localhost/fhir/r4",
-          "Subject": "http://localhost/fhir/r4",
+          "Issuer": "http://localhost:7016/fhir/r4",
+          "Subject": "http://localhost:7016/fhir/r4",
           "AuthorizationEndPoint": "https://localhost:5002/connect/authorize",
           "TokenEndpoint": "https://localhost:5002/connect/token",
           "RegistrationEndpoint": "https://localhost:5002/connect/register"
@@ -87,16 +87,16 @@ builder.Services.AddUdapMetadataServer(builder.Configuration);
             "Name": "udap://Community1",
             "IssuedCerts": [
               {
-                "FilePath": "CertificateStore/issued/fhirLabsApiClientLocalhostCert.pfx",
+                "FilePath": "CertificateStore/issued/devdays1.pfx",
                 "Password": "udap-test"
               }
             ]
           },
           {
-            "Name": "udap://ECDSA/",
+            "Name": "udap://Community2",
             "IssuedCerts": [
               {
-                "FilePath": "CertStore/issued/fhirLabsApiClientLocalhostCert6_ECDSA.pfx",
+                "FilePath": "CertificateStore/issued/devdays2.pfx",
                 "Password": "udap-test"
               }
             ]

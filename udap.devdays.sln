@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "udap.fhirserver.devdays", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udap.authserver.devdays", "udap.authserver.devdays\udap.authserver.devdays.csproj", "{A3AD3DE4-D372-4542-A9A5-759CBBF2708F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udap.pki.devdays", "udap.pki.devdays\udap.pki.devdays.csproj", "{41A51168-EEAF-413E-A2DB-70CE6EB9F45E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udap.certificates.server.devdays", "udap.certificates.server.devdays\udap.certificates.server.devdays.csproj", "{5251E303-4DB1-46B4-AB32-EF59FAF99957}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A3AD3DE4-D372-4542-A9A5-759CBBF2708F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3AD3DE4-D372-4542-A9A5-759CBBF2708F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3AD3DE4-D372-4542-A9A5-759CBBF2708F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41A51168-EEAF-413E-A2DB-70CE6EB9F45E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41A51168-EEAF-413E-A2DB-70CE6EB9F45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41A51168-EEAF-413E-A2DB-70CE6EB9F45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41A51168-EEAF-413E-A2DB-70CE6EB9F45E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5251E303-4DB1-46B4-AB32-EF59FAF99957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5251E303-4DB1-46B4-AB32-EF59FAF99957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5251E303-4DB1-46B4-AB32-EF59FAF99957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5251E303-4DB1-46B4-AB32-EF59FAF99957}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

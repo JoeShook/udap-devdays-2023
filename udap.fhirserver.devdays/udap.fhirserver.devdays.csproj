@@ -12,4 +12,8 @@
     <PackageReference Include="Hl7.Fhir.Specification.R4B" Version="4.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="CertificateStore\issued\" />
+  </ItemGroup>
+
 </Project>
