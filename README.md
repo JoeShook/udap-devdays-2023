@@ -9,9 +9,9 @@ The HL7 "[Security IG](http://hl7.org/fhir/us/udap-security/)" is a constraint o
 
 ## Objectives
 
-1. Host UDAP Metadata on a FHIR Server
-2. Host UDAP Dynamic Client Registration (DCR [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) on an Identity Server.
-3. Secure the FHIR Server with UDAP
+1. 🧩 Host UDAP Metadata on a FHIR Server
+2. 🧩 Host UDAP Dynamic Client Registration (DCR [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) on an Identity Server.
+3. 🧩 Secure the FHIR Server with UDAP
 
 ## Prerequisites
 
@@ -42,15 +42,17 @@ dotnet tye is not required.  The included tye.yaml is pre-configured to launch t
 dotnet tool install -g Microsoft.Tye --version "0.12.0-*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet6/nuget/v3/index.json
 ```
 
-### **🧩 udap.fhirserver.devdays Project**
+## Begin Tutorial
 
-#### 1. :boom: Add UDAP Metadata
+### **1. 🧩 udap.fhirserver.devdays Project**
+
+#### :boom: Add UDAP Metadata
 
 ```csharp
 builder.Services.AddUdapMetadataServer(builder.Configuration);
 ```
 
-#### 2. :boom: Add Certificates and Configuration
+#### :boom: Add Certificates and Configuration
 
 - The CertificateStore folder has already been added to the project.
 - Add the following UdapMetadataOptions section to appsettings.json
@@ -115,7 +117,7 @@ builder.Services.AddUdapMetadataServer(builder.Configuration);
 }
 ````
 
-#### 3. :boom: Run udap.fhirserver.devdays Project
+#### :boom: Run udap.fhirserver.devdays Project
 
 - [https://localhost:7016/fhir/r4?_format=json](https://localhost:7016/fhir/r4?_format=json)
 - [https://localhost:7016/fhir/r4/Patient](https://localhost:7016/fhir/r4/Patient)
@@ -129,7 +131,9 @@ Convenience links to find community specific UDAP metadata endpoints
 - [https://localhost:7016/fhir/r4/.well-known/udap/communities](https://localhost:7016/fhir/r4/.well-known/udap/communities)
 - [https://localhost:7016/fhir/r4/.well-known/udap](https://localhost:7016/fhir/r4/.well-known/udap)
 
-#### 4. :boom: Add Authentication
+
+## 3.A🧩 Secure the FHIR Server with UDAP
+### :boom: Add Authentication
 
 ````csharp
 builder.Services.AddAuthentication(
@@ -156,7 +160,9 @@ Requesting a Patient should now result in a HTTP Status code of 401.
 
 - [https://localhost:7016/fhir/r4/Patient](https://localhost:7016/fhir/r4/Patient)
 
-### **🧩 udap.authserver.devdays Project**
+To finish objective #2 the udap.authserver.devdays Project will need to be configured as the UDAP authorization server.  Re-test this in section 3.B 🧩 later.
+
+### **2.🧩 udap.authserver.devdays Project**
 
 Let's enable DCR on UDAP
 
@@ -183,7 +189,9 @@ builder.Services.AddIdentityServer()
 
 #### 2. :boom: Launch udap.authserver.devdays
 
-#### 3. :boom: Launch UdapEd.Server
+#### 3. :boom: Ensure udap.fhirserver.devdays is running
+
+#### 4. :boom: Launch UdapEd.Server
 
 Start in :arrow_right: **Discovery** area.  Enter the FHIR Server's Base URL; https://localhost:7016/fhir/r4 and click the query button :white_square_button:.
 
@@ -205,11 +213,17 @@ Continue in the :arrow_right: B2B area.  Depending on which Grant Type was regis
 
 Continue in the :arrow_right: Search area or take the **Access Token** and use it in something like Postman.
 
+## 3.B 🧩 Secure the FHIR Server with UDAP
+
+At this point using the **Access Token** successfully will satisfy the objective.  
+
 🗒️ Note: Match is not supported on this sample FHIR server.  
 
 ## Advanced
 
-### **🧩 Add Metadata to Firely Server**
+### **🧩 Add UDAP Metadata to the Firely Server**
+
+Demo if we have time.
 
 ## Comments
 
