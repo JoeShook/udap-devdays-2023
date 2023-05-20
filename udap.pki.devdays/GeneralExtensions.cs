@@ -22,7 +22,7 @@ public static class GeneralExtensions
     public static void EnsureDirectoryExistFromFilePath(this string source)
     {
         var directoryPath = Path.GetDirectoryName(source);
-        if (!Directory.Exists(directoryPath))
+        if (directoryPath != null)
         {
             EnsureDirectoryExists(directoryPath);
         }

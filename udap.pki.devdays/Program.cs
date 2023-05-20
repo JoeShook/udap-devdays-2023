@@ -195,8 +195,6 @@ void MakeUdapPki(
             communityStorePath.EnsureDirectoryExists();
             $"{localhostUdapIssuedFolder}".EnsureDirectoryExists();
 
-            X509Certificate2? clientCertificate = null;
-
             if (cryptoAlgorithm is "ECDSA")
             {
                 BuildClientCertificateECDSA(
@@ -314,7 +312,7 @@ X509Certificate2 BuildClientCertificate(
     certPackage.Add(new X509Certificate2(caCert.Export(X509ContentType.Cert)));
 
     var clientBytes = certPackage.Export(X509ContentType.Pkcs12, "udap-test");
-    File.WriteAllBytes($"{clientCertFilePath}.pfx", clientBytes);
+    File.WriteAllBytes($"{clientCertFilePath}.pfx", clientBytes!);
     var clientPem = PemEncoding.Write("CERTIFICATE", clientCert.RawData);
     File.WriteAllBytes($"{clientCertFilePath}.crt", clientPem.Select(c => (byte)c).ToArray());
 
@@ -415,7 +413,7 @@ X509Certificate2 BuildClientCertificateECDSA(
 
 
     var clientBytes = certPackage.Export(X509ContentType.Pkcs12, "udap-test");
-    File.WriteAllBytes($"{clientCertFilePath}.pfx", clientBytes);
+    File.WriteAllBytes($"{clientCertFilePath}.pfx", clientBytes!);
     var clientPem = PemEncoding.Write("CERTIFICATE", clientCert.RawData);
     File.WriteAllBytes($"{clientCertFilePath}.crt", clientPem.Select(c => (byte)c).ToArray());
 
@@ -498,7 +496,7 @@ void RevokeCertificate(X509Certificate2 signingCertificate, X509Certificate2 cer
     // https://github.com/dotnet/runtime/issues/77590#issuecomment-1325896560
     // https://stackoverflow.com/a/57330499/6115838
     //
-        byte[] encryptedPrivKeyBytes = key.ExportEncryptedPkcs8PrivateKey(
+        byte[] encryptedPrivKeyBytes = key!.ExportEncryptedPkcs8PrivateKey(
             "ILikePasswords",
             new PbeParameters(
                 PbeEncryptionAlgorithm.Aes256Cbc,
@@ -533,8 +531,8 @@ static void AddAuthorityKeyIdentifier(X509Certificate2 caCert, CertificateReques
     //
 
 
-    var issuerSubjectKey = caCert.Extensions?["2.5.29.14"].RawData;
-    var segment = new ArraySegment<byte>(issuerSubjectKey, 2, issuerSubjectKey.Length - 2);
+    var issuerSubjectKey = caCert.Extensions?["2.5.29.14"]!.RawData;
+    var segment = new ArraySegment<byte>(issuerSubjectKey!, 2, issuerSubjectKey!.Length - 2);
     var authorityKeyIdentifier = new byte[segment.Count + 4];
     // these bytes define the "KeyID" part of the AuthorityKeyIdentifier
     authorityKeyIdentifier[0] = 0x30;
@@ -608,7 +606,7 @@ static string BaseDir()
 
     var rm = new ResourceManager("Resources", assembly);
     using var stream = assembly.GetManifestResourceStream(resourcePath);
-    using var streamReader = new StreamReader(stream);
+    using var streamReader = new StreamReader(stream!);
 
     return streamReader.ReadToEnd().Trim();
 }
