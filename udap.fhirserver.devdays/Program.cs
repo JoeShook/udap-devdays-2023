@@ -33,6 +33,7 @@ builder.Services
 
     });
 
+builder.Services.AddUdapMetadataServer(builder.Configuration);
 
 var app = builder.Build();
 
@@ -41,6 +42,7 @@ var app = builder.Build();
 app.UsePathBase(new PathString("/fhir/r4"));
 app.UseRouting();
 app.UseHttpsRedirection();
+app.UseUdapMetadataServer();
 app.MapControllers();
 
 app.Run();
