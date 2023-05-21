@@ -9,9 +9,9 @@ The HL7 "[Security IG](http://hl7.org/fhir/us/udap-security/)" is a constraint o
 
 ## Objectives
 
-1. Host UDAP Metadata on a FHIR Server
-2. Host UDAP Dynamic Client Registration (DCR [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) on an Identity Server.
-3. Secure the FHIR Server with UDAP
+1. 🧩 Host UDAP Metadata on a FHIR Server
+2. 🧩 Host UDAP Dynamic Client Registration (DCR [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) on an Identity Server.
+3. 🧩 Secure the FHIR Server with UDAP
 
 ## Prerequisites
 
@@ -42,44 +42,67 @@ dotnet tye is not required.  The included tye.yaml is pre-configured to launch t
 dotnet tool install -g Microsoft.Tye --version "0.12.0-*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet6/nuget/v3/index.json
 ```
 
-### **🧩 udap.fhirserver.devdays Project**
+## Begin Tutorial
 
-#### 1. :boom: Add UDAP Metadata
+### **1. 🧩 udap.fhirserver.devdays Project**
+
+#### :boom: 📦 Udap.Metadata package
+
+The following configures Udap.Metadata as an Endpoint.  There is an alternative configuration where Udap.Metadata is configured as a Controller.  See the [WeatherApi](https://github.com/JoeShook/udap-dotnet/blob/main/examples/WeatherApi/Program.cs) example.
+
+```txt
+dotnet add package Udap.Metadata.Server
+```
+### :boom: Include services
 
 ```csharp
 builder.Services.AddUdapMetadataServer(builder.Configuration);
 ```
 
-#### 2. :boom: Add Certificates and Configuration
+### :boom: Add Udap.Metadata to pipeline
+
+```csharp
+app.UseUdapMetadataServer();
+```
+
+#### :boom: Add Certificates and Configuration
 
 - The CertificateStore folder has already been added to the project.
 - Add the following UdapMetadataOptions section to appsettings.json
 
 ````json
 "UdapMetadataOptions": {
-    "Enabled": true,
-    "UdapMetadataConfigs": [
-      {
-        "Community": "udap://Community1",
-        "SignedMetadataConfig": {
-          "AuthorizationEndPoint": "https://localhost:5002/connect/authorize",
-          "TokenEndpoint": "https://localhost:5002/connect/token",
-          "RegistrationEndpoint": "https://localhost:5002/connect/register"
-        }
-      },
-      {
-        "Community": "udap://Community2",
-        "SignedMetadataConfig": {
-          "RegistrationSigningAlgorithms": [ "ES384" ],
-          "TokenSigningAlgorithms": [ "ES384" ],
-          "Issuer": "http://localhost:7016/fhir/r4",
-          "Subject": "http://localhost:7016/fhir/r4",
-          "AuthorizationEndPoint": "https://localhost:5002/connect/authorize",
-          "TokenEndpoint": "https://localhost:5002/connect/token",
-          "RegistrationEndpoint": "https://localhost:5002/connect/register"
-        }    
-      },
-    ]
+  "Enabled": true,
+  "UdapMetadataConfigs": [
+    {
+      "Community": "udap://Community1",
+      "SignedMetadataConfig": {
+        "AuthorizationEndPoint": "https://localhost:5002/connect/authorize",
+        "TokenEndpoint": "https://localhost:5002/connect/token",
+        "RegistrationEndpoint": "https://localhost:5002/connect/register"
+      }
+    },
+    {
+      "Community": "udap://Community2",
+      "SignedMetadataConfig": {
+        "RegistrationSigningAlgorithms": [ "ES384" ],
+        "TokenSigningAlgorithms": [ "ES384" ],
+        "Issuer": "http://localhost:7016/fhir/r4",
+        "Subject": "http://localhost:7016/fhir/r4",
+        "AuthorizationEndPoint": "https://localhost:5002/connect/authorize",
+        "TokenEndpoint": "https://localhost:5002/connect/token",
+        "RegistrationEndpoint": "https://localhost:5002/connect/register"
+      }
+    },
+    {
+      "Community": "udap://Community3",
+      "SignedMetadataConfig": {
+        "AuthorizationEndPoint": "https://localhost:5002/connect/authorize",
+        "TokenEndpoint": "https://localhost:5002/connect/token",
+        "RegistrationEndpoint": "https://localhost:5002/connect/register"
+      }
+    }
+  ]
 }
 ````
 
@@ -87,35 +110,44 @@ builder.Services.AddUdapMetadataServer(builder.Configuration);
 
 ````json
 "UdapFileCertStoreManifest": {
-    "ResourceServers": [
-      {
-        "Name": "udap.fhirserver.devdays",
-        "Communities": [
-          {
-            "Name": "udap://Community1",
-            "IssuedCerts": [
-              {
-                "FilePath": "CertificateStore/issued/devdays1.pfx",
-                "Password": "udap-test"
-              }
-            ]
-          },
-          {
-            "Name": "udap://Community2",
-            "IssuedCerts": [
-              {
-                "FilePath": "CertificateStore/issued/devdays2.pfx",
-                "Password": "udap-test"
-              }
-            ]
-          }
-        ]
-      }
-    ]
+  "ResourceServers": [
+    {
+      "Name": "udap.fhirserver.devdays",
+      "Communities": [
+        {
+          "Name": "udap://Community1",
+          "IssuedCerts": [
+            {
+              "FilePath": "CertificateStore/Community1/issued/DevDaysRsaClient.pfx",
+              "Password": "udap-test"
+            }
+          ]
+        },
+        {
+          "Name": "udap://Community2",
+          "IssuedCerts": [
+            {
+              "FilePath": "CertificateStore/Community2/issued/DevDaysECDSAClient.pfx",
+              "Password": "udap-test"
+            }
+          ]
+        },
+        {
+          "Name": "udap://Community3",
+          "IssuedCerts": [
+            {
+              "FilePath": "CertificateStore/Community3/issued/DevDaysRevokedClient.pfx",
+              "Password": "udap-test"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
 ````
 
-#### 3. :boom: Run udap.fhirserver.devdays Project
+#### :boom: Run udap.fhirserver.devdays Project
 
 - [https://localhost:7016/fhir/r4?_format=json](https://localhost:7016/fhir/r4?_format=json)
 - [https://localhost:7016/fhir/r4/Patient](https://localhost:7016/fhir/r4/Patient)
@@ -127,9 +159,11 @@ Default UDAP metadata endpoint.
 Convenience links to find community specific UDAP metadata endpoints
 
 - [https://localhost:7016/fhir/r4/.well-known/udap/communities](https://localhost:7016/fhir/r4/.well-known/udap/communities)
-- [https://localhost:7016/fhir/r4/.well-known/udap](https://localhost:7016/fhir/r4/.well-known/udap)
+- [https://localhost:7016/fhir/r4/.well-known/udap/communities/ashtml](https://localhost:7016/fhir/r4/.well-known/udap/communities/ashtml)
 
-#### 4. :boom: Add Authentication
+
+## 3.A🧩 Secure the FHIR Server with UDAP
+### :boom: Add Authentication
 
 ````csharp
 builder.Services.AddAuthentication(
@@ -156,7 +190,9 @@ Requesting a Patient should now result in a HTTP Status code of 401.
 
 - [https://localhost:7016/fhir/r4/Patient](https://localhost:7016/fhir/r4/Patient)
 
-### **🧩 udap.authserver.devdays Project**
+To finish objective #2 the udap.authserver.devdays Project will need to be configured as the UDAP authorization server.  Re-test this in section 3.B 🧩 later.
+
+### **2.🧩 udap.authserver.devdays Project**
 
 Let's enable DCR on UDAP
 
@@ -183,7 +219,9 @@ builder.Services.AddIdentityServer()
 
 #### 2. :boom: Launch udap.authserver.devdays
 
-#### 3. :boom: Launch UdapEd.Server
+#### 3. :boom: Ensure udap.fhirserver.devdays is running
+
+#### 4. :boom: Launch UdapEd.Server
 
 Start in :arrow_right: **Discovery** area.  Enter the FHIR Server's Base URL; https://localhost:7016/fhir/r4 and click the query button :white_square_button:.
 
@@ -205,11 +243,17 @@ Continue in the :arrow_right: B2B area.  Depending on which Grant Type was regis
 
 Continue in the :arrow_right: Search area or take the **Access Token** and use it in something like Postman.
 
+## 3.B 🧩 Secure the FHIR Server with UDAP
+
+At this point using the **Access Token** successfully will satisfy the objective.  
+
 🗒️ Note: Match is not supported on this sample FHIR server.  
 
 ## Advanced
 
-### **🧩 Add Metadata to Firely Server**
+### **🧩 Add UDAP Metadata to the Firely Server**
+
+Demo if we have time.
 
 ## Comments
 
