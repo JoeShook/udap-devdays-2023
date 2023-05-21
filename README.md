@@ -165,26 +165,45 @@ Convenience links to find community specific UDAP metadata endpoints
 ## 3.A🧩 Secure the FHIR Server with UDAP
 ### :boom: Add Authentication
 
+```txt
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer -v 6.*
+```
+
+Register services required by authentication services. Specifically the Bearer schema.
+
 ````csharp
 builder.Services.AddAuthentication(
-    OidcConstants.AuthenticationSchemes.AuthorizationHeaderBearer)
+  OidcConstants.AuthenticationSchemes.AuthorizationHeaderBearer)
 
-    .AddJwtBearer(OidcConstants.AuthenticationSchemes.AuthorizationHeaderBearer, 
-      options =>
+  .AddJwtBearer(OidcConstants.AuthenticationSchemes.AuthorizationHeaderBearer, 
+    options =>
+    {
+      options.Authority = builder.Configuration["Jwt:Authority"];
+      options.RequireHttpsMetadata = 
+          bool.Parse(
+              builder.Configuration["Jwt:RequireHttpsMetadata"] ?? "true"
+              );        
+      
+      options.TokenValidationParameters = new TokenValidationParameters
       {
-        options.Authority = builder.Configuration["Jwt:Authority"];
-        options.RequireHttpsMetadata = 
-            bool.Parse(
-                builder.Configuration["Jwt:RequireHttpsMetadata"] ?? "true"
-                );        
-        
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateAudience = false
-        };
-      }
-    );
+          ValidateAudience = false
+      };
+    }
+  );
 ````
+
+Add the AuthorizationMiddleware with the UseAuthorization() extension.
+Add the the authorization policy to the endpoints with the RequireAuthorization() extension.
+The order of the middleware is demonstrated in the following code.
+
+```csharp
+  app.UsePathBase(new PathString("/fhir/r4"));
+  app.UseRouting();
+  app.UseAuthorization();
+  app.UseHttpsRedirection();
+  app.UseUdapMetadataServer();
+  app.MapControllers().RequireAuthorization();
+```
 
 Requesting a Patient should now result in a HTTP Status code of 401.
 
