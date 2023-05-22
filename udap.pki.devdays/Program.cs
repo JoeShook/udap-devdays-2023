@@ -98,8 +98,8 @@ void MakeUdapPki(
     var intermediateCdp = $"http://localhost:{staticCertPort}/crl/{anchorName}.crl";
     var clientCdp = $"http://localhost:{staticCertPort}/crl/{intermediateName}.crl";
 
-    string anchorHostedUrl = $"https://localhost:{staticCertPort}/certs/{anchorName}.crt";
-    string intermediateHostedUrl = $"https://localhost:{staticCertPort}/certs/{intermediateName}.crt";
+    string anchorHostedUrl = $"http://localhost:{staticCertPort}/certs/{anchorName}.crt";
+    string intermediateHostedUrl = $"http://localhost:{staticCertPort}/certs/{intermediateName}.crt";
 
     var localhostUdapIntermediateFolder = $"{communityStorePath}/intermediates";
     var localhostUdapIssuedFolder = $"{communityStorePath}/issued";
