@@ -5,6 +5,7 @@ using Duende.IdentityServer.EntityFramework.DbContexts;
 using Duende.IdentityServer.Models;
 using Duende.IdentityServer;
 using Duende.IdentityServer.EntityFramework.Mappers;
+using udap.authserver.devdays;
 using udap.authserver.devdays.Pages;
 
 var builder = WebApplication.CreateBuilder(args);
