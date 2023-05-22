@@ -215,18 +215,20 @@ To finish objective #2 the udap.authserver.devdays Project will need to be confi
 
 Let's enable DCR on UDAP
 
-#### 1. :boom: Apply AddUdapServer extension method to include DCR on UDAP
+#### 1. :boom: Apply the AddUdapServer extension method to the AddIdentityServer extension.  This will enable DCR on UDAP
 
 ````csharp
 builder.Services.AddIdentityServer()
  .AddUdapServer(
     options =>
         {
+            var udapServerOptions = builder.Configuration.
+              GetOption<ServerSettings>("ServerSettings");
             options.DefaultSystemScopes = udapServerOptions.DefaultSystemScopes;
             options.DefaultUserScopes = udapServerOptions.DefaultUserScopes;
             options.ServerSupport = udapServerOptions.ServerSupport;
             options.ForceStateParamOnAuthorizationCode = udapServerOptions.
-                orceStateParamOnAuthorizationCode;
+                ForceStateParamOnAuthorizationCode;
         },
     options =>
         options.UdapDbContext = b =>
