@@ -27,6 +27,8 @@ services:
     name: https
     host: localhost
     port: 5002
+    routes:
+     - /.well-known/udap
 
 - name: udap-certificates-server-devdays
   project: udap.certificates.server.devdays/udap.certificates.server.devdays.csproj
