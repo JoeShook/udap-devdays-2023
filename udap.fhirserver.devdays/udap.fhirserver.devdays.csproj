@@ -18,17 +18,4 @@
     <!-- <ProjectReference Include="..\..\udap-tools\udap-dotnet\Udap.Model\Udap.Model.csproj" /> -->
   </ItemGroup>
 
-  
-  <ItemGroup>
-    <None Update="CertificateStore\Community1\issued\DevDaysRsaClient.pfx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CertificateStore\Community2\issued\DevDaysECDSAClient.pfx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="CertificateStore\Community3\issued\DevDaysRevokedClient.pfx">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
 </Project>
