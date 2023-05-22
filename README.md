@@ -162,7 +162,7 @@ Convenience links to find community specific UDAP metadata endpoints
 - [https://localhost:7016/fhir/r4/.well-known/udap/communities/ashtml](https://localhost:7016/fhir/r4/.well-known/udap/communities/ashtml)
 
 
-## 3.A🧩 Secure the FHIR Server with UDAP
+### 3.A🧩 Secure the FHIR Server with UDAP
 ### :boom: Add Authentication
 
 ```txt
@@ -192,14 +192,17 @@ builder.Services.AddAuthentication(
   );
 ````
 
-Add the AuthorizationMiddleware with the UseAuthorization() extension.
+Add the AuthorizationMiddleware with the UseAuthentication() and UseAuthorization() extensions.
 Add the the authorization policy to the endpoints with the RequireAuthorization() extension.
 The order of the middleware is demonstrated in the following code.
 
 ```csharp
   app.UsePathBase(new PathString("/fhir/r4"));
   app.UseRouting();
+
+  app.UseAuthentication()
   app.UseAuthorization();
+  
   app.UseHttpsRedirection();
   app.UseUdapMetadataServer();
   app.MapControllers().RequireAuthorization();
@@ -216,6 +219,10 @@ To finish objective #2 the udap.authserver.devdays Project will need to be confi
 Let's enable DCR on UDAP
 
 #### 1. :boom: Apply the AddUdapServer extension method to the AddIdentityServer extension.  This will enable DCR on UDAP
+
+```txt
+dotnet add package Udap.Server
+```
 
 ````csharp
 builder.Services.AddIdentityServer()
@@ -237,6 +244,12 @@ builder.Services.AddIdentityServer()
                         dbOpts.MigrationsAssembly(typeof(Program).Assembly.FullName))
         );
 ````
+
+Add UdapServer to the pipeline.  Place it before ```app.UseIdentityServer()```.
+
+```txt
+app.UseUdapServer();
+```
 
 #### 2. :boom: Launch udap.authserver.devdays
 
