@@ -62,7 +62,6 @@ var app = builder.Build();
 
 app.UsePathBase(new PathString("/fhir/r4"));
 app.UseRouting();
-app.UseAuthorization();
 
 app.UseAuthentication();
 app.UseAuthorization();
