@@ -118,7 +118,7 @@ app.UseUdapMetadataServer();
           "Name": "udap://Community1",
           "IssuedCerts": [
             {
-              "FilePath": "CertificateStore/Community1/issued/DevDaysRsaClient.pfx",
+              "FilePath": "../../../CertificateStore/Community1/issued/DevDaysRsaClient.pfx",
               "Password": "udap-test"
             }
           ]
@@ -127,7 +127,7 @@ app.UseUdapMetadataServer();
           "Name": "udap://Community2",
           "IssuedCerts": [
             {
-              "FilePath": "CertificateStore/Community2/issued/DevDaysECDSAClient.pfx",
+              "FilePath": "../../../CertificateStore/Community2/issued/DevDaysECDSAClient.pfx",
               "Password": "udap-test"
             }
           ]
@@ -136,7 +136,7 @@ app.UseUdapMetadataServer();
           "Name": "udap://Community3",
           "IssuedCerts": [
             {
-              "FilePath": "CertificateStore/Community3/issued/DevDaysRevokedClient.pfx",
+              "FilePath": "../../../CertificateStore/Community3/issued/DevDaysRevokedClient.pfx",
               "Password": "udap-test"
             }
           ]

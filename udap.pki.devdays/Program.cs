@@ -20,7 +20,8 @@ using X509Extensions = Org.BouncyCastle.Asn1.X509.X509Extensions;
 Console.WriteLine("Generating PKI for UDAP DevDays");
 
 string staticCertPort = "5033";
-string certificateStore = "CertificateStore";
+string certificateStore = $"CertificateStore";
+string certificateStoreFullPath = $"{BaseDir()}/{certificateStore}";
 
 MakeUdapPki(
     $"{certificateStore}/Community1",                                       //communityStorePath
@@ -72,10 +73,10 @@ MakeUdapPki(
 
 // Revoke
 
-var subCA = new X509Certificate2($"{certificateStore}/Community3/intermediates/DevDaysSubCA_3.pfx", "udap-test", X509KeyStorageFlags.Exportable);
-var revokeCertificate = new X509Certificate2($"{certificateStore}/Community3/issued/DevDaysRevokedClient.pfx", "udap-test");
+var subCA = new X509Certificate2($"{certificateStoreFullPath}/Community3/intermediates/DevDaysSubCA_3.pfx", "udap-test", X509KeyStorageFlags.Exportable);
+var revokeCertificate = new X509Certificate2($"{certificateStoreFullPath}/Community3/issued/DevDaysRevokedClient.pfx", "udap-test");
 
-RevokeCertificate(subCA, revokeCertificate, $"{certificateStore}/Community3/crl/DevDaysSubCA_3.crl");
+RevokeCertificate(subCA, revokeCertificate, $"{certificateStoreFullPath}/Community3/crl/DevDaysSubCA_3.crl");
 
 
 
@@ -89,11 +90,14 @@ void MakeUdapPki(
             List<string> issuedSubjectAltNames,
             string cryptoAlgorithm)
 {
-    var crlFolder = $"{communityStorePath}/crl";
-    crlFolder.EnsureDirectoryExists();
-    var anchorCrlFile = $"{crlFolder}/{anchorName}.crl";
-    var intermediateCrlFile = $"{crlFolder}/{intermediateName}.crl";
-
+    var communityStoreFullPath = $"{BaseDir()}/{communityStorePath}";
+    var crlStorePath = $"{communityStorePath}/crl";
+    var crlStoreFullPath = $"{BaseDir()}/{crlStorePath}";
+    crlStoreFullPath.EnsureDirectoryExists();
+    var anchorCrlFile = $"{crlStorePath}/{anchorName}.crl";
+    var anchorCrlFullPath = $"{BaseDir()}/{anchorCrlFile}";
+    var intermediateCrlFile = $"{crlStorePath}/{intermediateName}.crl";
+    var intermediateCrlFullPath = $"{BaseDir()}/{intermediateCrlFile}";
 
     var intermediateCdp = $"http://localhost:{staticCertPort}/crl/{anchorName}.crl";
     var clientCdp = $"http://localhost:{staticCertPort}/crl/{intermediateName}.crl";
@@ -101,9 +105,10 @@ void MakeUdapPki(
     string anchorHostedUrl = $"http://localhost:{staticCertPort}/certs/{anchorName}.crt";
     string intermediateHostedUrl = $"http://localhost:{staticCertPort}/certs/{intermediateName}.crt";
 
-    var localhostUdapIntermediateFolder = $"{communityStorePath}/intermediates";
-    var localhostUdapIssuedFolder = $"{communityStorePath}/issued";
-    
+    var intermediateStorePath = $"{communityStorePath}/intermediates";
+    var intermediateStoreFullPath = $"{BaseDir()}/{intermediateStorePath}";
+    var issuedStorePath = $"{communityStorePath}/issued";
+    var issuedStoreFullPath = $"{BaseDir()}/{issuedStorePath}";
 
     using (RSA parent = RSA.Create(4096))
     using (RSA intermediate = RSA.Create(4096))
@@ -131,10 +136,10 @@ void MakeUdapPki(
         {
 
             var parentBytes = caCert.Export(X509ContentType.Pkcs12, "udap-test");
-            communityStorePath.EnsureDirectoryExists();
-            File.WriteAllBytes($"{communityStorePath}/{anchorName}.pfx", parentBytes);
+            communityStoreFullPath.EnsureDirectoryExists();
+            File.WriteAllBytes($"{communityStoreFullPath}/{anchorName}.pfx", parentBytes);
             var caPem = PemEncoding.Write("CERTIFICATE", caCert.RawData);
-            var caFilePath = $"{communityStorePath}/{anchorName}.crt";
+            var caFilePath = $"{communityStoreFullPath}/{anchorName}.crt";
             File.WriteAllBytes(caFilePath, caPem.Select(c => (byte)c).ToArray());
 
             //Distribute
@@ -142,7 +147,7 @@ void MakeUdapPki(
             caAiaFile.EnsureDirectoryExistFromFilePath();
             File.Copy(caFilePath, caAiaFile, true);
 
-            CreateCertificateRevocationList(caCert, anchorCrlFile);
+            CreateCertificateRevocationList(caCert, anchorCrlFullPath);
             
             var intermediateReq = new CertificateRequest(
                 $"CN={intermediateName}, OU=DevDays, O=Fhir Coding, L=Portland, S=Oregon, C=US",
@@ -179,10 +184,10 @@ void MakeUdapPki(
                 new ReadOnlySpan<byte>(RandomNumberGenerator.GetBytes(16)));
             var intermediateCertWithKey = intermediateCert.CopyWithPrivateKey(intermediate);
             var intermediateBytes = intermediateCertWithKey.Export(X509ContentType.Pkcs12, "udap-test");
-            localhostUdapIntermediateFolder.EnsureDirectoryExists();
-            File.WriteAllBytes($"{localhostUdapIntermediateFolder}/{intermediateName}.pfx", intermediateBytes);
+            intermediateStoreFullPath.EnsureDirectoryExists();
+            File.WriteAllBytes($"{intermediateStoreFullPath}/{intermediateName}.pfx", intermediateBytes);
             var intermediatePem = PemEncoding.Write("CERTIFICATE", intermediateCert.RawData);
-            var subCaFilePath = $"{localhostUdapIntermediateFolder}/{intermediateName}.crt";
+            var subCaFilePath = $"{intermediateStoreFullPath}/{intermediateName}.crt";
             File.WriteAllBytes(subCaFilePath, intermediatePem.Select(c => (byte)c).ToArray());
 
             //Distribute
@@ -190,20 +195,20 @@ void MakeUdapPki(
             subCaCopyToFilePath.EnsureDirectoryExistFromFilePath();
             File.Copy(subCaFilePath, subCaCopyToFilePath, true);
 
-            CreateCertificateRevocationList(intermediateCertWithKey, intermediateCrlFile);
+            CreateCertificateRevocationList(intermediateCertWithKey, intermediateCrlFullPath);
 
-            communityStorePath.EnsureDirectoryExists();
-            $"{localhostUdapIssuedFolder}".EnsureDirectoryExists();
+            $"{issuedStoreFullPath}".EnsureDirectoryExists();
 
             if (cryptoAlgorithm is "ECDSA")
             {
                 BuildClientCertificateECDSA(
+                    communityStorePath,
                     intermediateCert,
                     caCert,
                     intermediate,
                     issuedDistinguishedName,
                     issuedSubjectAltNames,
-                    $"{localhostUdapIssuedFolder}/{issuedName}",
+                    $"{issuedStorePath}/{issuedName}",
                     intermediateHostedUrl,
                     clientCdp
                 );
@@ -211,12 +216,13 @@ void MakeUdapPki(
             else
             {
                 BuildClientCertificate(
+                    communityStorePath,
                     intermediateCert,
                     caCert,
                     intermediate,
                     issuedDistinguishedName,
                     issuedSubjectAltNames,
-                    $"{localhostUdapIssuedFolder}/{issuedName}",
+                    $"{issuedStorePath}/{issuedName}",
                     intermediateHostedUrl,
                     clientCdp
                 );
@@ -228,6 +234,7 @@ void MakeUdapPki(
 
 
 X509Certificate2 BuildClientCertificate(
+            string communityStorePath,
             X509Certificate2 intermediateCert,
             X509Certificate2 caCert,
             RSA intermediateKey,
@@ -239,6 +246,7 @@ X509Certificate2 BuildClientCertificate(
             DateTimeOffset notBefore = default,
             DateTimeOffset notAfter = default)
 {
+    var clientCertFullFilePath = $"{BaseDir()}/{clientCertFilePath}";
 
     if (notBefore == default)
     {
@@ -312,21 +320,23 @@ X509Certificate2 BuildClientCertificate(
     certPackage.Add(new X509Certificate2(caCert.Export(X509ContentType.Cert)));
 
     var clientBytes = certPackage.Export(X509ContentType.Pkcs12, "udap-test");
-    File.WriteAllBytes($"{clientCertFilePath}.pfx", clientBytes!);
+    File.WriteAllBytes($"{clientCertFullFilePath}.pfx", clientBytes!);
     var clientPem = PemEncoding.Write("CERTIFICATE", clientCert.RawData);
-    File.WriteAllBytes($"{clientCertFilePath}.crt", clientPem.Select(c => (byte)c).ToArray());
+    File.WriteAllBytes($"{clientCertFullFilePath}.crt", clientPem.Select(c => (byte)c).ToArray());
 
 
     //Distribute
+    var fileName = new FileInfo(clientCertFilePath + ".pfx").Name;
     var clientP12File = $"{BaseDir()}/../udap.fhirserver.devdays/{clientCertFilePath}.pfx";
     clientP12File.EnsureDirectoryExistFromFilePath();
-    File.Copy($"{clientCertFilePath}.pfx", clientP12File,
+    File.Copy($"{clientCertFullFilePath}.pfx", clientP12File,
         true);
 
     return clientCert;
 }
 
 X509Certificate2 BuildClientCertificateECDSA(
+    string communityStorePath,
     X509Certificate2 intermediateCert,
     X509Certificate2 caCert,
     RSA intermediateKey,
@@ -338,6 +348,7 @@ X509Certificate2 BuildClientCertificateECDSA(
     DateTimeOffset notBefore = default,
     DateTimeOffset notAfter = default)
 {
+    var clientCertFullFilePath = $"{BaseDir()}/{clientCertFilePath}";
 
     if (notBefore == default)
     {
@@ -413,14 +424,15 @@ X509Certificate2 BuildClientCertificateECDSA(
 
 
     var clientBytes = certPackage.Export(X509ContentType.Pkcs12, "udap-test");
-    File.WriteAllBytes($"{clientCertFilePath}.pfx", clientBytes!);
+    File.WriteAllBytes($"{clientCertFullFilePath}.pfx", clientBytes!);
     var clientPem = PemEncoding.Write("CERTIFICATE", clientCert.RawData);
-    File.WriteAllBytes($"{clientCertFilePath}.crt", clientPem.Select(c => (byte)c).ToArray());
+    File.WriteAllBytes($"{clientCertFullFilePath}.crt", clientPem.Select(c => (byte)c).ToArray());
 
     //Distribute
+    var fileName = new FileInfo(clientCertFilePath + ".pfx").Name;
     var clientP12File = $"{BaseDir()}/../udap.fhirserver.devdays/{clientCertFilePath}.pfx";
     clientP12File.EnsureDirectoryExistFromFilePath();
-    File.Copy($"{clientCertFilePath}.pfx", clientP12File,
+    File.Copy($"{clientCertFullFilePath}.pfx", clientP12File,
         true);
     
     return clientCert;
