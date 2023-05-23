@@ -70,6 +70,8 @@ builder.Services.AddUdapMetadataServer(builder.Configuration);
 
 ### :boom: Add Udap.Metadata to pipeline
 
+Place it just before the MapControllers() extension method.
+
 ```csharp
 app.UseUdapMetadataServer();
 ```
