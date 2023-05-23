@@ -42,6 +42,15 @@ dotnet tye is not required.  The included tye.yaml is pre-configured to launch t
 dotnet tool install -g Microsoft.Tye --version "0.12.0-*" --add-source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet6/nuget/v3/index.json
 ```
 
+### Progression through the tutorial
+
+1. Start at the prerquisite branch and ensure all services start
+2. Along the way there are branches that satisfy the objectivs.
+3. **prerequisite** branch is the starting point.  It is the intended branch to start and complete the tutorial.
+4. **fhirserverWithUdap** branch is the tutorial solution up to  **2.🧩 udap.authserver.devdays Project**.
+5. **authServerWithUdap** branch is the full working solution.
+
+
 ## Begin Tutorial
 
 ### **1. 🧩 udap.fhirserver.devdays Project**
