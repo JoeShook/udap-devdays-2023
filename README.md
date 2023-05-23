@@ -21,8 +21,7 @@ Clone the udap-dotnet repository.
 git clone https://github.com/udap-tools/udap-dotnet.git
 ````
 
-We will run the UdapEd.Server project locally to test Discovery, DCR, Token Access and finally request a resource.
-Ensure you can compile and run UdapEd.Server ahead of time.
+We will run the UdapEd.Server project locally to test Discovery, DCR, Token Access and finally request a resource.  Ensure you can compile and run UdapEd.Server ahead of time.  It requires .NET 7.0.
 
 Within this [udap-devdays-2023]([JoeShook/udap-devdays-2023](https://github.com/JoeShook/udap-devdays-2023)): udap-dotnet tutorial repository ensure you can compile and run both udap.fhirserver.devdays and udap.authserver.devdays
 
@@ -172,8 +171,16 @@ Convenience links to find community specific UDAP metadata endpoints
 - [https://localhost:7016/fhir/r4/.well-known/udap/communities](https://localhost:7016/fhir/r4/.well-known/udap/communities)
 - [https://localhost:7016/fhir/r4/.well-known/udap/communities/ashtml](https://localhost:7016/fhir/r4/.well-known/udap/communities/ashtml)
 
+## :boom: Launch [UdapEd.Server](https://localhost:7041)
+
+Validate the https://localhost:7016/fhir/r4/.well-known/udap signed metadata with [UdapEd UI Client](https://localhost:7041).  Upload the [Community1 anchor](./udap.pki.devdays/CertificateStore/Community1/DevDaysCA_1.crt) as the clients known trust anchor.
+
+[Client Validation Demo](https://storage.googleapis.com/dotnet_udap_content/DevDays2023Metadata.mp4)
+
+[![Client Validation Demo](https://storage.googleapis.com/dotnet_udap_content/DevDays2023Metadata.jpg)](https://storage.googleapis.com/dotnet_udap_content/DevDays2023Metadata.mp4)
 
 ### 3.A🧩 Secure the FHIR Server with UDAP
+
 ### :boom: Add Authentication
 
 ```txt
