@@ -21,8 +21,7 @@ Clone the udap-dotnet repository.
 git clone https://github.com/udap-tools/udap-dotnet.git
 ````
 
-We will run the UdapEd.Server project locally to test Discovery, DCR, Token Access and finally request a resource.
-Ensure you can compile and run UdapEd.Server ahead of time.
+We will run the UdapEd.Server project locally to test Discovery, DCR, Token Access and finally request a resource.  Ensure you can compile and run UdapEd.Server ahead of time.  It requires .NET 7.0.
 
 Within this [udap-devdays-2023]([JoeShook/udap-devdays-2023](https://github.com/JoeShook/udap-devdays-2023)): udap-dotnet tutorial repository ensure you can compile and run both udap.fhirserver.devdays and udap.authserver.devdays
 
@@ -70,11 +69,21 @@ builder.Services.AddUdapMetadataServer(builder.Configuration);
 
 ### :boom: Add Udap.Metadata to pipeline
 
+Place it just before the MapControllers() extension method.
+
 ```csharp
 app.UseUdapMetadataServer();
 ```
 
 #### :boom: Add Certificates and Configuration
+
+- Add the configuration to point the FHIR Server to the Authorization Server.
+
+```json
+"Jwt": {
+    "Authority": "https://localhost:5002"
+}
+```
 
 - The CertificateStore folder has already been added to the project.
 - Add the following UdapMetadataOptions section to appsettings.json
@@ -170,8 +179,16 @@ Convenience links to find community specific UDAP metadata endpoints
 - [https://localhost:7016/fhir/r4/.well-known/udap/communities](https://localhost:7016/fhir/r4/.well-known/udap/communities)
 - [https://localhost:7016/fhir/r4/.well-known/udap/communities/ashtml](https://localhost:7016/fhir/r4/.well-known/udap/communities/ashtml)
 
+## :boom: Launch [UdapEd.Server](https://localhost:7041)
+
+Validate the https://localhost:7016/fhir/r4/.well-known/udap signed metadata with [UdapEd UI Client](https://localhost:7041).  Upload the [Community1 anchor](./udap.pki.devdays/CertificateStore/Community1/DevDaysCA_1.crt) as the clients known trust anchor.
+
+[Client Validation Demo](https://storage.googleapis.com/dotnet_udap_content/DevDays2023Metadata.mp4)
+
+[![Client Validation Demo](https://storage.googleapis.com/dotnet_udap_content/DevDays2023Metadata.jpg)](https://storage.googleapis.com/dotnet_udap_content/DevDays2023Metadata.mp4)
 
 ### 3.A🧩 Secure the FHIR Server with UDAP
+
 ### :boom: Add Authentication
 
 ```txt
@@ -209,7 +226,7 @@ The order of the middleware is demonstrated in the following code.
   app.UsePathBase(new PathString("/fhir/r4"));
   app.UseRouting();
 
-  app.UseAuthentication()
+  app.UseAuthentication();
   app.UseAuthorization();
   
   app.UseHttpsRedirection();
@@ -251,20 +268,47 @@ builder.Services.AddIdentityServer()
                 b.UseSqlite(connectionString,
                     dbOpts => 
                         dbOpts.MigrationsAssembly(typeof(Program).Assembly.FullName))
-        );
+        ),
+        baseUrl: "http://localhost:5002/connect/register"
 ````
 
-Add UdapServer to the pipeline.  Place it before ```app.UseIdentityServer()```.
+Add ```UdapServer()``` to the pipeline.  Place it before ```app.UseIdentityServer()```.
 
 ```txt
 app.UseUdapServer();
+app.UseIdentityServer()
 ```
 
-#### 2. :boom: Launch udap.authserver.devdays
+#### 2. :boom: Add the Udap.Server database schema to the Identity Server Schema
 
-#### 3. :boom: Ensure udap.fhirserver.devdays is running
+Uncomment ```await InitializeDatabaseWithUdap(serviceScope, configDbContext);``` in ```SeedData.cs```
 
-#### 4. :boom: Launch UdapEd.Server
+Run Entity Framework Migrations
+
+Install ```dotnet-ef``` if it does not exist
+
+```txt
+dotnet tool install --global dotnet-ef
+```
+
+```text
+dotnet ef migrations add InitialIdentityServerUdapDbMigration -c UdapDbContext -o Data/Migrations/IdentityServer/UdapDb
+```
+
+---
+:spiral_notepad: Note: You can launch all apps with ```tye run``` from solution folder.
+
+See it in action in the following demo.  Details steps below the demo.
+
+[Client Validation Demo](https://storage.googleapis.com/dotnet_udap_content/tye_UDAP_Authorization.mp4)
+
+[![Client Validation Demo](https://storage.googleapis.com/dotnet_udap_content/tye_UDAP_Authorization.jpg)](https://storage.googleapis.com/dotnet_udap_content/tye_UDAP_Authorization.mp4)
+
+#### 3. :boom: Launch udap.authserver.devdays
+
+#### 4. :boom: Ensure udap.fhirserver.devdays is running
+
+#### 5. :boom: Launch UdapEd.Server
 
 Start in :arrow_right: **Discovery** area.  Enter the FHIR Server's Base URL; https://localhost:7016/fhir/r4 and click the query button :white_square_button:.
 
