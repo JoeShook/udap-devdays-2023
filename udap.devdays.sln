@@ -5,11 +5,11 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "udap.fhirserver.devdays", "udap.fhirserver.devdays\udap.fhirserver.devdays.csproj", "{F959A3FE-423F-4C61-BBA3-ADE7C9CF8C6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udap.authserver.devdays", "udap.authserver.devdays\udap.authserver.devdays.csproj", "{A3AD3DE4-D372-4542-A9A5-759CBBF2708F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "udap.authserver.devdays", "udap.authserver.devdays\udap.authserver.devdays.csproj", "{A3AD3DE4-D372-4542-A9A5-759CBBF2708F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udap.pki.devdays", "udap.pki.devdays\udap.pki.devdays.csproj", "{41A51168-EEAF-413E-A2DB-70CE6EB9F45E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "udap.pki.devdays", "udap.pki.devdays\udap.pki.devdays.csproj", "{41A51168-EEAF-413E-A2DB-70CE6EB9F45E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udap.certificates.server.devdays", "udap.certificates.server.devdays\udap.certificates.server.devdays.csproj", "{5251E303-4DB1-46B4-AB32-EF59FAF99957}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "udap.certificates.server.devdays", "udap.certificates.server.devdays\udap.certificates.server.devdays.csproj", "{5251E303-4DB1-46B4-AB32-EF59FAF99957}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Support", "Support", "{6A824E94-D7F3-4783-B589-F3EE087A4EEB}"
 	ProjectSection(SolutionItems) = preProject
