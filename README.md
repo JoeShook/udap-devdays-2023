@@ -77,6 +77,14 @@ app.UseUdapMetadataServer();
 
 #### :boom: Add Certificates and Configuration
 
+- Add the configuration to point the FHIR Server to the Authorization Server.
+
+```json
+"Jwt": {
+    "Authority": "https://localhost:5002"
+}
+```
+
 - The CertificateStore folder has already been added to the project.
 - Add the following UdapMetadataOptions section to appsettings.json
 
@@ -218,7 +226,7 @@ The order of the middleware is demonstrated in the following code.
   app.UsePathBase(new PathString("/fhir/r4"));
   app.UseRouting();
 
-  app.UseAuthentication()
+  app.UseAuthentication();
   app.UseAuthorization();
   
   app.UseHttpsRedirection();
@@ -260,14 +268,39 @@ builder.Services.AddIdentityServer()
                 b.UseSqlite(connectionString,
                     dbOpts => 
                         dbOpts.MigrationsAssembly(typeof(Program).Assembly.FullName))
-        );
+        ),
+        baseUrl: "http://localhost:5002/connect/register"
 ````
 
-Add UdapServer to the pipeline.  Place it before ```app.UseIdentityServer()```.
+Add ```UdapServer()``` to the pipeline.  Place it before ```app.UseIdentityServer()```.
 
 ```txt
 app.UseUdapServer();
+app.UseIdentityServer()
 ```
+
+Uncomment ```await SeedData.InitializeDatabase(app);``` in ```program.cs```
+Uncomment ```SeedData.cs```
+
+Run Entity Framework Migrations
+
+Install ```dotnet-ef``` if it does not exist
+
+```txt
+dotnet tool install --global dotnet-ef
+```
+
+```text
+dotnet ef migrations add InitialIdentityServerUdapDbMigration -c UdapDbContext -o Data/Migrations/IdentityServer/UdapDb
+```
+
+:spiral_notepad: Note: You can launch all apps with ```tye run``` from solution folder.
+
+See it in action in the following demo.  Details steps below the demo.
+
+[Client Validation Demo](https://storage.googleapis.com/dotnet_udap_content/tye_UDAP_Authorization.mp4)
+
+[![Client Validation Demo](https://storage.googleapis.com/dotnet_udap_content/tye_UDAP_Authorization.jpg)](https://storage.googleapis.com/dotnet_udap_content/tye_UDAP_Authorization.mp4)
 
 #### 2. :boom: Launch udap.authserver.devdays
 
