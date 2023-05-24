@@ -35,27 +35,6 @@ builder.Services
 
     });
 
-builder.Services.AddUdapMetadataServer(builder.Configuration);
-
-builder.Services.AddAuthentication(
-        OidcConstants.AuthenticationSchemes.AuthorizationHeaderBearer)
-
-    .AddJwtBearer(OidcConstants.AuthenticationSchemes.AuthorizationHeaderBearer,
-        options =>
-        {
-            options.Authority = builder.Configuration["Jwt:Authority"];
-            options.RequireHttpsMetadata =
-                bool.Parse(
-                    builder.Configuration["Jwt:RequireHttpsMetadata"] ?? "true"
-                );
-
-            options.TokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateAudience = false
-            };
-        }
-    );
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -63,11 +42,9 @@ var app = builder.Build();
 app.UsePathBase(new PathString("/fhir/r4"));
 app.UseRouting();
 
-app.UseAuthentication();
-app.UseAuthorization();
 
 app.UseHttpsRedirection();
 app.UseUdapMetadataServer();
-app.MapControllers().RequireAuthorization();
+app.MapControllers();
 
 app.Run();
