@@ -279,8 +279,9 @@ app.UseUdapServer();
 app.UseIdentityServer()
 ```
 
-Uncomment ```await SeedData.InitializeDatabase(app);``` in ```program.cs```
-Uncomment ```SeedData.cs```
+#### 2. :boom: Add the Udap.Server database schema to the Identity Server Schema
+
+Uncomment ```await InitializeDatabaseWithUdap(serviceScope, configDbContext);``` in ```SeedData.cs```
 
 Run Entity Framework Migrations
 
@@ -302,11 +303,11 @@ See it in action in the following demo.  Details steps below the demo.
 
 [![Client Validation Demo](https://storage.googleapis.com/dotnet_udap_content/tye_UDAP_Authorization.jpg)](https://storage.googleapis.com/dotnet_udap_content/tye_UDAP_Authorization.mp4)
 
-#### 2. :boom: Launch udap.authserver.devdays
+#### 3. :boom: Launch udap.authserver.devdays
 
-#### 3. :boom: Ensure udap.fhirserver.devdays is running
+#### 4. :boom: Ensure udap.fhirserver.devdays is running
 
-#### 4. :boom: Launch UdapEd.Server
+#### 5. :boom: Launch UdapEd.Server
 
 Start in :arrow_right: **Discovery** area.  Enter the FHIR Server's Base URL; https://localhost:7016/fhir/r4 and click the query button :white_square_button:.
 
