@@ -25,7 +25,7 @@ public static class SeedData
         await configDbContext.Database.MigrateAsync();
         await serviceScope.ServiceProvider.GetRequiredService<PersistedGrantDbContext>().Database.MigrateAsync();
 
-        await InitializeDatabaseWithUdap(serviceScope, configDbContext);
+        // await InitializeDatabaseWithUdap(serviceScope, configDbContext);
 
 
         //
