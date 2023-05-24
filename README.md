@@ -295,6 +295,7 @@ dotnet tool install --global dotnet-ef
 dotnet ef migrations add InitialIdentityServerUdapDbMigration -c UdapDbContext -o Data/Migrations/IdentityServer/UdapDb
 ```
 
+---
 :spiral_notepad: Note: You can launch all apps with ```tye run``` from solution folder.
 
 See it in action in the following demo.  Details steps below the demo.
