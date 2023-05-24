@@ -16,6 +16,7 @@ services:
     port: 7016
     routes:
      - /fhir/r4?_format=json
+     - /fhir/r4/Patient
      - /fhir/r4/.well-known/udap
      - /fhir/r4/.well-known/udap/communities
      - /fhir/r4/.well-known/udap/communities/ashtml
