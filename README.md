@@ -44,9 +44,9 @@ dotnet tool install -g Microsoft.Tye --version "0.12.0-*" --add-source https://p
 ### Progression through the tutorial
 
 1. Start at the prerquisite branch and ensure all services start
-2. Along the way there are branches that satisfy the objectivs.
+2. Along the way there are branches that satisfy the objectives.
 3. **prerequisite** branch is the starting point.  It is the intended branch to start and complete the tutorial.
-4. **fhirserverWithUdap** branch is the tutorial solution up to  **2.🧩 udap.authserver.devdays Project**.
+4. **fhirserverWithUdap** branch is the tutorial solution configuring the FHIR Server correctly.
 5. **authServerWithUdap** branch is the full working solution.
 
 ## Things to look out for
@@ -189,6 +189,20 @@ Convenience links to find community specific UDAP metadata endpoints
 ## :boom: Launch [UdapEd.Server](https://localhost:7041)
 
 Validate the https://localhost:7016/fhir/r4/.well-known/udap signed metadata with [UdapEd UI Client](https://localhost:7041).  Upload the [Community1 anchor](./udap.pki.devdays/CertificateStore/Community1/DevDaysCA_1.crt) as the clients known trust anchor.
+
+---
+
+Notice in the image below.
+
+- :exclamation: <span style="color:red">(RevocationStatusUnknown) The revocation function was unable to check revocation for the certificate.</span>
+  
+This error will be present in almost every case when a X509 Chain cannot be built and verified.  Always look at the other errors first.  For example, if an intermediate certificate cannot be resolved nor found in a trusted store, such as the Windows Certificate store or a Linux trust store then the ```RevocationStatusUnknown``` will pre presented by the ```Udap.Client``` during validation.  The ```Untrusted``` error should clue us into checking the ```Trust Anchor``` and ```Intermediate Certificate``` if one exists.  ```Intermediate Certificates``` can be resolved via the ```AIA (Authority Information Access)``` extension.  Look at the ```UdapEd``` tool to see where that extension points too.  Remember that ```Trust Anchor``` chosen for the ```Udap.Client``` is loaded into it' trusted root store.  It is the top of the store and the whole chain from ```Trust Anchor``` to the ```Client Certificate``` used to sign the metadata must be build and validated including ```CRL (Certificate Revocation List)``` checks.  This can be tricky especially in development while regenerating PKI structures and running tests.  Windows and Linux will cache the CRL requests and sometimes load intermediates into trust stores.  The ```UdapEd``` tool may evolve more to try and find these tricky strategies based on operating systems and visualize what is happening.
+
+An actual revoked certificate will be reported like the following.  This can be tested by setting the **BaseUrl** to ```https://localhost:7016/fhir/r4``` and the **Community** to ```udap://Community3```.  **And** don't forget to choose the ```udap://Community3``` community anchor, otherwise you will not be able to build the chain.  Without a built chain the CRL endpoint cannot be checked because we do not trust the ```X509 Chain```. 
+
+- :exclamation: <span style="color:red">(Revoked) The certificate is revoked.</span>
+
+---
 
 [Client Validation Demo](https://storage.googleapis.com/dotnet_udap_content/DevDays2023Metadata.mp4)
 
