@@ -96,8 +96,9 @@ public static class SeedData
             var anchorCertificate = communitySeedData.Item2;
             var communityName = communitySeedData.Item1;
             if ((await clientRegistrationStore.GetAnchors(communityName))
-                .All(a => a.Thumbprint != anchorCertificate.Thumbprint)) {
-                
+                .All(a => a.Thumbprint != anchorCertificate.Thumbprint))
+            {
+
                 var community = udapContext.Communities.Single(c => c.Name == communityName);
 
                 var anchor = new Anchor
