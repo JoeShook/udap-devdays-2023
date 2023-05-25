@@ -52,6 +52,7 @@ dotnet tool install -g Microsoft.Tye --version "0.12.0-*" --add-source https://p
 ## Things to look out for
 
 If the developer regenerates certificates with the udap.pki.devdays project during the Tutorial delete the udap.authserver.devdays.EntityFramework.db database.  And restart udap.authserver.devdays.
+
 ### On Windows
 
 If the developer regenerates certificates with the udap.pki.devdays during the Tutorial they may then need to launch mmc.exe, the Certificates snap-in for the current user.  Go to Intermediate Certification Authorities and delete the DevDaysSubCA_1.  
