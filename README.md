@@ -44,11 +44,17 @@ dotnet tool install -g Microsoft.Tye --version "0.12.0-*" --add-source https://p
 ### Progression through the tutorial
 
 1. Start at the prerquisite branch and ensure all services start
-2. Along the way there are branches that satisfy the objectivs.
+2. Along the way there are branches that satisfy the objectives.
 3. **prerequisite** branch is the starting point.  It is the intended branch to start and complete the tutorial.
-4. **fhirserverWithUdap** branch is the tutorial solution up to  **2.🧩 udap.authserver.devdays Project**.
+4. **fhirserverWithUdap** branch is the tutorial solution configuring the FHIR Server correctly.
 5. **authServerWithUdap** branch is the full working solution.
 
+## Things to look out for
+
+If the developer regenerates certificates with the udap.pki.devdays project during the Tutorial delete the udap.authserver.devdays.EntityFramework.db database.  And restart udap.authserver.devdays.
+### On Windows
+
+If the developer regenerates certificates with the udap.pki.devdays during the Tutorial they may then need to launch mmc.exe, the Certificates snap-in for the current user.  Go to Intermediate Certification Authorities and delete the DevDaysSubCA_1.  
 
 ## Begin Tutorial
 
