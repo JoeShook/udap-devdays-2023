@@ -11,7 +11,7 @@ The HL7 "[Security IG](http://hl7.org/fhir/us/udap-security/)" is a constraint o
 
 1. 🧩 Host UDAP Metadata on a FHIR Server
 2. 🧩 Host UDAP Dynamic Client Registration (DCR [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) on an Identity Server.
-3. 🧩 Secure the FHIR Server with UDAP
+3. 🧩 Secure a FHIR Server with UDAP
 
 ## Prerequisites
 
@@ -23,13 +23,19 @@ git clone https://github.com/udap-tools/udap-dotnet.git
 
 We will run the UdapEd.Server project locally to test Discovery, DCR, Token Access and finally request a resource.  Ensure you can compile and run UdapEd.Server ahead of time.  It requires .NET 7.0.
 
-Within this [udap-devdays-2023]([JoeShook/udap-devdays-2023](https://github.com/JoeShook/udap-devdays-2023)): udap-dotnet tutorial repository ensure you can compile and run both udap.fhirserver.devdays and udap.authserver.devdays
+```cli
+git clone https://github.com/JoeShook/udap-devdays-2023.git
+```
 
-udap.fhirserver.devdays has one patient resource loaded.  This FHIR server is a simple DemoFileSystemFhirServer implementation of Brian Postlethwaite’s [fhir-net-web-api](https://github.com/brianpos/fhir-net-web-api/tree/feature/r4b).  
+Start in the prerequisite branch.
 
-udap.authserver.devdays is a Duende Identity Server implementation with a SQLite data store without DCR on UDAP. When the tutorial starts we will add DCR on UDAP to the Identity Server.
+Within the [udap-devdays-2023]([JoeShook/udap-devdays-2023](https://github.com/JoeShook/udap-devdays-2023)): udap-dotnet tutorial repository ensure you can compile and run both ```udap.fhirserver.devdays``` and ```udap.authserver.devdays```.
 
-:spiral_notepad: Note: the udap.authserver.devdays prerequisite was built from the [EntityFramework Quickstart](https://docs.duendesoftware.com/identityserver/v5/quickstarts/4_ef/).
+```udap.fhirserver.devdays``` has one patient resource loaded.  This FHIR server is a simple DemoFileSystemFhirServer implementation of Brian Postlethwaite’s [fhir-net-web-api](https://github.com/brianpos/fhir-net-web-api/tree/feature/r4b).  
+
+```udap.authserver.devdays``` is a Duende Identity Server implementation with a SQLite data store without DCR on UDAP. When the tutorial starts we will add DCR on UDAP to the Identity Server.
+
+:spiral_notepad: Note: the ```udap.authserver.devdays``` prerequisite was built from the [EntityFramework Quickstart](https://docs.duendesoftware.com/identityserver/v5/quickstarts/4_ef/).
 
 ### dotnet tye
 
