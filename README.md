@@ -13,6 +13,9 @@ The HL7 "[Security IG](http://hl7.org/fhir/us/udap-security/)" is a constraint o
 2. 🧩 Host UDAP Dynamic Client Registration (DCR [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)) on an Identity Server.
 3. 🧩 Secure a FHIR Server with UDAP
 
+----
+Note: The objectives are performed in the following order: 1, 3A, 2 and finally 3B.
+
 ## Prerequisites
 
 Clone the udap-dotnet repository.
