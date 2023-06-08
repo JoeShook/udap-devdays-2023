@@ -248,8 +248,8 @@ builder.Services.AddAuthentication(
   );
 ````
 
-Add the AuthorizationMiddleware with the UseAuthentication() and UseAuthorization() extensions.
-Add the the authorization policy to the endpoints with the RequireAuthorization() extension.
+Add the AuthorizationMiddleware with the ```UseAuthentication()``` and ```UseAuthorization()``` extensions.
+Add the the authorization policy to the endpoints with the ```RequireAuthorization()``` extension.
 The order of the middleware is demonstrated in the following code.
 
 ```csharp
