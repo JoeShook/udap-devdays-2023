@@ -2,9 +2,7 @@ using System.Text.Json;
 using Hl7.Fhir.DemoFileSystemFhirServer;
 using Hl7.Fhir.NetCoreApi;
 using Hl7.Fhir.WebApi;
-using IdentityModel;
 using Microsoft.AspNetCore.Mvc.Formatters;
-using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -35,16 +33,17 @@ builder.Services
 
     });
 
+builder.Services.AddUdapMetadataServer(builder.Configuration);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 
 app.UsePathBase(new PathString("/fhir/r4"));
 app.UseRouting();
-
+app.UseUdapMetadataServer();
 
 app.UseHttpsRedirection();
-app.UseUdapMetadataServer();
 app.MapControllers();
 
 app.Run();
