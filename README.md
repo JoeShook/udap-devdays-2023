@@ -299,7 +299,8 @@ builder.Services.AddIdentityServer()
                     dbOpts => 
                         dbOpts.MigrationsAssembly(typeof(Program).Assembly.FullName))
         ),
-        baseUrl: "http://localhost:5002/connect/register"
+        baseUrl: "https://localhost:5002/connect/register"
+        )
 ````
 
 Add ```UdapServer()``` to the pipeline.  Place it before ```app.UseIdentityServer()```.
