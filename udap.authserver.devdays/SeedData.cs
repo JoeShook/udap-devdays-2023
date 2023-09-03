@@ -18,14 +18,14 @@ namespace udap.authserver.devdays;
 public static class SeedData
 {
 
-    public static async Task InitializeDatabase(IApplicationBuilder app)
+    public static async Task InitializeDatabase(IApplicationBuilder app, Serilog.ILogger logger)
     {
         using var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>()!.CreateScope();
         var configDbContext = serviceScope.ServiceProvider.GetRequiredService<ConfigurationDbContext>();
         await configDbContext.Database.MigrateAsync();
         await serviceScope.ServiceProvider.GetRequiredService<PersistedGrantDbContext>().Database.MigrateAsync();
 
-        await InitializeDatabaseWithUdap(serviceScope, configDbContext);
+        await InitializeDatabaseWithUdap(serviceScope, configDbContext, logger);
 
 
         //
@@ -54,7 +54,7 @@ public static class SeedData
     }
 
 
-    static async Task InitializeDatabaseWithUdap(IServiceScope serviceScope, ConfigurationDbContext configDbContext)
+    static async Task InitializeDatabaseWithUdap(IServiceScope serviceScope, ConfigurationDbContext configDbContext, Serilog.ILogger logger)
     {
         var udapContext = serviceScope.ServiceProvider.GetRequiredService<UdapDbContext>();
         await udapContext.Database.MigrateAsync();
@@ -62,7 +62,7 @@ public static class SeedData
 
         var assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         var communities = new List<Tuple<string, X509Certificate2>>();
-        var certificateStorePath = "../../../../udap.pki.devdays/CertificateStore";
+        var certificateStorePath = "CertificateStore";
         var certificateStoreFullPath = Path.Combine(assemblyPath!, certificateStorePath);
 
         foreach (var folder in Directory.GetDirectories(certificateStoreFullPath))
@@ -71,6 +71,9 @@ public static class SeedData
             var anchorFile = Directory.GetFiles(folder, "*.crt").First();
             var anchorCertificate = new X509Certificate2(anchorFile);
             communities.Add(new Tuple<string, X509Certificate2>(folderName, anchorCertificate));
+
+            logger.Information($"Creating Anchor from: {anchorFile}");
+            logger.Information($"Anchor Info: {anchorCertificate.Thumbprint}");
         }
 
         //

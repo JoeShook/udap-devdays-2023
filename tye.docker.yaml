@@ -1,0 +1,49 @@
+# tye application configuration file
+# read all about it at https://github.com/dotnet/tye
+#
+# when you've given us a try, we'd love to know what you think:
+#    https://aka.ms/AA7q20u
+#
+name: udap.devdays
+services:
+
+- name: udap-fhirserver-devdays
+  #project: udap.fhirserver.devdays/udap.fhirserver.devdays.csproj
+  #image: udapfhirserverdevdays
+  dockerFile: udap.fhirserver.devdays/Dockerfile
+  bindings:
+  - protocol: https
+    name: https
+    #host: localhost
+    port: 7017
+    routes:
+     - /fhir/r4?_format=json
+     - /fhir/r4/.well-known/udap
+     - /fhir/r4/.well-known/udap/communities
+     - /fhir/r4/.well-known/udap/communities/ashtml
+  env:
+  - name: ASPNETCORE_URLS
+    value: http://*:80;https://*:443
+
+- name: udap-authserver-devdays
+  #project: udap.authserver.devdays/udap.authserver.devdays.csproj
+  dockerFile: udap.authserver.devdays/Dockerfile
+  bindings:
+  - protocol: https
+    name: https
+    #host: localhost
+    port: 5102
+    routes:
+     - /.well-known/udap
+  env:
+  - name: ASPNETCORE_URLS
+    value: http://*:80;https://*:443
+
+- name: udap-certificates-server-devdays
+  #project: udap.certificates.server.devdays/udap.certificates.server.devdays.csproj
+  dockerFile: udap.certificates.server.devdays/Dockerfile
+  bindings:
+  - protocol: http
+    name: http
+    #host: localhost
+    port: 5034

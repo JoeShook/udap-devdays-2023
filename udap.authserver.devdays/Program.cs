@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog((ctx, lc) => lc
     .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}")
     .Enrich.FromLogContext()
+    .MinimumLevel.Override("Microsoft.EntityFrameworkCore.Database.Command", Serilog.Events.LogEventLevel.Warning)
     .ReadFrom.Configuration(ctx.Configuration));
 
 var migrationsAssembly = typeof(Program).Assembly.GetName().Name;
@@ -50,7 +51,7 @@ builder.Services.AddIdentityServer()
                 b.UseSqlite(connectionString,
                     dbOpts =>
                         dbOpts.MigrationsAssembly(typeof(Program).Assembly.FullName)),
-        baseUrl: "https://localhost:5002/connect/register"
+        baseUrl: "https://host.docker.internal:5102/connect/register"
     );
 
 var app = builder.Build();
@@ -66,7 +67,7 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-await SeedData.InitializeDatabase(app);
+await SeedData.InitializeDatabase(app, Log.Logger);
 
 app.UseStaticFiles();
 app.UseRouting();

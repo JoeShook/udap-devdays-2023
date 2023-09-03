@@ -13,7 +13,7 @@ services:
   - protocol: https
     name: https
     host: localhost
-    port: 7016
+    port: 7017
     routes:
      - /fhir/r4?_format=json
      - /fhir/r4/.well-known/udap
@@ -26,7 +26,7 @@ services:
   - protocol: https
     name: https
     host: localhost
-    port: 5002
+    port: 5102
     routes:
      - /.well-known/udap
 
@@ -36,4 +36,4 @@ services:
   - protocol: http
     name: http
     host: localhost
-    port: 5033
+    port: 5034

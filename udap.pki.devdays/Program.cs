@@ -19,7 +19,7 @@ using X509Extensions = Org.BouncyCastle.Asn1.X509.X509Extensions;
 
 Console.WriteLine("Generating PKI for UDAP DevDays");
 
-string staticCertPort = "5033";
+string staticCertPort = "5034";
 string certificateStore = $"CertificateStore";
 string certificateStoreFullPath = $"{BaseDir()}/{certificateStore}";
 
@@ -31,7 +31,8 @@ MakeUdapPki(
     "CN=localhost, OU=DevDays-Community1, O=Fhir Coding, L=Portland, S=Oregon, C=US",  //issuedDistinguishedName
     new List<string>
     {
-        "https://localhost:7016/fhir/r4",
+        "https://localhost:7017/fhir/r4",
+        "https://host.docker.internal:7017/fhir/r4",
         "http://localhost/fhir/r4",
     },                                                                      //SubjAltNames (Demonstrate multiple)
     "RSA"
@@ -45,7 +46,8 @@ MakeUdapPki(
     "CN=localhost, OU=DevDays-Community2, O=Fhir Coding, L=Portland, S=Oregon, C=US",  //issuedDistinguishedName
     new List<string>
     {
-        "https://localhost:7016/fhir/r4",
+        "https://localhost:7017/fhir/r4",
+        "https://host.docker.internal:7017/fhir/r4",
         "http://localhost/fhir/r4",
     },                                                                      //SubjAltNames (Demonstrate multiple)
     "ECDSA"
@@ -65,7 +67,8 @@ MakeUdapPki(
     "CN=localhost, OU=DevDays-Community3, O=Fhir Coding, L=Portland, S=Oregon, C=US",  //issuedDistinguishedName
     new List<string>
     {
-        "https://localhost:7016/fhir/r4",
+        "https://localhost:7017/fhir/r4",
+        "https://host.docker.internal:7017/fhir/r4",
         "http://localhost/fhir/r4",
     },                                                                      //SubjAltNames (Demonstrate multiple)
     "RSA"
@@ -99,11 +102,11 @@ void MakeUdapPki(
     var intermediateCrlFile = $"{crlStorePath}/{intermediateName}.crl";
     var intermediateCrlFullPath = $"{BaseDir()}/{intermediateCrlFile}";
 
-    var intermediateCdp = $"http://localhost:{staticCertPort}/crl/{anchorName}.crl";
-    var clientCdp = $"http://localhost:{staticCertPort}/crl/{intermediateName}.crl";
+    var intermediateCdp = $"http://host.docker.internal:{staticCertPort}/crl/{anchorName}.crl";
+    var clientCdp = $"http://host.docker.internal:{staticCertPort}/crl/{intermediateName}.crl";
 
-    string anchorHostedUrl = $"http://localhost:{staticCertPort}/certs/{anchorName}.crt";
-    string intermediateHostedUrl = $"http://localhost:{staticCertPort}/certs/{intermediateName}.crt";
+    string anchorHostedUrl = $"http://host.docker.internal:{staticCertPort}/certs/{anchorName}.crt";
+    string intermediateHostedUrl = $"http://host.docker.internal:{staticCertPort}/certs/{intermediateName}.crt";
 
     var intermediateStorePath = $"{communityStorePath}/intermediates";
     var intermediateStoreFullPath = $"{BaseDir()}/{intermediateStorePath}";
@@ -146,6 +149,10 @@ void MakeUdapPki(
             var caAiaFile = $"{BaseDir()}/../udap.certificates.server.devdays/wwwroot/certs/{new FileInfo(caFilePath).Name}";
             caAiaFile.EnsureDirectoryExistFromFilePath();
             File.Copy(caFilePath, caAiaFile, true);
+
+            var caAuthServerFile = $"{BaseDir()}/../udap.authserver.devdays/{communityStorePath}/{new FileInfo(caFilePath).Name}";
+            caAuthServerFile.EnsureDirectoryExistFromFilePath();
+            File.Copy(caFilePath, caAuthServerFile, true);
 
             CreateCertificateRevocationList(caCert, anchorCrlFullPath);
             
