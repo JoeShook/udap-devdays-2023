@@ -1,0 +1,42 @@
+<mxfile host="65bd71144e">
+    <diagram id="sjLsLYad5e1rqB4nw-4a" name="Page-1">
+        <mxGraphModel dx="762" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="" style="edgeStyle=none;html=1;fontColor=#000000;" edge="1" parent="1" source="2" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;GitHub&lt;/font&gt;: udap-tools/udap-dotnet&lt;br&gt;&lt;br&gt;Source Code where the core work is done.&lt;br&gt;&lt;br&gt;MIT License" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="50" width="210" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="edgeStyle=none;html=1;fontColor=#000000;jumpStyle=none;" edge="1" parent="1" source="3" target="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="370" y="295"/>
+                            <mxPoint x="370" y="164"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;NuGet.Org&lt;/font&gt;&lt;br&gt;&lt;br&gt;Udap.Client&lt;br&gt;Udap.Server&lt;br&gt;Udap.Metadata.Server&lt;br&gt;Udap.Common&lt;br&gt;Udap.Model&lt;br&gt;Udap.Util" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;rounded=1;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="230" width="210" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="edgeStyle=none;jumpStyle=none;html=1;fontColor=#000000;" edge="1" parent="1" source="5" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;font style=&quot;&quot; color=&quot;#000000&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;GitHub&lt;/font&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;: HL7-FAST/udap-dotnet&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;div style=&quot;font-size: 13px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Build Auth Server and Identity Server for Foundry&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Consume NuGet packages&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px; text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Build Docker&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Publish Docker to a Hub&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Readme doc describe how to consume the Docker images and or run and build localy in develoepr lab&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Build Trust Community PKI used for UDAP use case scenarios&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;Apache 2.0 License&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontStyle=1;spacingLeft=5;spacingBottom=4;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="10" width="270" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="edgeStyle=none;jumpStyle=none;html=1;fontColor=#000000;" edge="1" parent="1" source="7" target="13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Docker Hub in Foundry&lt;/font&gt;&lt;br&gt;&lt;br&gt;Udap.Auth.Server image&lt;br&gt;Udap.Idp1.Server image&lt;br&gt;&lt;br&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="380" width="250" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;font color=&quot;#000000&quot; style=&quot;background-color: rgb(248, 206, 204);&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Foundry&lt;/font&gt;&lt;br&gt;&lt;br&gt;-&amp;nbsp;&lt;a style=&quot;cursor: pointer; outline: 0px; font-family: &amp;quot;Source Sans 3 VF&amp;quot;, sans-serif; font-size: 14px; font-weight: 400; text-align: left;&quot; title=&quot;https://auth.udap-dotnet.fast.hl7.org/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; href=&quot;https://auth.udap-dotnet.fast.hl7.org/&quot;&gt;https://auth.udap-dotnet.fast.hl7.org&lt;/a&gt;&lt;br&gt;&lt;br&gt;-&amp;nbsp;&lt;a style=&quot;text-decoration-line: none; cursor: pointer; font-family: &amp;quot;Source Sans 3 VF&amp;quot;, sans-serif; font-size: 14px; font-weight: 400; text-align: left;&quot; title=&quot;https://idp1.udap-dotnet.fast.hl7.org/&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; href=&quot;https://idp1.udap-dotnet.fast.hl7.org/&quot;&gt;https://idp1.udap-dotnet.fast.hl7.org&lt;/a&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#b85450;rounded=1;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="540" width="250" height="145" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
