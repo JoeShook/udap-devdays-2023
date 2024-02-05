@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "udap.certificates.server.de
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Support", "Support", "{6A824E94-D7F3-4783-B589-F3EE087A4EEB}"
 	ProjectSection(SolutionItems) = preProject
+		nuget.config = nuget.config
+		README.md = README.md
 		tye.docker.yaml = tye.docker.yaml
 		tye.yaml = tye.yaml
 	EndProjectSection
